@@ -16,3 +16,4 @@
 
 > 3. Math Function
 
+    Learned all important types of Math Functions 
