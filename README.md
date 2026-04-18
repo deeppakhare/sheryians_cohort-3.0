@@ -25,3 +25,7 @@
     3. if-else-if statement
     4. ternary operaotr (?:) 
 
+> 4. Conditional Statements
+
+    Used when checking multiple fixed values
+
