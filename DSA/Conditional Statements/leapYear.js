@@ -1,3 +1,4 @@
+// leap year from user input
 let prompt = require("prompt-sync")();
 let year = prompt("Enter year:- ");
 

@@ -1,3 +1,4 @@
+// finding greatest number
 let prompt = require("prompt-sync")();
 let a = Number(prompt("Enter 1st number:- "));
 let b = Number(prompt("Enter 2nd number:- "));

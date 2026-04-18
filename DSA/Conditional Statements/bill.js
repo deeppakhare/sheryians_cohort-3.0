@@ -1,3 +1,5 @@
+// electricity bill unit readings
+
 let prompt = require("prompt-sync")();
 let bill = 0;
 let unit = Number(prompt("Enter unit:- "));
