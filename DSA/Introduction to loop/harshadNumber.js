@@ -7,7 +7,7 @@ while (temp > 0) {
   temp = Math.floor(temp / 10);
 }
 if (num % sum == 0) {
-  console.log("It is Harshah");
+  console.log("It is Harshad");
 } else {
   console.log("Not Harshad");
 }
