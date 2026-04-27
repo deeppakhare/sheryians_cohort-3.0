@@ -25,7 +25,13 @@
     3. if-else-if statement
     4. ternary operaotr (?:) 
 
-> 4. Conditional Statements
+> 4. Switch Cases 
 
     Used when checking multiple fixed values
 
+> 5. Loops
+    1. for loop
+    2. while loop
+    3. do while loop
+
+> 6. Pattern Programming
