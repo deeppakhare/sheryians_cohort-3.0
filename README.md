@@ -35,3 +35,7 @@
     3. do while loop
 
 > 6. Pattern Programming
+
+
+
+## **2. HTML**
