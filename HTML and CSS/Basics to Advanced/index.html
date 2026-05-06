@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First Web Page</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>Welcome here</h1>
+    <p>
+        Lorem ipsum dolor, <u>sit</u> amet consectetur adipisicing elit. Quas
+        officia rerum deleniti tenetur nostrum ipsa voluptatum cum? Aspernatur,
+        minima corporis!
+    </p>
+    <hr>
+    <table border="1">
+        <caption>
+            Food items..
+        </caption>
+
+        <colgroup>
+            <col style="background-color: lightblue" />
+            <col style="background-color: lightpink" />
+            <col style="background-color: lightgoldenrodyellow" />
+        </colgroup>
+        <thead>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Maggie</td>
+                <td>30</td>
+                <td>24</td>
+            </tr>
+            <tr>
+                <td>Lays</td>
+                <td>10</td>
+                <td>40</td>
+            </tr>
+            <tr>
+                <td>Kurkure</td>
+                <td>30</td>
+                <td>60</td>
+            </tr>
+        </tbody>
+        <footer>
+            <tr>
+                <th colspan="2">Total</th>
+                <th>124</th>
+            </tr>
+        </footer>
+    </table>
+    <hr>
+    <!-- <form>
+
+        <fieldset>
+            <legend>Personal</legend>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name">
+            <br>
+            <br>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email">
+            <br>
+            <br>
+            <label for="age">Age</label>
+            <input type="number" id="age" placeholder="Enter your age">
+            <br>
+            <br>
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter password">
+        </fieldset>
+
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter name">
+
+        <label for="course">Select Courses</label>
+        <select name="" id="course">
+            <optgroup label="Frontend">
+                <option>HTML</option>
+                <option>CSS</option>
+                <option>JS</option>
+            </optgroup>
+            <optgroup label="Backend">
+                <option>Nodejs</option>
+                <option>Express.js</option>
+                <option>MongoDB</option>
+            </optgroup>
+        </select>
+        <br><br>
+        <label for="reviews">Reviews</label>
+        <textarea id="reviews" rows="4"></textarea>
+        <br>
+        <button>Submit form</button>
+    </form> -->
+
+    <form>
+        <fieldset>
+            <legend>Personal Details</legend>
+            <label for="name">Name</label><br>
+            <input type="text" id="name" placeholder="Name"><br><br>
+            <label for="email">Email</label><br>
+            <input type="email" id="email" placeholder="Email"><br><br>
+            <label for="mobile">Mobile</label><br>
+            <input type="text" id="mobile" placeholder="Mobile">
+        </fieldset><br>
+        <fieldset>
+            <legend>Address Details</legend>
+            <label for="address1">Address line 1</label><br>
+            <textarea id="address1"></textarea><br><br>
+            <label for="city">City</label><br>
+            <select id="city">
+                <option value="bhopal">Bhopal</option>
+                <option value="pune">Pune</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="indore">Indore</option>
+            </select><br><br>
+            <label for="country">Country</label><br>
+            <select id="country">
+                <option value="usa">USA</option>
+                <option value="austrila">Austrila</option>
+                <option value="dibai">Dubai</option>
+                <option value="india">India</option>
+            </select>
+
+            <br>
+        </fieldset><br>
+        <label for="course">Select Course</label>
+        <select id="course">
+            <optgroup label="frontend">
+                <option value="html">Html</option>
+                <option value="css">CSS</option>
+                <option value="js">JS</option>
+            </optgroup>
+            <optgroup label="backend">
+                <option value="nodejs">Nodejs</option>
+                <option value="expressjs">Express.js</option>
+                <option value="mongodb">mongodb</option>
+            </optgroup>
+        </select>
+        <br><br>
+
+        <button>Submit form</button>
+    </form>
+</body>
+
+</html>
