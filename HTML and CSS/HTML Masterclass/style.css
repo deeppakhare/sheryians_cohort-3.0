@@ -1,0 +1,9 @@
+@font-face{
+    font-family: horror;
+    src: url(./Nightcore\ Demo.ttf);
+}
+
+h1{
+    font-family: horror;
+    color: red;
+}

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 1.  Sementic HTML tags use in modern html  -->
+    <!-- Non-semantic — works visually but meaningless -->
+    <div class="header">
+        <div class="nav">
+            <div class="nav-item">Home</div>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="article">...</div>
+    </div>
+    <div class="footer">...</div>
+
+    <!-- Semantic — same visual result, rich meaning -->
+    <header>
+        <nav>
+            <a href="/">Home</a>
+        </nav>
+    </header>
+    <main>
+        <article>...</article>
+    </main>
+    <footer>...</footer>
+    <br>
+    <hr>
+
+    <!-- 2. The Inline Elements -->
+    <p>
+        The word <strong>danger</strong> carries high importance. <br>
+        The word <em>slowly</em> is being emphasized for tone.<br>
+        The abbreviation <abbr title="Hyper Text Markup Language">HTML</abbr> is explained on hover.<br>
+        This is a <mark>highlighted passage</mark> for reference.<br>
+        The price dropped from <del>₹500</del> to <ins>₹350</ins>.<br>
+        The formula is H<sub><small>2</small></sub>O and E=mc<sup><small>2</small></sup>.<br>
+        The error code was <code>404 Not Found</code>.<br>
+        Press <kbd>Ctrl</kbd> + <kbd>S</kbd> to save.<br>
+        The output was <samp>Hello, World!</samp>.<br>
+        The variable is defined as <var>x</var>.<br>
+        <q>To be or not to be</q> is a famous quote.<br>
+        <cite>Hamlet</cite> was written by Shakespeare.<br>
+        This is <small>fine print or legal text</small>.<br>
+        A word break opportunity: super<wbr>cali<wbr>fragilistic<br>
+        <time datetime="2025-01-16">January 15, 2025</time><br>
+    </p>
+    <br>
+    <hr>
+    <!-- 3.Lists -->
+    <!-- Unordered list — bullets, order doesn't matter -->
+    <ul style="list-style-type: square;">
+        <li>Milk</li>
+        <li>Eggs</li>
+        <li>Bread</li>
+    </ul>
+
+    <!-- Ordered list — numbered, order matters -->
+    <ol type="1" start="1"> type can be: 1, A, a, I, i
+        <li>Preheat oven to 180°C</li>
+        <li>Mix ingredients</li>
+        <li>Bake for 25 minutes</li>
+    </ol>
+
+    <!-- Ordered list reversed (countdown) -->
+    <ol reversed>
+        <li>Third place</li>
+        <li>Middle place</li>
+        <li>Second place</li>
+        <li>First place</li>
+    </ol>
+
+    <!-- Description list — term/definition pairs -->
+    <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language — the structure of web pages</dd>
+
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets — the presentation of web pages</dd>
+    </dl>
+    <br>
+    <hr>
+    <!-- 4. Links tags -->
+    <!-- Basic link -->
+    <a href="https://example.com">Visit Example</a>
+    <br>
+    <!-- Open in new tab — always add rel for security -->
+    <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+        External Site
+    </a>
+    <br>
+    <!-- Link to page section (anchor link) -->
+    <a href="/HTML and CSS/Basics to Advanced/index.html">Jump to Section 2</a>
+    <h2 id="section-2">Section 2</h2>
+    <br>
+    <!-- Email link -->
+    <a href="mailto:hello@example.com">Email us</a>
+    <br>
+    <!-- Phone link (works on mobile) -->
+    <a href="tel:+919876543210">Call us</a>
+    <br>
+    <!-- Download link -->
+    <a href="./image.png" download="screenshot.png">Download screenshot</a>
+    <br>
+    <!-- Link with meaningful text — GOOD for SEO and accessibility -->
+    <a href="/html-guide">Read our complete HTML guide</a>
+    <br>
+    <!-- Link with meaningless text — BAD -->
+    <a href="/html-guide">Click here</a> <!-- Never do this -->
+    <br>
+    <hr>
+    <br>
+    <!-- 5. Images -->
+    <!-- Basic image — alt is mandatory -->
+    <img height="100"
+        src="https://imgs.search.brave.com/A8iY13bkgCNmR11Qj3EHJsjEf4zypD4LCd2JRlNlRkc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc2Vla2xvZ28u/Y29tL2xvZ28tcG5n/LzExLzIvcmFuZG9t/LXRhc2stbG9nby1w/bmdfc2Vla2xvZ28t/MTE1Nzc5LnBuZw"
+        alt="A developer coding at a desk">
+    <br>
+    <!-- Decorative image — empty alt, screen reader skips it -->
+    <img src=" " alt="">
+    <br>
+    <!-- Responsive image — different sizes for different screens -->
+    <img src="./image.png" srcset="photo-400.jpg 400w, photo-800.jpg 800w, photo-1200.jpg 1200w"
+        sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px" alt="Description" width="800" height="600"
+        loading="eager">
+    <br>
+    <!-- Modern formats with fallback -->
+    <picture>
+        <source srcset="photo.avif" type="image/avif">
+        <source srcset="photo.webp" type="image/webp">
+        <img src="./image.png" alt="Description" width="800" height="600">
+    </picture>
+    <br>
+    <!-- Figure with caption -->
+    <figure>
+        <img src="./image.png" alt="Bar chart showing monthly sales data">
+        <figcaption>Monthly sales for Q3 2025. Data from internal CRM.</figcaption>
+    </figure>
+    <br>
+    <hr>
+    <br>
+
+    <!-- 6. Tables -->
+    <table border="2">
+        <caption>Monthly Sales Report — Q3 2025</caption>
+
+        <thead>
+            <tr>
+                <th scope="col">Month</th>
+                <th scope="col">Revenue</th>
+                <th scope="col">Orders</th>
+                <th scope="col">Growth</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th scope="row">July</th>
+                <td>₹1,20,000</td>
+                <td>340</td>
+                <td>+12%</td>
+            </tr>
+            <tr>
+                <th scope="row">August</th>
+                <td>₹1,45,000</td>
+                <td>390</td>
+                <td>+20%</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th scope="row">Total</th>
+                <td>₹2,65,000</td>
+                <td colspan="2">730</td>
+            </tr>
+        </tfoot>
+    </table>
+    <br>
+    <hr>
+    <br>
+    <!-- 7. Forms -->
+    <form action="/submit" method="POST" novalidate>
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <div class="form-group">
+                <label for="full-name">Full name <span aria-hidden="true">*</span></label>
+                <input type="text" id="full-name" name="fullName" required autocomplete="name" aria-required="true"
+                    aria-describedby="name-hint">
+                <span id="name-hint">Enter your name as it appears on official documents</span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" autocomplete="email" required placeholder="Enter Email">
+            </div>
+
+            <fieldset>
+                <legend>Preferred contact method</legend>
+                <label><input type="radio" name="contact" value="email"> Email</label>
+                <label><input type="radio" name="contact" value="phone"> Phone</label>
+            </fieldset>
+
+        </fieldset>
+<br>
+        <button type="submit">Submit form</button>
+    </form>
+    <br>
+    <hr><br>
+</body>
+
+</html>
