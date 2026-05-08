@@ -4,6 +4,30 @@
 }
 
 h1{
-    font-family: horror;
+    /* font-family: horror; */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: red;
+}div:has(> blockquote) {
+  background-color: #ededed;
+  margin: 10px auto;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+blockquote p::before {
+  content: "\201C";
+}
+
+blockquote p::after {
+  content: "\201D";
+}
+
+blockquote + p {
+  text-align: right;
+}
+
+
+abbr {
+  font-style: italic;
+  color: chocolate;
 }
