@@ -9,3 +9,15 @@ html,body{
     width: 100%;
 }
 
+div{
+    margin: 10000px;
+}
+
+.pikachu{
+    height: 500px;
+    width: 800px;
+    background-color: #F6CF57;
+   
+    margin: 20px;
+    border-radius: 20px;
+}
