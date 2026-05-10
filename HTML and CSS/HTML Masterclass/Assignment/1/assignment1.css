@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+
+@font-face {
+  font-family: loew-light;
+  src: url(./Fontspring-DEMO-loew-light.otf);
+}
+
+@font-face {
+  font-family: loew-dark;
+  src: url(./Fontspring-DEMO-loew-medium.otf);
+}
+
+@font-face {
+  font-family: loew-black;
+  src: url(./Fontspring-DEMO-loew-black.otf);
+}
+@font-face {
+  font-family: loew-regular;
+  src: url(./Fontspring-DEMO-loew-regular.otf);
+}
+
+#task {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -53%);
+  overflow: hidden;
+}
+
+.pikachu {
+  height: 90%;
+  width: 90%;
+  background: linear-gradient(to right, #fbc50b 62%, #fae7b4 40%);
+  margin: 20px;
+  border-radius: 20px;
+}
+
+#logo {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  top: 1%;
+  left: 4%;
+}
+#pokeball {
+    opacity: 0.2;
+    height: 300px;
+    width: 300px;
+  position: absolute;
+    left: 4%;
+    bottom: -17%;
+}
+
+#pikachu {
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-10%, -50%);
+}
+
+#three-line {
+  height: 50px;
+  position: absolute;
+  top: 7%;
+  right: 5%;
+}
+
+#pokeball {
+  height: 400px;
+}
+
+.text {
+  margin-left: 100px;
+  position: absolute;
+  top: 30%;
+  left: 50px;
+}
+
+.line-1{
+  font-family: loew-dark;
+  letter-spacing: 10px;
+}
+.line-2{
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.heading{
+    font-family: loew-black;
+    font-size: 150px;
+}
+
+.para{
+    font-family: loew-regular;
+    line-height: 30px;
+}
