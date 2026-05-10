@@ -107,3 +107,25 @@ body {
     font-family: loew-regular;
     line-height: 30px;
 }
+
+.dots{
+    position: fixed;
+    right: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    z-index: 1000;
+}
+
+.dot{
+    height: 15px;
+    width: 15px;
+    background-color: #fbc50b;
+    border-radius: 50%;
+}
+
+#black{
+    background-color: black;
+}
