@@ -1,0 +1,384 @@
+@font-face {
+    font-family: betm-medium;
+    src: url(./assets/Fonts/BetmMedium.otf);
+}
+@font-face {
+    font-family: betm-light;
+    src: url(./assets/Fonts/BetmLight.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-color: rgb(220, 224, 241);
+}
+.container {
+    background-color: rgb(239, 236, 253);
+    height: 97%;
+    width: 90%;
+    margin: 50px;
+    border-radius: 30px;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.logo2 {
+    height: 200px;
+    width: 200px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    background-color: #f8f9fd;
+}
+
+.menu img {
+    height: 20px;
+}
+
+.mode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    background-color: #f8f9fd;
+}
+
+.mode img {
+    height: 20px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 20%;
+    left: 50px;
+    background-color: #f8f9fd;
+    height: 50px;
+    width: 500px;
+    border-radius: 30px;
+    font-family: betm-light;
+    color: rgb(99, 94, 94);
+    font-size: 20px;
+    gap: 15px;
+}
+
+.search img {
+    margin-left: 20px;
+}
+
+
+.filter {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    position: absolute;
+    top: 20%;
+    right: 130px;
+    background-color: #f8f9fd;
+    height: 50px;
+    width: 250px;
+    border-radius: 30px;
+    font-family: betm-medium;
+    color: rgb(165, 148, 148);
+    font-size: 20px;
+}
+
+.filter p {
+    margin-left: 15px;
+    font-family: betm-medium;
+    color: black;
+}
+
+.filter2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 20%;
+    right: 50px;
+    background-color: #f8f9fd;
+    height: 50px;
+    width: 50px;
+    border-radius: 20px;
+}
+
+.pokemons {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+    gap: 80px;
+    display: flex;
+}
+
+#box1{
+    border-bottom: 4px solid rgb(255, 206, 108);
+    background-color: rgb(244, 241, 228);
+}
+#box2{
+    border-bottom: 4px solid rgb(254, 136, 58);
+    background-color: rgb(248, 227, 228);
+}
+#box3{
+    border-bottom: 4px solid rgb(254, 140, 71);
+    background-color: rgb(252, 237, 210);
+}
+#box4{
+    border-bottom: 4px solid rgb(77, 148, 188);
+    background-color: rgb(205, 231, 250);
+}
+#box5{
+    border-bottom: 4px solid rgb(154, 185, 128);
+    background-color: rgb(248, 215, 219);
+}
+
+.box {
+    height: 400px;
+    width: 250px;
+    background-color: rgb(203, 219, 219);
+    border-radius: 20px;
+    position: relative;
+}
+
+.box .code {
+    font-family: betm-light;
+    margin-top: 20px;
+    margin-left: 10%;
+}
+
+.box img {
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box h1 {
+    font-family: betm-light;
+    position: absolute;
+    bottom: 15%;
+    left: 10%;
+}
+
+.icon4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background-color: rgb(254, 255, 255);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    
+}
+
+.icon4 svg {
+    height: 20px;
+}
+
+.icon2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 5%;
+    right: 8%;
+    background-color: rgb(254, 255, 255);
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.icon2 svg {
+
+    fill: rgb(126, 114, 114);
+    height: 20px;
+}
+.icon1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    background-color: rgb(254, 255, 255);
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+
+.icon1 svg {
+    height: 20px;
+    fill: black;
+}
+
+
+.icon3 {
+    display: flex;
+    flex-direction: row;
+    justify-content:cen;
+    gap: 8px;
+    align-items: center;
+    height: 30px;
+    width: 130px;
+    font-family: betm-medium;
+    font-size: 12px;
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+    background-color: rgb(233, 255, 255);
+    border-radius: 10px;
+}
+
+.icon3 svg{
+    height: 12px;
+    fill: rgb(255, 255, 255);
+}
+
+.icon3.fifth{
+    background-color: rgb(233, 247, 223);
+}
+.icon3.third{
+    background-color: rgb(244, 223, 172);
+}
+
+.leaf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: green;
+}
+
+
+.bar{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 40px;
+    margin-left: 10px;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: rgb(245, 247, 254);
+    height: 120px;
+    width: 85%;
+    border-radius: 15px;
+    
+}
+
+.features{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 50px;
+    width: 50%;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.data h1{
+    font-family: betm-medium;
+    font-size: 20px;
+}
+.data p{
+    font-size: 15px;
+    font-family: betm-light;
+    line-height: 15px;
+}
+.first{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+#logo1{
+    background-color: lightblue;
+}
+#logo2{
+    background-color: rgb(196, 237, 196);
+}
+#logo3{
+    background-color: rgb(231, 231, 166);
+}
+#logo4{
+    background-color: rgb(239, 178, 239);
+}
+#logo1 img{
+    height: 50px;
+    fill: lightblue;
+}
+#logo2 svg{
+    height: 50px;
+    fill: green;
+}
+#logo3 svg{
+    height: 50px;
+    fill: goldenrod;
+}
+#logo4 svg{
+    height: 50px;
+    fill: purple;
+}
+
+.last{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: betm-medium;
+    font-size: 15px;
+    position: absolute;
+    bottom: 2%;
+    gap: 10px;
+    color: rgb(72, 61, 61);
+    left: 50%;
+    opacity: 0.6;
+}
+
+.last img{
+    height: 30px;
+}
