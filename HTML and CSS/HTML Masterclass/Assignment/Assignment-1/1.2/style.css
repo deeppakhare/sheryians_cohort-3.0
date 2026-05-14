@@ -2,6 +2,7 @@
     font-family: betm-medium;
     src: url(./assets/Fonts/BetmMedium.otf);
 }
+
 @font-face {
     font-family: betm-light;
     src: url(./assets/Fonts/BetmLight.otf);
@@ -18,9 +19,11 @@ html {
     height: 100%;
     width: 100%;
 }
-body{
+
+body {
     background-color: rgb(220, 224, 241);
 }
+
 .container {
     background-color: rgb(239, 236, 253);
     height: 97%;
@@ -140,23 +143,27 @@ body{
     display: flex;
 }
 
-#box1{
+#box1 {
     border-bottom: 4px solid rgb(255, 206, 108);
     background-color: rgb(244, 241, 228);
 }
-#box2{
+
+#box2 {
     border-bottom: 4px solid rgb(254, 136, 58);
     background-color: rgb(248, 227, 228);
 }
-#box3{
+
+#box3 {
     border-bottom: 4px solid rgb(254, 140, 71);
     background-color: rgb(252, 237, 210);
 }
-#box4{
+
+#box4 {
     border-bottom: 4px solid rgb(77, 148, 188);
     background-color: rgb(205, 231, 250);
 }
-#box5{
+
+#box5 {
     border-bottom: 4px solid rgb(154, 185, 128);
     background-color: rgb(248, 215, 219);
 }
@@ -201,7 +208,7 @@ body{
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    
+
 }
 
 .icon4 svg {
@@ -223,9 +230,10 @@ body{
 
 .icon2 svg {
 
-    fill: rgb(126, 114, 114);
+    fill: rgb(0, 0, 0);
     height: 20px;
 }
+
 .icon1 {
     display: flex;
     justify-content: center;
@@ -242,14 +250,30 @@ body{
 
 .icon1 svg {
     height: 20px;
-    fill: black;
+
+}
+
+#first{
+    fill:rgb(255, 207, 108) ;
+}
+#second{
+    fill:rgb(254, 128, 52) ;
+}
+#third{
+    fill:rgb(254, 137, 72) ;
+}
+#fourth{
+    fill:rgb(79, 153, 194) ;
+}
+#fifth{
+    fill:rgb(155, 186, 129) ;
 }
 
 
 .icon3 {
     display: flex;
     flex-direction: row;
-    justify-content:cen;
+    justify-content: cen;
     gap: 8px;
     align-items: center;
     height: 30px;
@@ -263,15 +287,16 @@ body{
     border-radius: 10px;
 }
 
-.icon3 svg{
+.icon3 svg {
     height: 12px;
     fill: rgb(255, 255, 255);
 }
 
-.icon3.fifth{
+.icon3.fifth {
     background-color: rgb(233, 247, 223);
 }
-.icon3.third{
+
+.icon3.third {
     background-color: rgb(244, 223, 172);
 }
 
@@ -283,11 +308,27 @@ body{
     height: 20px;
     width: 20px;
     border-radius: 50%;
-    background-color: green;
+    background-color: rgb(0, 0, 0);
+}
+
+.icon3.one{
+    background-color: rgb(255, 230, 180);
+}
+.icon3.two{
+    background-color: rgb(255, 191, 151);
+}
+.icon3.three{
+    background-color: rgb(255, 188, 151);
+}
+.icon3.four{
+    background-color: rgb(161, 222, 255);
+}
+.icon3.five{
+    background-color: rgb(179, 197, 165);
 }
 
 
-.bar{
+.bar {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -302,10 +343,10 @@ body{
     height: 120px;
     width: 85%;
     border-radius: 15px;
-    
+
 }
 
-.features{
+.features {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -316,16 +357,18 @@ body{
     margin-right: 30px;
 }
 
-.data h1{
+.data h1 {
     font-family: betm-medium;
     font-size: 20px;
 }
-.data p{
+
+.data p {
     font-size: 15px;
     font-family: betm-light;
     line-height: 15px;
 }
-.first{
+
+.first {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -334,36 +377,43 @@ body{
     border-radius: 50%;
 }
 
-#logo1{
+#logo1 {
     background-color: lightblue;
 }
-#logo2{
+
+#logo2 {
     background-color: rgb(196, 237, 196);
 }
-#logo3{
+
+#logo3 {
     background-color: rgb(231, 231, 166);
 }
-#logo4{
+
+#logo4 {
     background-color: rgb(239, 178, 239);
 }
-#logo1 img{
+
+#logo1 img {
     height: 50px;
     fill: lightblue;
 }
-#logo2 svg{
+
+#logo2 svg {
     height: 50px;
     fill: green;
 }
-#logo3 svg{
+
+#logo3 svg {
     height: 50px;
     fill: goldenrod;
 }
-#logo4 svg{
+
+#logo4 svg {
     height: 50px;
     fill: purple;
 }
 
-.last{
+.last {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -378,6 +428,7 @@ body{
     opacity: 0.6;
 }
 
-.last img{
+.last img {
     height: 30px;
 }
+
