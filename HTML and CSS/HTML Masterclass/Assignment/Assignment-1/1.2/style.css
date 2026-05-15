@@ -31,6 +31,9 @@ body {
     margin: 50px;
     border-radius: 30px;
     position: relative;
+    background-image: url(https://imgs.search.brave.com/WwCTncmXGx6dBee683nHno0GHOUmUqu5oznqcmfwdNc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvaGQvcHVy/cGxlLWFuZC13aGl0/ZS1iYWNrZ3JvdW5k/LTM0NDAteC0xNDQw/LTh5cDlqOTlnNjh1/MjRvOXcuanBn);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .logo {
