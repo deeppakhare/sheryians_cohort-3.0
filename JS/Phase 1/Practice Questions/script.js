@@ -257,32 +257,76 @@
 
 
 // 8. Remove extra spaces from a string.
-let a = " Apple                       is the fruit";
-console.log(a.trim());
+// console.log("                  Apple        ".trim());
+
 
 // 9. Repeat the word `"Hi"` 5 times.
+// let a = "Hi";
+// console.log(a.repeat(5));
+
+
 // 10. Print the first character of a string.
+// let name = "Deep";
+// console.log(name[0]);
+
+
 // 11. Use template literals to print:`"My name is Aman and I am 20 years old"`
+// let name = "Aman"
+// let age = 22;
+// console.log(`My name is ${name} and I am ${age} years old`);
+
 
 // ---
 
 // ## Numbers & Math
 
 // 1. Round `4.7` using `Math.round()`.
+// console.log(Math.round(4.7));
+
+
 // 2. Find the square root of 81.
+// console.log(Math.sqrt(81));
+
+
 // 3. Find the maximum number from `10, 20, 5, 99`.
+// console.log(Math.max(10, 20, 5, 99));
+
+
 // 4. Generate a random number between 1 and 10.
+// console.log(Math.floor(Math.random()*10)+1);
+
+
 // 5. Convert `"99.99"` into an integer.
+// console.log(parseInt("99.99"));
+
+
 // 6. Check whether `25` is an integer or not.
+// console.log(Number.isInteger(25));
+
+
 // 7. Use `toFixed(2)` on `3.141592`.
+// let num = 3.141592;
+// console.log(num.toFixed(2));
+
 
 // ---
 
 // ## Conditionals
 
 // 1. Check whether a number is positive or negative.
+// let num = -32;
+// if(num > 0) console.log('It is positive');
+// else console.log("It is negative");
+
+
 // 2. Check whether a number is even or odd.
+// let num = 69;
+// if (num % 2 == 0) console.log("It is even");
+// else console.log("It is odd");
+
+
 // 3. Check whether a person is eligible to vote.
+
 // 4. Find the largest among two numbers.
 // 5. Find the largest among three numbers.
 // 6. Check whether a year is a leap year.
