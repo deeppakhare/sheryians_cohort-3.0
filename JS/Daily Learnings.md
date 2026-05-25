@@ -1,0 +1,45 @@
+\*\*\*\*\*\*\*\*\*\*\*\*\*\* JAVASCRIPT By Sarthak Bhaya \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+
+
+
+# 21 May 2026
+
+1. while loop with some conditions.
+2. do while loop
+3. for loop
+4. Web API - DOM, Promises, location traking, local Storage, session storage, console, history traking, timer, fetch api
+5. difference between let, var and const.
+6. Template Litrals  " ${} ".
+7. Useful String Methods
+8. functions
+
+
+
+# 22 May 2026
+
+1. What is functions
+2. Types of functions
+
+   1. function declaration
+   2. function expression
+   3. fat arrow function
+   4. IIFE
+3. pure function and impur function
+4. Callback function
+5. Higher order function
+
+
+
+# 25 May 2026
+
+1. What is  Array
+2. Array length 
+3. push, pop, shift, unshift
+4. splice for adding and removing element
+5. reverce , sort
+6. slice, concate, includes, indexof, join
+7. for loop and for of loop
+8. Reference behaviour of array (Array is a refernce data type)
+9. spread operator
+
+
