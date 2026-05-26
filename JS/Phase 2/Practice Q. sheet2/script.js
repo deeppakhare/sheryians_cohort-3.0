@@ -16,9 +16,10 @@
 
 // **Hint:** Mixed data types + nested indexing
 
-let arr = [23, 66, 41, 2, 'splender', 'yamaha', 'alto', true, false, [22, 44, 96, 32, 'sdfijkf', 'fuiesjkd']]
-console.log(arr.length);
-
+// let arr = [23, 66, 41, 2, 'splender', 'yamaha', 'alto', true, false, [22, 44, 96, 32, 'sdfijkf', 'fuiesjkd']]
+// for(let i = 0; i <= (arr[9].length)-1; i++){
+//     console.log(arr[9][i]);
+// }
 
 // # 2. Indexing in Array
 
@@ -28,13 +29,21 @@ console.log(arr.length);
 
 // **Hint:** Use `0` and `length - 1`
 
+// let arr = [23, 66, 41, 2, 'splender', 'yamaha', 'alto', true, false];
+// console.log(arr[0]);
+// console.log(arr[(arr.length)-1]);
+
 // ### Hard
 
 // Swap the second and second-last element using indexing.
 
 // **Hint:** Use temporary variable
 
-// ---
+// let arr = [23, 66, 41, 2, 'splender', 'yamaha', 'alto', true, false];
+// let temp = arr[1];
+// arr[1] = arr[(arr.length)-2];
+// arr[(arr.length)-2] = temp;
+// console.log(arr);
 
 // # 3. Multi-Dimensional Arrays
 
@@ -44,13 +53,32 @@ console.log(arr.length);
 
 // **Hint:** Double indexing
 
+// let matrix = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9],
+// ];
+// console.log(matrix[0][0]);
+// console.log(matrix[1][0]);
+// console.log(matrix[2][0]);
+
 // ### Hard
 
 // Find the sum of all diagonal elements in a 3x3 matrix.
 
 // **Hint:** Same row and column index
 
-// ---
+// let matrix = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9],
+// ];
+
+// let sum = 0;
+// for (let i = 0; i <= matrix.length - 1; i++) {
+//   sum += matrix[i][i];
+// }
+// console.log(sum);
 
 // # 4. length
 
@@ -60,13 +88,20 @@ console.log(arr.length);
 
 // **Hint:** Use `.length`
 
+// let arr = [23, 66, 41, 2, 'splender', 'yamaha', 'alto', true, false];
+// console.log(arr.length);
+
 // ### Hard
 
 // Create a function that checks whether array length is even or odd.
 
 // **Hint:** Use modulus operator
 
-// ---
+// let count = (arr) => {
+//     if(arr.length % 2 === 0) console.log("Even");
+//     else console.log("Odd");
+// }
+// count([23, 66, 41, 2, 'splender', 'yamaha', 'alto', true, false])
 
 // # 5. push()
 
@@ -76,13 +111,26 @@ console.log(arr.length);
 
 // **Hint:** Use `push()`
 
+// let arr = [23, 66, 41, 2, 'splender', 'yamaha', 'alto', true, false];
+// arr.push('Nayan');
+// arr.push(12);
+// arr.push(669);
+// console.log(arr);
+
 // ### Hard
 
 // Add elements dynamically inside loop from another array.
 
 // **Hint:** Loop + push
 
-// ---
+
+// let arr1 = [23, 66, 41, 2, "splender", "yamaha", "alto", true, false];
+// let arr2 = [7, 8, 9, "deep", 43, 22, "nayan"];
+// for(let i = 0; i <= arr2.length-1; i++){
+//     arr1.push(arr2[i])
+// }
+// console.log(arr1);
+
 
 // # 6. pop()
 
