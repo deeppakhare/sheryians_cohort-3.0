@@ -43,3 +43,15 @@
 9. spread operator
 
 
+# 26 May 2026
+
+***Higher Order Function ****
+1. forEach loop for iteration
+2. Map for trnsformation
+3. filter for filteration
+4. reduce 
+5. find
+6. findIndex
+7. some 
+8. every
+9. destructuring
