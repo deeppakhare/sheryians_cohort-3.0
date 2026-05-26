@@ -462,30 +462,139 @@
 
 
 // 4. Convert temperature from Celsius to Fahrenheit.
+// let celcius = 45 ;
+// let faran = (celcius * 9 / 5) + 32;
+// console.log(faran);
+
 
 // 5. Convert kilometers into meters.
+// let kilometer = 2.5;
+// let meters = 1000 * kilometer;
+// console.log(meters);
+
+
 // 6. Calculate total marks and percentage of 5 subjects.
+// let maths = 73;
+// let science = 80;
+// let marathi = 86;
+// let hindi = 84;
+// let english = 90;
+// let total = marathi + science + hindi + english + maths;
+// let percentage = ( total / 500 ) * 100;
+// console.log(percentage);
+// console.log(total);
+
 // 7. Calculate electricity bill based on units consumed.
+// let fixed = 130;
+// let unit = 310;
+// let bill = 0;
+// if(unit > 0 && unit <= 100) {
+//     bill = unit * 3.98;
+// }
+// else if (unit >= 101 && unit <= 300) {
+//     bill = 100 * 3.98 + (unit - 100) * 10.95;
+// }
+// else if (unit >= 301 && unit <= 500) {
+//     bill = 100 * 3.98 + 199 * 10.95 + (unit - 299) * 14;
+// }
+// else console.log("Invalid unit");
+
+// console.log(Math.floor(fixed + bill));
+
+
 // 8. Create a username generator using first name and birth year.
+// let firstName = "Deep";
+// let birthYear = 2004;
+// let username = first + birthYear;
+// console.log(username);
+
+
 // 9. Check whether a string starts with a specific letter.
+// let str = '@gmail.com';
+// let specail = '@'
+// console.log(str.charAt(0)==specail);
+
+
 // 10. Count the total characters in a sentence excluding spaces.
+// let sen = "Hello welcome here";
+// console.log(sen.replaceAll(" ","").length);
+
 
 // ---
 
 // ## Logical Thinking Questions
 
 // 1. Take two numbers and print which one is greater.
+// let num1 = 122;
+// let num2 = 24;
+// if(num1 > num2) console.log("greater number ", num1);
+// else console.log("greater number ", num2);
+
 // 2. Check whether a number lies between 10 and 50.
+// let num = 49;
+// if(num >= 10 && num <= 50) console.log("It lies");
+// else console.log("Not lies");
+
+
 // 3. Check whether a password length is greater than 8.
+// let pass = "324355353";
+// if (pass.length >= 8) console.log("Greater than 8");
+// else console.log("Smaller than 8");
+
+
 // 4. Check if a person can drive:
 // - age > 18
-// - has license = true
+// - 'has license = true
+// let age = 19;
+// let license = true;
+// if(age > 18 && license == true) console.log("You can drive");
+// else console.log("Dont drive");
+
+
 // 1. Check whether a number is divisible by 2, 3, or both.
+// let num = 4;
+// if(num % 2== 0 && num % 3 == 0) console.log("Divisible by both");
+// else if(num % 3 == 0)console.log("Divisible by 3");
+// else if (num % 2 == 0) console.log("Divisible by 2");
+// else console.log("Invalid number");
+
+
 // 2. Print `"Good Morning"`, `"Good Afternoon"`, or `"Good Evening"` based on time.
+// let date = new Date;
+// let time = date.getHours();
+// if(time >= 5 && time < 12) console.log("Good Morning");
+// else if(time >= 12 && time < 17) console.log("Good Afternoon");
+// else if(time >= 17 && time < 22) console.log("Good Evening");
+// else console.log("Good Night");
+
+
 // 3. Find whether a number is a multiple of 10.
+// let num = 155;
+// if (num % 10 == 0) console.log("Multiple of 10");
+// else console.log("Not multiple");
+
+
 // 4. Create a simple discount calculator.
+// let price = 1250;
+// let discount = 10;
+// let total = price * discount / 100;
+// console.log(total);
+
+
 // 5. Check whether a product is in stock.
+// let store = ['tap', 'pipe', 'solution', 'tape', 'elbo', 'coupling'];
+// let product = 'joiner';
+// if(store.includes(product)) console.log("In stock");
+// else console.log("Out of Stock");
+
+
 // 6. Calculate final bill after GST.
+// let amount = 13580;
+// let gst = 18;
+// let gstAmount = amount * 18 / 100;
+// let total = amount + gstAmount;
+// console.log(total);
+
 
 // ---
 
