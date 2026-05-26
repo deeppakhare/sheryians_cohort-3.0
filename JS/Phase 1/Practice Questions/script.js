@@ -438,10 +438,31 @@
 // ## Mixed Practice Questions
 
 // 1. Create a mini biodata program using variables and template literals.
+// let name = "Deep";
+// let surname = "Pakhare";
+// let age = 21;
+// let city = "Buldhana";
+// console.log(`My name is ${name} ${surname}, I am ${age} years old and I live in ${city}`);
+
 
 // 2. Calculate the area of a rectangle.
+// var length = 5;
+// var width = 3;
+// var area = length * width;
+// console.log(`area  of rectangle is ${area} `);
+
+
 // 3. Calculate the simple interest.
+// let principal = 1000;
+// let rateOfIntrest = 5;
+// let time = 3;
+// let SI = (principal * rateOfIntrest * time) / 100;
+// let total = SI + principal;
+// console.log(total);
+
+
 // 4. Convert temperature from Celsius to Fahrenheit.
+
 // 5. Convert kilometers into meters.
 // 6. Calculate total marks and percentage of 5 subjects.
 // 7. Calculate electricity bill based on units consumed.
