@@ -20,8 +20,8 @@
 // user se password pucho
 
 
-do{
-    var pass = prompt("Enter the password");
-} while(pass != '123')
+// do{
+//     var pass = prompt("Enter the password");
+// } while(pass != '123')
 
-console.log("Welcome");
+// console.log("Welcome");

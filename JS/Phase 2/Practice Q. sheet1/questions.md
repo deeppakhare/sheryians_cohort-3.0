@@ -1,4 +1,4 @@
-# avaScript Beginner Practice Questions (Phase -2 )
+# JavaScript Beginner Practice Questions (Phase -2 ) Sheet  - 1
 
 ---
 
