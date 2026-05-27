@@ -18,7 +18,12 @@
 // - You don't return anything here.
 // - Use `console.log()` inside it.
 
-// ---
+// let prices = [100, 250, 399, 499];
+// prices.forEach((elem) => {
+//     console.log(`₹ ${elem}`);
+// })
+
+
 
 // ### Hard Question
 
@@ -49,7 +54,18 @@
 // - Loop through objects using `forEach()`
 // - Use condition checking inside loop.
 
-// ---
+
+// let students = [
+//   { name: "Anubhav", marks: 85 },
+//   { name: "Rahul", marks: 42 },
+//   { name: "Aman", marks: 90 },
+// ];
+
+// students.forEach((elem) => {
+//     if(elem.marks > 50) console.log(`${elem.name} - Pass`);
+//     else console.log(`${elem.name} - Fail`);
+// })
+
 
 // # 2. `map()`
 
@@ -72,7 +88,14 @@
 // - `map()` creates a new array.
 // - Use `.toUpperCase()`.
 
-// ---
+
+// let names = ["anubhav", "rahul", "aman"];
+// let upper = names.map((elem) => {
+//     return elem.toUpperCase();
+// });
+// console.log(upper);
+
+
 
 // ### Hard Question
 
@@ -107,7 +130,19 @@
 // price - (price * 10 / 100)
 // ```
 
-// ---
+
+// let products = [
+//   { name: "Laptop", price: 50000 },
+//   { name: "Phone", price: 20000 },
+// ];
+// let discount = products.map((elem) => {
+//    return {
+//     ...elem, // spread existing properties
+//     discountPrice: elem.price - (elem.price * 10 / 100)
+//   };
+// })
+// console.log(discount);
+
 
 // # 3. `filter()`
 
@@ -129,7 +164,14 @@
 
 // - `filter()` keeps elements when condition is `true`.
 
-// ---
+
+// let nums = [1,2,3,4,5,6,7,8];
+// let gw = nums.filter((elem) => {
+//     if (elem % 2 == 0) return elem;
+    
+// })
+// console.log(gw);
+
 
 // ### Hard Question
 
@@ -150,7 +192,16 @@
 // - Check `active === true`
 // - Return condition directly.
 
-// ---
+
+// let users = [
+//   { name: "Anubhav", active: true },
+//   { name: "Rahul", active: false },
+//   { name: "Aman", active: true },
+// ];
+// users.filter((elem) => {
+//     if(elem.active === true) console.log(elem.name); 
+// }) 
+
 
 // # 4. `reduce()`
 
@@ -174,7 +225,13 @@
 //     - accumulator
 //     - current value
 
-// ---
+
+// let nums = [10,20,30,40];
+// let sum = nums.reduce((accu, val) => {
+//     return accu + val;
+// },0)
+// console.log(sum);
+
 
 // ### Hard Question
 
@@ -199,7 +256,15 @@
 // - Create an empty object `{}` as initial value.
 // - Increase count if already exists.
 
-// ---
+let fruits = ["apple", "banana", "apple", "orange", "banana", "apple"];
+let obj = {};
+fruits.reduce((acc, val) => {
+    let count = 0;
+    if(acc == val) count++;
+    console.log(count);
+    
+    
+},0)
 
 // # 5. `find()`
 
