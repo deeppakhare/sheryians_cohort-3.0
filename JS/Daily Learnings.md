@@ -62,3 +62,9 @@
 1. what is Object
 2. CRUD operation in object
 3. Object.keys(obj_name),Object.values(obj_name), Object.(obj_name) 
+4. seal, freeze
+5. shallow coy
+6. deep copy
+7. spread with object
+8. object destructuring
+9. nested object
