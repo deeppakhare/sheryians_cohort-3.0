@@ -96,6 +96,39 @@ var names2 = names.filter((elem) => {
 
 let nums = [1, 2, 3, 4];
 let sum = nums.reduce((acc, n) => acc + n, 0);
-console.log(sum);   
+// console.log(sum);   
+
+
+
+//      Object
+
+let obj = {
+    name: 'Deep',
+    num: 21 ,
+    gender: 'Male',
+    haveLicence: true
+}
+
+// console.log(obj);
+// console.log(obj.name);
+
+//  CRUD
+// Create
+obj.city = 'Buldhan'
+// console.log(obj);
+// read
+// console.log(obj);
+// update
+obj.name = 'Nayan'
+// console.log(obj);
+// delete
+delete obj.num;
+// console.log(obj);
+
+
+
+console.log(Object.keys(obj));
+console.log(Object.values(obj));
+console.log(Object.entries(obj));
 
 

@@ -55,3 +55,10 @@
 7. some 
 8. every
 9. destructuring
+
+
+# 27 May 2026
+
+1. what is Object
+2. CRUD operation in object
+3. Object.keys(obj_name),Object.values(obj_name), Object.(obj_name) 
