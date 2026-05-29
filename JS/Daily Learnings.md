@@ -68,3 +68,15 @@
 7. spread with object
 8. object destructuring
 9. nested object
+
+# 29 May 2026
+### How javascript Works 
+1. single-threaded, synchronous
+1. Javascript is a  Single Threaded, Synchronous
+2. Global Execusion Context, Function Execution Context (FEC)
+3. Call Stack
+4. Hoisting
+5. Global Scope, Function Scope, Block Scope
+6. Lexical Scope 
+7. Lexical Environment
+8. Closures

@@ -136,10 +136,6 @@
 // }
 // console.log(palindrome("Deep"));
 
-function reverseString(str) {
-    return str.split('').reverse().join('');
-}
-console.log(reverseString("deep"));
 
 
 // 6. Write a callback function example using `setTimeout`.
