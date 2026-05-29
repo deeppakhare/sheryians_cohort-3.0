@@ -7,25 +7,141 @@
 // ## Beginner Level
 
 // 1. Create a function named `greet` that prints `"Hello World"`.
+// function greet(){
+//     console.log("Hello World");
+// }
+// greet();
+
+
 // 2. Create a function `add(a, b)` that returns the sum.
+// function add(a,b){
+//     return sum = a + b;
+// }
+// console.log(add(5,9));
+
+
 // 3. Write a function to calculate the square of a number.
+// function square(a){
+//     return a*a;
+// }
+// console.log(square(25));
+
+
 // 4. Create a function that checks whether a number is even or odd.
+// let even = function (num){
+//     num % 2 == 0 ? console.log("It is even") : console.log("It is Odd")
+// }
+// even(37);
+
+
 // 5. Write a function that converts Celsius to Fahrenheit.
+// let celsius = function (temp) {
+//     return (temp * 9 / 5) + 32;
+// }
+// console.log(celsius(5));
+
+
 // 6. Create a function with default parameter `"Guest"`.
+// function boy(name = "Guest") {
+//     console.log(name);
+// }
+// boy();
+
+
 // 7. Write a function that returns the greater of two numbers.
+// let greater = (a, b) => {
+//     return a > b ? `${a} is greater` : `${b} is greater`
+// }
+// console.log(greater(32, 88));
+
+
 // 8. Create a function to calculate area of rectangle.
+// let area = (len, bre) => {
+//     return len * bre;
+// }
+// console.log(area(5,10));
+
+
 // 9. Write a function that returns `"Adult"` if age ≥ 18 else `"Minor"`.
+// let level = (age) => {
+//     return age >= 18 ? `is Adult` : `is Minior`;
+// }
+// console.log(level(12));
+
+
 // 10. Create a function to reverse a string.
+// let string = (str) => {
+//     let reverse = "";
+//     for(let i = str.length-1; i >= 0; i--){
+//         reverse += str[i];
+//     }
+//     console.log(reverse);
+// }
+// string("Deep")
+
 
 // ---
 
 // ## Intermediate Level
 
 // 1. Write a function expression for multiplication.
+// let multi = (a,b) => {
+//     return  a*b;
+// }
+// console.log(multi(5,12));
+
+
 // 2. Convert a normal function into an arrow function.
+// ********** Normal Function ************
+// function hello(){
+//     console.log("Hell");
+// }
+// hello();
+// ************** Arrow Function ****************
+// let hell = () => {
+//     console.log("Hell");
+// }
+// hell();
+
+
 // 3. Create a function that accepts unlimited numbers and returns their sum using rest operator.
+// let sum = (...num) => {
+//     var sum1 = 0;
+//     for(let i = 0; i <= num.length-1; i++){
+//         sum1 = sum1 + num[i];
+//     }
+//     console.log(sum1);
+// }
+// sum(3,2,2,2);
+
+
 // 4. Write a function that counts vowels in a string.
+// let string = (str) => {
+//     let count = 0;
+//     for (const ch of str) {
+//         if(ch === 'a' ||ch === 'e' ||ch === 'i' ||ch === 'o' ||ch === 'u') count++;
+//     }
+//     console.log(count);
+// }
+// string('Wlcome to Sheriyans coding school')
+
+
 // 5. Create a function that checks if a string is palindrome.
+// let palindrome = (str) => {
+//     let reverse = "";
+//     // for (const ch of str) {
+//          return str.reverse();
+        
+//     // }
+// }
+// console.log(palindrome("Deep"));
+
+function reverseString(str) {
+    return str.split('').reverse().join('');
+}
+console.log(reverseString("deep"));
+
+
 // 6. Write a callback function example using `setTimeout`.
 // 7. Create a higher-order function that executes another function twice.
 // 8. Write a function that returns another function.
