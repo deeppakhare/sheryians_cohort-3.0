@@ -1,5 +1,6 @@
 // # JavaScript Beginner Practice Questions (Phase -2 ) Sheet  - 1
 
+
 // ---
 
 // # Part 1 — Functions Basics (1–20)
@@ -12,13 +13,11 @@
 // }
 // greet();
 
-
 // 2. Create a function `add(a, b)` that returns the sum.
 // function add(a,b){
 //     return sum = a + b;
 // }
 // console.log(add(5,9));
-
 
 // 3. Write a function to calculate the square of a number.
 // function square(a){
@@ -26,13 +25,11 @@
 // }
 // console.log(square(25));
 
-
 // 4. Create a function that checks whether a number is even or odd.
 // let even = function (num){
 //     num % 2 == 0 ? console.log("It is even") : console.log("It is Odd")
 // }
 // even(37);
-
 
 // 5. Write a function that converts Celsius to Fahrenheit.
 // let celsius = function (temp) {
@@ -40,13 +37,11 @@
 // }
 // console.log(celsius(5));
 
-
 // 6. Create a function with default parameter `"Guest"`.
 // function boy(name = "Guest") {
 //     console.log(name);
 // }
 // boy();
-
 
 // 7. Write a function that returns the greater of two numbers.
 // let greater = (a, b) => {
@@ -54,20 +49,17 @@
 // }
 // console.log(greater(32, 88));
 
-
 // 8. Create a function to calculate area of rectangle.
 // let area = (len, bre) => {
 //     return len * bre;
 // }
 // console.log(area(5,10));
 
-
 // 9. Write a function that returns `"Adult"` if age ≥ 18 else `"Minor"`.
 // let level = (age) => {
 //     return age >= 18 ? `is Adult` : `is Minior`;
 // }
 // console.log(level(12));
-
 
 // 10. Create a function to reverse a string.
 // let string = (str) => {
@@ -79,7 +71,6 @@
 // }
 // string("Deep")
 
-
 // ---
 
 // ## Intermediate Level
@@ -89,7 +80,6 @@
 //     return  a*b;
 // }
 // console.log(multi(5,12));
-
 
 // 2. Convert a normal function into an arrow function.
 // ********** Normal Function ************
@@ -103,7 +93,6 @@
 // }
 // hell();
 
-
 // 3. Create a function that accepts unlimited numbers and returns their sum using rest operator.
 // let sum = (...num) => {
 //     var sum1 = 0;
@@ -113,7 +102,6 @@
 //     console.log(sum1);
 // }
 // sum(3,2,2,2);
-
 
 // 4. Write a function that counts vowels in a string.
 // let string = (str) => {
@@ -125,43 +113,157 @@
 // }
 // string('Wlcome to Sheriyans coding school')
 
-
 // 5. Create a function that checks if a string is palindrome.
-// let palindrome = (str) => {
+// function reverseString(str) {
 //     let reverse = "";
-//     // for (const ch of str) {
-//          return str.reverse();
-        
-//     // }
+//     for(let i = str.length-1; i >= 0; i-- ){
+//         reverse += str[i];
+//     }
+//     return reverse;
 // }
-// console.log(palindrome("Deep"));
-
-
+// console.log(reverseString("Deep is my name"));
 
 // 6. Write a callback function example using `setTimeout`.
+// setTimeout(function name(){
+//     console.log("Deep");
+// },1000)
+
 // 7. Create a higher-order function that executes another function twice.
+// let parent = () => {
+//     console.log(`I am parent`);
+//     function child(){
+//         console.log(`I am Child`);
+//     }
+//     child()
+// }
+// parent()
+
 // 8. Write a function that returns another function.
+// let parent = () => {
+//     console.log(`I am parent`);
+//     function child(){
+//         console.log(`I am Child`);
+//     }
+//     child()
+// }
+// parent()
+
 // 9. Create a pure function for subtraction.
+// let sub = (a,b) => {
+//     return a - b
+// }
+// console.log(sub(4,2));
+
 // 10. Create an impure function using global variable modification.
+// let count = 0;
+// function impure() {
+//     count++;
+//     return count;
+// }
+// console.log(impure());
+// console.log(impure());
+// console.log(impure());
 
 // ---
 
 // # Part 2 — Advanced Functions (21–35)
 
 // 1. Write a recursive function for factorial.
+// let fact = (num) => {
+//   if (num === 0 || num === 1) return 1;
+
+//   return num * fact(num-1)
+// }
+// console.log(fact(5));
+
+
 // 2. Write recursive Fibonacci function.
+// let fibonacci = (num) => {
+//     if(num === 0) return 0;
+//     if(num === 1) return 1;
+//     return fibonacci(num - 1) + fibonacci (num - 2)
+// }
+// console.log(fibonacci(3));
+
+
 // 3. Create a function that finds power using recursion.
+
+
 // 4. Create an IIFE that prints `"Executed"`.
+// (function gree(){
+//   console.log("Executed");
+// })()
+
+
 // 5. Write a function that memoizes factorial calculation.
+// let memorize = () => {
+//     let cache = {}
+
+//     return function factorial(num){
+//         if(cache[num] !== undefined) return cache[num];
+
+//         if(num === 0 || num === 1){
+//             cache[num] == 1;
+//             return 1;
+//         }
+
+//         cache[num] = num * factorial(num - 1);
+//         return cache[num];
+//     }
+    
+//     factorial.getCache = () => cache;
+//     return factorial;
+// }
+// const fact = memorize();
+// fact(3);
+// fact(5);
+// console.log(fact.getCache());
+
+
 // 6. Create a closure counter function.
 // 7. Write a function currying example for addition.
 // 8. Create debounce function logic.
 // 9. Create throttle function logic.
 // 10. Write a function that executes only once.
+// function greet(){
+//     console.log("Hello")
+// }
+// greet();
+
+
 // 11. Create custom implementation of `map`.
+// let greet = [22,233,44,5,6,67,7]
+// let mapp = greet.map(function hello(num){
+//     console.log("Hello",num);
+// })
+// console.log(mapp);
+
+
 // 12. Create custom implementation of `filter`.
+// let greet = [22,233,44,5,6,67,7]
+// let filter = greet.filter(function even (num) {
+//     return num % 2 == 0;
+// })
+// console.log(filter);
+
+
 // 13. Create custom implementation of `reduce`.
+// let greet = [22,233,44,5,6,67,7]
+// let sum =  greet.reduce(function(acc, val) {
+//     return acc + val;
+// },0)
+// console.log(sum);
+
+
 // 14. Create custom `forEach`.
+// let greet = [22,233,44,5,6,67,7]
+// let sum = greet.forEach(function sum(num){
+//     console.log(num);
+    
+// });
+// console.log(sum);
+
+
 // 15. Explain output:
 
 // ```jsx
@@ -172,22 +274,68 @@
 // console.log(test());
 // ```
 
-// ---
+// Output = undefined
 
 // # Part 3 — Arrays Basics (36–55)
 
 // ## Beginner
 
 // 1. Create an array of 5 fruits.
+// let arr = ["Custard", "Apple", "Mango", "Chikku", "Papaya"];
+
+
 // 2. Print first and last element of array.
+// let arr = ["Custard", "Apple", "Mango", "Chikku", "Papaya"];
+// console.log(arr[0]);
+// console.log(arr[arr.length-1]);
+
+
 // 3. Find length of array.
+// let arr = ["Custard", "Apple", "Mango", "Chikku", "Papaya"];
+// let length = arr.length;
+// console.log(length);
+
+
 // 4. Add element at end using `push`.
+// let arr = ["Custard", "Apple", "Mango", "Chikku", "Papaya"];
+// arr.push("JackFruit")
+// console.log(arr);
+
+
 // 5. Remove last element using `pop`.
+// let arr = ["Custard", "Apple", "Mango", "Chikku", "Papaya"];
+// arr.pop(arr[arr.length-1]);
+// console.log(arr);
+
+
 // 6. Add element at beginning using `unshift`.
+// let arr = ["Custard", "Apple", "Mango", "Chikku", "Papaya"];
+// arr.unshift("Berry");
+// console.log(arr);
+
+
 // 7. Remove first element using `shift`.
+// let arr = ["Custard", "Apple", "Mango", "Chikku", "Papaya"];
+// arr.shift();
+// console.log(arr);
+
+
 // 8. Reverse an array.
+// let arr = ["Custard", "Apple", "Mango", "Chikku", "Papaya"];
+// arr.reverse()
+// console.log(arr);
+
+
 // 9. Sort numbers ascending.
+// let arr = [22,45,45,243,7,784,3,234,456]
+// arr.sort((a,b) => a-b);
+// console.log(arr);
+
+
 // 10. Sort numbers descending.
+let arr = [22,45,45,243,7,784,3,234,456]
+arr.sort((a,b) => b-a);
+console.log(arr);
 
 // ---
 
@@ -271,7 +419,7 @@
 // ---
 
 // > These questions are optional, but if you want to improve your JavaScript and logic building skills, then try solving them.Take help from ChatGPT, Google, or YouTube if needed, but understand the logic instead of copying answers.
-// > 
+// >
 
 // # Bonus Hard Questions
 
