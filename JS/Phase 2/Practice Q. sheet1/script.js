@@ -333,9 +333,9 @@
 
 
 // 10. Sort numbers descending.
-let arr = [22,45,45,243,7,784,3,234,456]
-arr.sort((a,b) => b-a);
-console.log(arr);
+// let arr = [22,45,45,243,7,784,3,234,456]
+// arr.sort((a,b) => b-a);
+// console.log(arr);
 
 // ---
 
