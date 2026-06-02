@@ -89,3 +89,9 @@
 4. .bind
 5. prototype
 6.types of error
+
+
+# 2 June 2026
+1. Constructor Function
+2. Prototypal Inhiritance
+3. Classical Inheritance
