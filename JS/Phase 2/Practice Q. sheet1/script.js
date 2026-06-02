@@ -342,15 +342,65 @@
 // ## Intermediate
 
 // 1. Use `splice` to remove elements.
+// let arr = ["Custard", "Apple", "Mango", "Chikku", "Papaya"];
+// arr.splice(2,2);
+// console.log(arr);
+
+
 // 2. Use `splice` to insert elements.
+// let arr = ["Custard", "Apple", "Mango", "Chikku", "Papaya"];
+// arr.splice(2,0,1,2,3,4)
+// console.log(arr);
+
+
 // 3. Use `slice` to copy array.
+// let arr = ["Custard", "Apple", "Mango", "Chikku", "Papaya"];
+// arr.slice(arr.push("banana"));
+// console.log(arr);
+
+
 // 4. Find index of an element.
+// let arr = ["Custard", "Apple", "Mango", "Chikku", "Papaya"];
+// console.log(arr.indexOf("Mango"));
+
+
 // 5. Check if array contains a value.
+// let arr = ["Custard", "Apple","Banana", "Mango", "Chikku", "Papaya"];
+// console.log(arr.includes("Banana"));
+
+
 // 6. Join array elements with .
+// let arr = ["Custard", "Apple","Banana", "Mango", "Chikku", "Papaya"];
+// console.log(arr.join('-'));
+// console.log(arr);
+
+
 // 7. Merge two arrays using spread operator.
+// let arr = ["Custard", "Apple","Banana", "Mango", "Chikku", "Papaya"];
+// let arr2 = [22,45,45,243,7,784,3,234,456]
+// console.log(...arr,...arr2);
+
+
 // 8. Copy array using spread operator.
+// let arr = ["Custard", "Apple","Banana", "Mango", "Chikku", "Papaya"];
+// console.log(arr);
+// let copy = []
+// copy.push(...arr)
+// copy.push("JackFruit")
+// console.log(copy);
+
+
 // 9. Find maximum value using `Math.max`.
+// let arr2 = [22,45,45,243,7,784,3,234,456]
+// let arr = Math.max(...arr2);
+// console.log(arr);
+
+
 // 10. Swap two variables using destructuring.
+// let x = 1, y = 2;
+// [x, y] = [y, x];
+// console.log(x, y);
+
 
 // ---
 
@@ -361,17 +411,128 @@
 // # Part 5 — Objects Basics (76–90)
 
 // 1. Create object for a student.
+// let student = {
+//     name: 'Deep',
+//     age: 23,
+//     haveLicence: true
+// }
+
+
 // 2. Access properties using dot notation.
+// let student = {
+//     name: 'Deep',
+//     age: 23,
+//     haveLicence: true
+// }
+// console.log(student.name);
+
+
 // 3. Access properties using bracket notation.
+// let student = {
+//     name: 'Deep',
+//     age: 23,
+//     haveLicence: true
+// }
+// console.log(student['name']);
+
+
 // 4. Add new property dynamically.
+// let student = {
+//     name: 'Deep',
+//     age: 23,
+//     haveLicence: true
+// }
+// student.country = "India";
+// console.log(student);
+
+
 // 5. Update existing property.
+// let student = {
+//     name: 'Deep',
+//     age: 23,
+//     haveLicence: true
+// }
+// student.name = "Nayan"
+// console.log(student);
+
+
 // 6. Delete a property.
+// let student = {
+//     name: 'Deep',
+//     age: 23,
+//     haveLicence: true
+// }
+// delete student.haveLicence;
+// console.log(student);
+
+
 // 7. Create object method.
+// let student = {
+//     name: function name(name){
+//         console.log(name);
+//     },
+//     sum: function sum(a,b){
+//         console.log(a+b);
+//     }
+// }
+// student.name("Sheriyans");
+// student.sum(5,3);
+
+
 // 8. Use `this` keyword inside method.
+// let obj = {
+//     name: "Deep",
+//     welcomeMsg: function welcome(){
+//         console.log("Welcome to here ", this.name);
+//     }
+// }
+// obj.welcomeMsg();
+
+
 // 9. Create nested object.
+// let obj = {
+//     names: {
+//         firstnmae: "Deep",
+//         middle: "Gnaesh",
+//         surname: "Pakhare"
+//     },
+//     num: {
+//         num1: 66,
+//         num2: 69
+//     }
+// }
+// console.log(obj);
+
+
 // 10. Access deeply nested property.
+// let obj = {
+//     names: {
+//         firstnmae: "Deep",
+//         middle: "Gnaesh",
+//         surname: "Pakhare"
+//     },
+//     num: {
+//         num1: 66,
+//         num2: 69
+//     }
+// }
+// console.log(obj.names.firstnmae);
+// console.log(obj.num.num2);
+
+
 // 11. Destructure object properties.
+let student = {
+    name: 'Deep',
+    age: 23,
+    haveLicence: true
+}
+let {name,age} = student;
+console.log(name,age);
+
+
+
 // 12. Rename variables while destructuring.
+
 // 13. Add default values during destructuring.
 // 14. Copy object using spread operator.
 // 15. Merge two objects.
