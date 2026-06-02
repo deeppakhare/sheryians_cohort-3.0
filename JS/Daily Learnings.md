@@ -80,3 +80,12 @@
 6. Lexical Scope 
 7. Lexical Environment
 8. Closures
+
+
+# 1 June 2026
+1. this keyword
+2. .call
+3. .apply
+4. .bind
+5. prototype
+6.types of error
