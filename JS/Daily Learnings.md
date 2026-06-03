@@ -95,3 +95,14 @@
 1. Constructor Function
 2. Prototypal Inhiritance
 3. Classical Inheritance
+
+# 3 June 2026
+### Async javascript 
+1. Synchronous vs Asynchronous
+2. setTimeout()
+3. setinterval
+4. clearInterval()
+5. Call Stack
+6. Callback Queue
+7. Microtask Queue 
+8. Event Loop
