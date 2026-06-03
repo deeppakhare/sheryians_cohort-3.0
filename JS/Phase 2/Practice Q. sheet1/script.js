@@ -521,34 +521,158 @@
 
 
 // 11. Destructure object properties.
-let student = {
-    name: 'Deep',
-    age: 23,
-    haveLicence: true
-}
-let {name,age} = student;
-console.log(name,age);
+// let student = {
+//     name: 'Deep',
+//     age: 23,
+//     haveLicence: true
+// }
+// let {name,age} = student;
+// console.log(name,age);
 
 
 
 // 12. Rename variables while destructuring.
+// let student = {
+//     name: 'Deep',
+//     age: 23,
+//     haveLicence: true
+// }
+// let {name: fullName,age: year} = student;
+// console.log(fullName,year);
+
 
 // 13. Add default values during destructuring.
-// 14. Copy object using spread operator.
-// 15. Merge two objects.
+// let obj = {
+//     name: 'Deep',
+//     age: 20
+// }
+// let {name,age,country = 'India'} = obj;
+// console.log(age, country);
 
-// ---
+
+// 14. Copy object using spread operator.
+// let obj = {
+//     name: 'Deep',
+//     age: 20
+// }
+// let copy = {...obj}
+// console.log(copy);
+
+
+// 15. Merge two objects.
+// let student = {
+//     name: 'Nayan',
+//     age: 32,
+//     haveLicence: true
+// }
+// let obj = {
+//     name2: 'Deep',
+//     age2: 20
+// }
+// let merged = {...obj,...student}
+// console.log(merged);
+
+
 
 // # Part 6 — Advanced Objects + Real Logic (91–100)
 
 // 1. Use `Object.keys()` on object.
+// let student = {
+//     name: 'Nayan',
+//     age: 32,
+//     haveLicence: true
+// }
+// console.log(Object.keys(student));
+
+
 // 2. Use `Object.values()`.
+// let student = {
+//     name: 'Nayan',
+//     age: 32,
+//     haveLicence: true
+// }
+// console.log(Object.values(student));
+
+
 // 3. Use `Object.entries()`.
+// let student = {
+//     name: 'Nayan',
+//     age: 32,
+//     haveLicence: true
+// }
+// console.log(Object.entries(student));
+
+
 // 4. Loop through object using `for...in`.
+// let student = {
+//     name: 'Nayan',
+//     age: 32,
+//     haveLicence: true
+// }
+// for (const key in student) {
+//     console.log(key,student[key]);
+// }
+
+
 // 5. Freeze an object and test modification.
+// let student = {
+//     name: 'Nayan',
+//     age: 32,
+//     haveLicence: true
+// }
+// let freeze = Object.freeze(student);
+// console.log(freeze.name);
+
+
 // 6. Seal an object and test modification.
+// let student = {
+//     name: 'Nayan',
+//     age: 32,
+//     haveLicence: true
+// }
+// let seal = Object.seal(student);
+// seal.age = 33;
+// console.log(seal);
+
+
 // 7. Create array of objects for users.
+// let users = [
+//     {
+//         name: 'Deep',
+//         age: 22
+//     },
+//     {
+//         name: 'Nayan',
+//         age: 16
+//     },
+//     {
+//         name: 'Pavan',
+//         age: 23
+//     },
+//     {
+//         name: 'Sultan',
+//         age: 20
+//     }
+// ]
+
+// console.log(users[0]);
+
+
 // 8. Find user with highest age.
+// let users = [
+//   { name: 'Deep', age: 22 },
+//   { name: 'Nayan', age: 16 },
+//   { name: 'Pavan', age: 23 },
+//   { name: 'Sultan', age: 20 }
+// ];
+
+// let oldestUser = users.reduce((oldest, current) => {
+//   return (current.age > oldest.age) ? current : oldest;
+// }, users[0]);
+
+// console.log(oldestUser); 
+
+
 // 9. Build a mini TODO app using arrays + objects.
 // 10. Build a shopping cart system with:
 // - add item
