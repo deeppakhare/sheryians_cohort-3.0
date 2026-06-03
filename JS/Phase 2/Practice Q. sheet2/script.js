@@ -139,14 +139,24 @@
 // Remove last element and print removed value.
 
 // **Hint:** Store `pop()` result
+// let arr = [23, 66, 41, 2, "splender", "yamaha", "alto", true, false];
+// let result = arr.pop()
+// console.log(result);
+
 
 // ### Hard
 
 // Keep removing elements until array becomes empty.
 
 // **Hint:** Use `while` loop
+// let arr = [23, 66, 41, 2, "splender", "yamaha", "alto", true, false];
+// let i = arr.length;
+// while(i > 0){
+//     arr.pop()
+//     console.log(arr);
+//     i--;
+// }
 
-// ---
 
 // # 7. unshift()
 
@@ -155,6 +165,10 @@
 // Add one username at beginning of array.
 
 // **Hint:** Use `unshift()`
+// let arr = [23, 66, 41, 2, "splender", "yamaha", "alto", true, false];
+// arr.unshift("Deep");
+// console.log(arr);
+
 
 // ### Hard
 
@@ -162,7 +176,12 @@
 
 // **Hint:** Multiple arguments
 
-// ---
+// let arr = [23, 66, 41, 2, "splender", "yamaha", "alto", true, false];
+// arr.unshift("Deep");
+// arr.unshift("Pakhare");
+// arr.unshift(6669);
+// console.log(arr);
+
 
 // # 8. shift()
 
@@ -172,13 +191,23 @@
 
 // **Hint:** Use `shift()`
 
+// let arr = [23, 66, 41, 2, "splender", "yamaha", "alto", true, false];
+// arr.shift();
+// console.log(arr);
+
+
 // ### Hard
 
 // Remove first element repeatedly until only 2 elements remain.
 
 // **Hint:** Loop + length check
 
-// ---
+// let arr = [23, 66, 41, 2, "splender", "yamaha", "alto", true, false];
+// for(let i = arr.length-1; i >= 2; i--){
+//     arr.shift()
+//     console.log(arr);
+// }
+
 
 // # 9. splice()
 
@@ -188,13 +217,21 @@
 
 // **Hint:** `splice(start, deleteCount)`
 
+// let arr = [23, 66, 41, 2, "splender", "yamaha", "alto", true, false];
+// arr.splice(4,2)
+// console.log(arr);
+
+
 // ### Hard
 
 // Replace 3 middle elements with 5 new values.
 
 // **Hint:** Use insertion with splice
 
-// ---
+// let arr = [23, 66, 41, 2, "splender", "yamaha", "alto", true, false];
+// arr.splice(3,3,1,2,3,4,5);
+// console.log(arr);
+
 
 // # 10. reverse()
 
@@ -204,13 +241,24 @@
 
 // **Hint:** Use `reverse()`
 
+// let arr = [23, 66, 41, 2, "splender", "yamaha", "alto", true, false];
+// arr.reverse();
+// console.log(arr);
+
+
 // ### Hard
 
 // Reverse only first half of array.
 
 // **Hint:** Manual swapping
 
-// ---
+// let arr = [23, 66, 41, 2, "splender", "yamaha", "alto", true, false];
+// let arr2 = arr.slice(0,5)
+// arr2.reverse()
+// let arr3 = arr.slice(5,9)
+// arr = [...arr2,...arr3]
+// console.log(arr);
+
 
 // # 11. sort()
 
@@ -220,13 +268,19 @@
 
 // **Hint:** Compare function
 
-// ### Hard
+// let arr = [232,223,45,225,233,434,34,5,54,3]
+// let asc = arr.sort((a,b) => a-b)
+// console.log(asc);
+
 
 // Sort array so even numbers come first and odd later.
 
 // **Hint:** Custom compare logic
 
-// ---
+// let arr = [232,223,45,225,233,434,34,5,54,3]
+// let asc = arr.sort((a,b) => (a % 2 - b % 2) || (a - b))
+// console.log(asc);
+
 
 // # 12. slice()
 
@@ -236,13 +290,21 @@
 
 // **Hint:** Use `slice()`
 
+// let arr = [232,223,45,225,233,434,34,5,54,3]
+// let arr2 = arr.slice(0,4);
+// console.log(arr2);
+
+
 // ### Hard
 
 // Create a copy excluding first and last element.
 
 // **Hint:** Use start and end indexes
 
-// ---
+// let arr = [232,223,45,225,233,434,34,5,54,3]
+// let arr2 = arr.slice(1,arr.length-1)
+// console.log(arr2);
+
 
 // # 13. concat()
 
@@ -252,13 +314,33 @@
 
 // **Hint:** Use `concat()`
 
+// let arr = [23, 66, 41, 2, "splender"]
+// let arr2  = ["yamaha", "alto", true, false];
+// let arr3 = []
+// let merged = arr2.concat(arr,arr3)
+// console.log(merged);
+
+
 // ### Hard
 
 // Merge 3 arrays and remove duplicate values.
 
 // **Hint:** Combine + loop/includes
 
-// ---
+// let arr = [23, true, 41, 2, "splender"]
+// let arr2  = ["yamaha", "splender", true, false];
+// let arr3 = ["CD-100", 2, 100, 18];
+// let arr4 = [...arr,...arr2,...arr3];
+// let filter = [];
+// for(let i = 0; i <= arr4.length-1;i++){
+//     if(!filter.includes(arr4[i])) {
+//         filter.push(arr4[i]);
+//     }
+        
+//     }
+// console.log(arr4);
+// console.log(filter);
+
 
 // # 14. includes()
 
@@ -268,13 +350,20 @@
 
 // **Hint:** Use boolean result
 
+// let arr = ["banana", "Chikku", "Papaya", "Mango", "Apple"];
+// console.log(arr.includes("Apple"));
+
+
 // ### Hard
 
 // Check if all elements of one array exist inside another.
 
 // **Hint:** Loop + includes
 
-// ---
+let arr = ["banana", "Chikku", "Papaya", "Mango", "Apple"];
+let arr2 = ["banana", "Chikku", "Papaya", "Custard"];
+// let arr2 = ["banana", "Chikku", "Papaya" ];
+
 
 // # 15. indexOf()
 
