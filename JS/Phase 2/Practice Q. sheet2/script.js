@@ -502,7 +502,7 @@
 
 // **Hint:** Combine spread carefully
 
-let arr1 = [2, 3, 4, 5, 9, 20];
-let arr2 = ["deep", "nayan", "pawan"]
-let arr3 = [...arr1,...arr2];
-console.log(arr3);
+// let arr1 = [2, 3, 4, 5, 9, 20];
+// let arr2 = ["deep", "nayan", "pawan"]
+// let arr3 = [...arr1,...arr2];
+// console.log(arr3);
