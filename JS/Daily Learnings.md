@@ -106,3 +106,14 @@
 6. Callback Queue
 7. Microtask Queue 
 8. Event Loop
+
+
+# 4 June 2026
+• API
+• Understanding Promises in depth
+• Learning how to create custom Promises
+• Exploring Promise states (Pending, Resolved, Rejected)
+• Handling Promises using .then() and .catch()
+• Understanding error handling with try...catch
+• Learning how to work with APIs and asynchronous data
+• Better understanding of real-world asynchronous workflows
