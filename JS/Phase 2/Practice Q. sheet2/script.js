@@ -123,14 +123,12 @@
 
 // **Hint:** Loop + push
 
-
 // let arr1 = [23, 66, 41, 2, "splender", "yamaha", "alto", true, false];
 // let arr2 = [7, 8, 9, "deep", 43, 22, "nayan"];
 // for(let i = 0; i <= arr2.length-1; i++){
 //     arr1.push(arr2[i])
 // }
 // console.log(arr1);
-
 
 // # 6. pop()
 
@@ -142,7 +140,6 @@
 // let arr = [23, 66, 41, 2, "splender", "yamaha", "alto", true, false];
 // let result = arr.pop()
 // console.log(result);
-
 
 // ### Hard
 
@@ -157,7 +154,6 @@
 //     i--;
 // }
 
-
 // # 7. unshift()
 
 // ### Intermediate
@@ -168,7 +164,6 @@
 // let arr = [23, 66, 41, 2, "splender", "yamaha", "alto", true, false];
 // arr.unshift("Deep");
 // console.log(arr);
-
 
 // ### Hard
 
@@ -182,7 +177,6 @@
 // arr.unshift(6669);
 // console.log(arr);
 
-
 // # 8. shift()
 
 // ### Intermediate
@@ -194,7 +188,6 @@
 // let arr = [23, 66, 41, 2, "splender", "yamaha", "alto", true, false];
 // arr.shift();
 // console.log(arr);
-
 
 // ### Hard
 
@@ -208,7 +201,6 @@
 //     console.log(arr);
 // }
 
-
 // # 9. splice()
 
 // ### Intermediate
@@ -221,7 +213,6 @@
 // arr.splice(4,2)
 // console.log(arr);
 
-
 // ### Hard
 
 // Replace 3 middle elements with 5 new values.
@@ -231,7 +222,6 @@
 // let arr = [23, 66, 41, 2, "splender", "yamaha", "alto", true, false];
 // arr.splice(3,3,1,2,3,4,5);
 // console.log(arr);
-
 
 // # 10. reverse()
 
@@ -244,7 +234,6 @@
 // let arr = [23, 66, 41, 2, "splender", "yamaha", "alto", true, false];
 // arr.reverse();
 // console.log(arr);
-
 
 // ### Hard
 
@@ -259,7 +248,6 @@
 // arr = [...arr2,...arr3]
 // console.log(arr);
 
-
 // # 11. sort()
 
 // ### Intermediate
@@ -272,7 +260,6 @@
 // let asc = arr.sort((a,b) => a-b)
 // console.log(asc);
 
-
 // Sort array so even numbers come first and odd later.
 
 // **Hint:** Custom compare logic
@@ -280,7 +267,6 @@
 // let arr = [232,223,45,225,233,434,34,5,54,3]
 // let asc = arr.sort((a,b) => (a % 2 - b % 2) || (a - b))
 // console.log(asc);
-
 
 // # 12. slice()
 
@@ -294,7 +280,6 @@
 // let arr2 = arr.slice(0,4);
 // console.log(arr2);
 
-
 // ### Hard
 
 // Create a copy excluding first and last element.
@@ -304,7 +289,6 @@
 // let arr = [232,223,45,225,233,434,34,5,54,3]
 // let arr2 = arr.slice(1,arr.length-1)
 // console.log(arr2);
-
 
 // # 13. concat()
 
@@ -319,7 +303,6 @@
 // let arr3 = []
 // let merged = arr2.concat(arr,arr3)
 // console.log(merged);
-
 
 // ### Hard
 
@@ -336,11 +319,10 @@
 //     if(!filter.includes(arr4[i])) {
 //         filter.push(arr4[i]);
 //     }
-        
+
 //     }
 // console.log(arr4);
 // console.log(filter);
-
 
 // # 14. includes()
 
@@ -353,16 +335,22 @@
 // let arr = ["banana", "Chikku", "Papaya", "Mango", "Apple"];
 // console.log(arr.includes("Apple"));
 
-
 // ### Hard
 
 // Check if all elements of one array exist inside another.
 
 // **Hint:** Loop + includes
 
-let arr = ["banana", "Chikku", "Papaya", "Mango", "Apple"];
-let arr2 = ["banana", "Chikku", "Papaya", "Custard"];
-// let arr2 = ["banana", "Chikku", "Papaya" ];
+// let arr = ["banana", "Chikku", "Papaya", "Mango", "Apple"];
+// let arr2 = ["banana", "Chikku", "Papaya"];
+// let count = 0;
+// let check = arr2.forEach(function exist(elem) {
+//   if (arr.includes(elem)) {
+//     count++;
+//   }
+// });
+// if(count == arr2.length) console.log("all elements are exist");
+// else console.log("Not all elements exist");
 
 
 // # 15. indexOf()
@@ -373,13 +361,21 @@ let arr2 = ["banana", "Chikku", "Papaya", "Custard"];
 
 // **Hint:** Use `indexOf()`
 
+// let arr = ["banana", "Chikku", "Rahul", "Mango", "Apple"];
+// console.log(arr.indexOf("Rahul"));
+
+
 // ### Hard
 
 // Find all positions of repeated number `5`.
 
 // **Hint:** Loop through entire array
 
-// ---
+// let arr = [1,23,4,5,34,5,23,5,6,7,8,5]
+// for(let i = 0; i <= arr.length-1; i++){
+//     if(arr[i] === 5) console.log(i);
+// }
+
 
 // # 16. join()
 
@@ -389,13 +385,19 @@ let arr2 = ["banana", "Chikku", "Papaya", "Custard"];
 
 // **Hint:** Use `join(",")`
 
+// let arr = ["banana", "Chikku", "Rahul", "Mango", "Apple"];
+// console.log(arr.join(","));
+
+
 // ### Hard
 
 // Convert array into sentence format.
 
 // **Hint:** Join with spaces
 
-// ---
+// let arr = ["banana", "Chikku", "Rahul", "Mango", "Apple"];
+// console.log(arr.join(" "));
+
 
 // # 17. for loop
 
@@ -405,13 +407,23 @@ let arr2 = ["banana", "Chikku", "Papaya", "Custard"];
 
 // **Hint:** Loop through indexes
 
+// let arr = ["banana", "Chikku", "Rahul", "Mango", "Apple"];
+// for(let i = 0; i <= arr.length-1; i++){
+//     console.log(arr[i]);
+// }
+
+
 // ### Hard
 
 // Print elements at only even indexes.
 
 // **Hint:** Increase loop smartly
 
-// ---
+// let arr = ["banana", "Chikku", "Rahul", "Mango", "Apple"];
+// for(let i = 0; i <= arr.length-1; i++){
+//     if(arr.indexOf(arr[i]) % 2 === 0) console.log(arr[i]);
+// }
+
 
 // # 18. for...of
 
@@ -421,13 +433,25 @@ let arr2 = ["banana", "Chikku", "Papaya", "Custard"];
 
 // **Hint:** Direct value iteration
 
+// let arr = ["banana", "Chikku", "Rahul", "Mango", "Apple"];
+// for (const element of arr) {
+//     console.log(element);
+// }
+
+
 // ### Hard
 
 // Count vowels from array of characters.
 
 // **Hint:** Use conditions inside loop
 
-// ---
+// let arr = ['J','a','v','a','s','c','r','i','p','t','i','s','b','e','s','t'];
+// let count = 0;
+// for (const element of arr) {
+//     if(element == 'a' || element == 'e' || element == 'i' || element == 'o' || element == 'u' ) count++;
+// }
+// console.log(count);
+
 
 // # 19. Reference Behaviour of Array
 
@@ -437,13 +461,27 @@ let arr2 = ["banana", "Chikku", "Papaya", "Custard"];
 
 // **Hint:** Observe original array
 
+// let arr1 = [2, 3, 4, 5, 9, 20];
+// console.log(arr1);
+
+// let arr2 = [...arr1];
+// arr2.push(23)
+// arr2.push(3)
+// arr2.push(30)
+// console.log(arr2);
+
+
 // ### Hard
 
 // Create true copy so original array does not change.
 
 // **Hint:** Use spread operator
 
-// ---
+// let arr1 = [2, 3, 4, 5, 9, 20];
+// console.log(arr1);
+// let arr2 = [...arr1];
+// console.log(arr2);
+
 
 // # 20. Spread Operator
 
@@ -453,8 +491,18 @@ let arr2 = ["banana", "Chikku", "Papaya", "Custard"];
 
 // **Hint:** Use `...`
 
+// let arr1 = [2, 3, 4, 5, 9, 20];
+// console.log(arr1);
+// let arr2 = [...arr1];
+// console.log(arr2);
+
 // ### Hard
 
 // Merge arrays and add extra values in between.
 
 // **Hint:** Combine spread carefully
+
+let arr1 = [2, 3, 4, 5, 9, 20];
+let arr2 = ["deep", "nayan", "pawan"]
+let arr3 = [...arr1,...arr2];
+console.log(arr3);
