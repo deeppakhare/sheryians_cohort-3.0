@@ -1,5 +1,5 @@
 
-// ISBN :- International Structured Nook Number
+// ISBN :- International Structured Book Number
 
 // let num = 9992158106;
 let num = 8175257660;

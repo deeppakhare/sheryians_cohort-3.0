@@ -388,19 +388,18 @@ count = 0;
 // true
 // ```
 
+
+// ### Hint
+
+// - `some()` returns true if at least one condition matches.
+
+
 let nums = [10, 20, -5, 40];
 nums.some((a,b) => {
     console.log(a);
     console.log(b);
     
 });
-
-
-// ### Hint
-
-// - `some()` returns true if at least one condition matches.
-
-// ---
 
 // ### Hard Question
 
