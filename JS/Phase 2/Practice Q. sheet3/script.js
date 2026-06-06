@@ -258,13 +258,11 @@
 
 let fruits = ["apple", "banana", "apple", "orange", "banana", "apple"];
 let obj = {};
-fruits.reduce((acc, val) => {
-    let count = 0;
-    if(acc == val) count++;
-    console.log(count);
-    
-    
-},0)
+count = 0;
+
+
+
+
 
 // # 5. `find()`
 
@@ -281,6 +279,13 @@ fruits.reduce((acc, val) => {
 // ```jsx
 // 60
 // ```
+
+// let nums = [20, 35, 60, 80];
+// let sort =  nums.find(function (elem){
+//       if(elem>50) return elem
+// })
+// console.log(sort);
+
 
 // ### Hint
 
@@ -308,7 +313,16 @@ fruits.reduce((acc, val) => {
 // user.username === "admin"
 // ```
 
-// ---
+// let users = [
+//   { username: "rahul" },
+//   { username: "admin" },
+//   { username: "aman" }
+// ];
+// let admin = users.find((elem) => {
+//     if(elem.username == "admin") return elem;    
+// });
+// console.log(admin);
+
 
 // # 6. `findIndex()`
 
@@ -324,7 +338,9 @@ fruits.reduce((acc, val) => {
 
 // - `findIndex()` returns index number.
 
-// ---
+// let arr = [10, 20, 40 ,50, 90];
+// console.log(arr.indexOf(90));
+
 
 // ### Hard Question
 
@@ -346,7 +362,15 @@ fruits.reduce((acc, val) => {
 
 // - Use condition directly inside callback.
 
-// ---
+// let students = [
+//   { name: "A", marks: 90 },
+//   { name: "B", marks: 30 },
+//   { name: "C", marks: 70 }
+// ];
+// students.forEach((elem) => {
+//     if(elem.marks < 40) console.log(students.indexOf(elem));
+// })
+
 
 // # 7. `some()`
 
@@ -363,6 +387,14 @@ fruits.reduce((acc, val) => {
 // ```jsx
 // true
 // ```
+
+let nums = [10, 20, -5, 40];
+nums.some((a,b) => {
+    console.log(a);
+    console.log(b);
+    
+});
+
 
 // ### Hint
 
