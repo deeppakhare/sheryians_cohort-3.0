@@ -256,12 +256,28 @@
 // - Create an empty object `{}` as initial value.
 // - Increase count if already exists.
 
-let fruits = ["apple", "banana", "apple", "orange", "banana", "apple"];
-let obj = {};
-count = 0;
+// let fruits = ["apple", "banana", "apple", "orange", "banana", "apple"];
+// let obj = {};
+// count = 0;
+// for(let i = 0; i <= fruits.length-1; i++){
+//     let fruit = fruits[i];
+//     if(obj[fruit]){
+//         obj[fruit] = obj[fruit] + 1;
+//     } else {
+//         obj[fruit] = 1;
+//     }
+// }
+// console.log(obj);
 
-
-
+// let frequency = 0;
+// let mostFreq;
+// for (const key in obj) {
+//    if(obj[key] > frequency){
+//     frequency = obj[key];
+//     mostFreq = key;
+//    }  
+// }
+// console.log(mostFreq);
 
 
 // # 5. `find()`
@@ -394,12 +410,9 @@ count = 0;
 // - `some()` returns true if at least one condition matches.
 
 
-let nums = [10, 20, -5, 40];
-nums.some((a,b) => {
-    console.log(a);
-    console.log(b);
-    
-});
+// let nums = [10, 20, -5, 40];
+// console.log(nums.some((n) => n < 0));
+
 
 // ### Hard Question
 
@@ -420,7 +433,12 @@ nums.some((a,b) => {
 // stock === 0
 // ```
 
-// ---
+// let products = [
+//   { name: "Laptop", stock: 5 },
+//   { name: "Phone", stock: 0 },
+// ];
+// console.log(products.some((n) => n.stock == 0) )
+
 
 // # 8. `every()`
 
@@ -442,7 +460,9 @@ nums.some((a,b) => {
 
 // - `every()` checks all elements.
 
-// ---
+// let nums = [10, 20, 30, 40];
+// console.log(nums.every((n) => n>0 ));
+
 
 // ### Hard Question
 
@@ -469,3 +489,14 @@ nums.some((a,b) => {
 // ```jsx
 // marks >= 40
 // ```
+
+// let students = [
+//   { name: "A", marks: 80 },
+//   { name: "B", marks: 45 },
+//   { name: "C", marks: 60 },
+// ];
+// let result = students.every((n) => n.marks > 40 );
+// if(result) console.log("All are passes");
+// else console.log("Not");
+
+
