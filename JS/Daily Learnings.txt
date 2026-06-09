@@ -117,3 +117,21 @@
 • Understanding error handling with try...catch
 • Learning how to work with APIs and asynchronous data
 • Better understanding of real-world asynchronous workflows
+
+
+# 9 June 2026
+1. Introduction to DOM
+2. Browser -> Dom Tree -> CSS OM Tree 
+3. DOM Tree + CSS OM --> Render Tree.
+4.  > document.querySelector('h1');
+    > document.querySelectorAll('h1');
+    > document.getElementBYTagName('h1');
+    > document.getElementById('heading');
+    > document.getElementsByClassName('first');
+5.    > h1.textContent('...);
+      > h1.innerText('...);
+      > h1.innerHtml('...);
+      >.style.bgcolor= "red"
+      >.style.padding = "10px"
+      >.style.display = "flex"
+      
