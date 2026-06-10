@@ -135,3 +135,11 @@
       >.style.padding = "10px"
       >.style.display = "flex"
       
+
+# 10 June 2026
+1. Differnce between Node List and HTML Collection
+    > .childNode
+    > .children
+2. Classlist and there functions
+3. addEventListener('click',callbackfunction...)
+4. bhaya take example og bulb he made one button and add evenlistner to button then the bulb bg color make yello
