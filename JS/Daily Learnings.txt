@@ -143,3 +143,28 @@
 2. Classlist and there functions
 3. addEventListener('click',callbackfunction...)
 4. bhaya take example og bulb he made one button and add evenlistner to button then the bulb bg color make yello
+
+
+# 11 June 2026
+1. attributes and properties
+    > attributes --> id,class,src,alt,type,placeholder
+    > properties --> name given to the attributes values
+    - .getAttribute
+    - .setAttribute
+    - .removeAttribute
+    - .hasAttribute (return boolean)
+
+2. How to make custom attribute with 'data-xyz' property in HTML 
+    > and change propert using .dataset property in dom
+
+3. input.value vs input.getAttribute('value')
+4. creating inserting and removing elements from dom
+    > .createElement()
+    > - .appendChild() -- old version  (appendChils only insert one element)
+      - .append() --new version (append insert multiple elements)
+    > .removeChild()
+    > .insertBefore()
+    > .prepend() --(insert first)
+    > .before() 
+    > .after()
+    > .replaceChild();    
