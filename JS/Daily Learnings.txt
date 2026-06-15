@@ -168,3 +168,7 @@
     > .before() 
     > .after()
     > .replaceChild();    
+
+
+# 15 June 2026
+1. Event Daligation (we add event listner to parent)
