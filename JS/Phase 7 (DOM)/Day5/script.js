@@ -69,3 +69,5 @@ box.addEventListener("click", () => {
   score += 1;
   scoree.textContent = score;
 });
+
+
