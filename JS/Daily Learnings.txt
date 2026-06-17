@@ -172,3 +172,16 @@
 
 # 15 June 2026
 1. Event Daligation (we add event listner to parent)
+
+
+# 17 June 2026
+1. WHat is local storage
+2. LC save in key value pair
+3. LC accept data in String
+4.  localStorage.setItem("name","Deep")
+     localStorage.getItem("name")
+5.   JSON 
+    for conversion JSON.stringify(data)
+    for parsing  JSON.parse(stringData)
+6. fetch vs axios 
+  And the Dom is end here and in upcoming code the React will start
