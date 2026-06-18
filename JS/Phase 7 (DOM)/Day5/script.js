@@ -71,3 +71,43 @@ box.addEventListener("click", () => {
 });
 
 
+// localStorage.setItem("name", "Nitin gadkari");
+
+// localStorage.setItem("song", "tera mera khatam");
+
+// let lsd = localStorage.getItem("name");
+
+// let song = localStorage.getItem("song");
+// console.log(lsd);
+// console.log("song->", song);
+
+// let data = [
+//   {
+//     name: "piyush",
+//     age: 69,
+//     address: "saket nagar",
+//     pincode: 462022,
+//   },
+//   {
+//     name: "Aryan kelvin",
+//     age: 69,
+//     address: "saket nagar",
+//     pincode: 462022,
+//   },
+//   {
+//     name: "Bhuvan bam",
+//     age: 69,
+//     address: "Mumbai",
+//     pincode: 462022,
+//   },
+// ];
+
+// let newData = ["polo"];
+
+// localStorage.setItem("fam-people", JSON.stringify(data));
+
+// const lsd = localStorage.getItem("fam-people");
+
+// let value = JSON.parse(lsd);
+
+// console.log(value);
