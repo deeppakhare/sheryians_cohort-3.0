@@ -1,75 +1,109 @@
-// const five = document.querySelector("#five");
-// const main = document.querySelector("main");
+const createBtn = document.querySelector("#create");
+const formDiv = document.querySelector(".form");
+const closeBtn = document.querySelector("#close");
 
-// five.addEventListener("click", (event) => {
-//   console.log(event.target);
-// });
+const productDiv = document.querySelector(".products");
 
-// main.addEventListener("click", (e) => {
-//   console.log(e.target);
-// });
+const form = document.querySelector("form");
 
-// let random = Math.random() * 10;
-// let r = Math.ceil(random);
+const productsArr = JSON.parse(localStorage.getItem("products")) || [];
+console.log(productsArr);
 
-// console.log(r);
+let updateIndex = null;
 
-const main = document.querySelector("main");
-const overlay = document.querySelector("#overlay");
+let ui = () => {
+  productDiv.innerHTML = "";
+  productsArr.forEach((elem, index) => {
+    productDiv.innerHTML += `<div class="product-card">
+          <div class="img">
+            <img
+              src="${elem.image}"
+              alt=""
+            />
+          </div>
 
-const btn = document.querySelector("button");
-const timer = document.querySelector("#timer");
-const scoree = document.querySelector("#score");
+          <div class="text">
+            <h3>${elem.productName}</h3>
+            <p>${elem.description}</p>
+            <p>${elem.price}</p>
+          </div>
 
-const box = document.createElement("div");
-box.classList.add("box");
-
-let interval;
-let time = 0;
-let score = 0;
-
-const randomColor = () => {
-  let r = Math.floor(Math.random() * 256);
-  let g = Math.floor(Math.random() * 256);
-  let b = Math.floor(Math.random() * 256);
-
-  return `rgb(${r}, ${g}, ${b})`;
+          <div class="btns">
+            <button onclick="updateProduct('${elem.productName}')" id="update">Update</button>
+            <button onclick="deleteProduct(${index})" id="delete">Delete</button>
+          </div>
+        </div>`;
+  });
 };
 
-const randomBox = () => {
-  box.style.backgroundColor = randomColor();
-  main.append(box);
+ui();
 
-  let mainH = main.clientHeight - box.offsetHeight;
-  let mainW = main.clientWidth - box.offsetWidth;
+createBtn.addEventListener("click", () => {
+  formDiv.style.display = "flex";
+});
 
-  const rY = Math.random() * mainH;
-  const rX = Math.random() * mainW;
+closeBtn.addEventListener("click", () => {
+  formDiv.style.display = "none";
+});
 
-  box.style.top = `${rY}px`;
-  box.style.left = `${rX}px`;
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  let productName = event.target[0].value;
+  let description = event.target[1].value;
+  let price = event.target[2].value;
+  let image = event.target[3].value;
+
+  if (
+    productName.trim() === "" ||
+    description.trim() === "" ||
+    price.trim() === "" ||
+    image === ""
+  ) {
+    alert("please fill all the fields");
+    return;
+  }
+
+  let obj = {
+    productName,
+    description,
+    price,
+    image,
+  };
+
+  if (updateIndex !== null) {
+    productsArr[updateIndex] = obj;
+    updateIndex = null;
+    localStorage.setItem("products", JSON.stringify(productsArr));
+  } else {
+    productsArr.push(obj);
+    localStorage.setItem("products", JSON.stringify(productsArr));
+  }
+
+  ui();
+  console.log(productsArr);
+
+  form.reset();
+
+  formDiv.style.display = "none";
+});
+
+const updateProduct = (name) => {
+  formDiv.style.display = "flex";
+  let product = productsArr.find((elem) => elem.productName === name);
+  updateIndex = productsArr.findIndex((elem) => elem.productName === name);
+
+  form[0].value = product.productName;
+  form[1].value = product.description;
+  form[2].value = product.price;
+  form[3].value = product.image;
 };
 
-btn.addEventListener("click", () => {
-  clearInterval(interval);
-
-  interval = setInterval(() => {
-    randomBox();
-    time += 1;
-    timer.textContent = time;
-  }, 1000);
-
-  setTimeout(() => {
-    clearInterval(interval);
-    overlay.style.display = "flex";
-  }, 10000);
-});
-
-box.addEventListener("click", () => {
-  score += 1;
-  scoree.textContent = score;
-});
-
+const deleteProduct = (index) => {
+  productsArr.splice(index, 1);
+  localStorage.setItem("products", JSON.stringify(productsArr));
+  ui();
+};
 
 // localStorage.setItem("name", "Nitin gadkari");
 
