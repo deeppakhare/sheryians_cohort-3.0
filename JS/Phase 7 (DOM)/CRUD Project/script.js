@@ -6,7 +6,8 @@ const productDiv = document.querySelector(".products");
 
 const form = document.querySelector("form");
 
-const productsArr = [];
+const productsArr = JSON.parse(localStorage.getItem("products")) || [];
+console.log(productsArr);
 
 let updateIndex = null;
 
@@ -34,6 +35,8 @@ let ui = () => {
         </div>`;
   });
 };
+
+ui();
 
 createBtn.addEventListener("click", () => {
   formDiv.style.display = "flex";
@@ -71,8 +74,10 @@ form.addEventListener("submit", (event) => {
   if (updateIndex !== null) {
     productsArr[updateIndex] = obj;
     updateIndex = null;
+    localStorage.setItem("products", JSON.stringify(productsArr));
   } else {
     productsArr.push(obj);
+    localStorage.setItem("products", JSON.stringify(productsArr));
   }
 
   ui();
@@ -96,5 +101,47 @@ const updateProduct = (name) => {
 
 const deleteProduct = (index) => {
   productsArr.splice(index, 1);
+  localStorage.setItem("products", JSON.stringify(productsArr));
   ui();
 };
+
+// localStorage.setItem("name", "Nitin gadkari");
+
+// localStorage.setItem("song", "tera mera khatam");
+
+// let lsd = localStorage.getItem("name");
+
+// let song = localStorage.getItem("song");
+// console.log(lsd);
+// console.log("song->", song);
+
+// let data = [
+//   {
+//     name: "piyush",
+//     age: 69,
+//     address: "saket nagar",
+//     pincode: 462022,
+//   },
+//   {
+//     name: "Aryan kelvin",
+//     age: 69,
+//     address: "saket nagar",
+//     pincode: 462022,
+//   },
+//   {
+//     name: "Bhuvan bam",
+//     age: 69,
+//     address: "Mumbai",
+//     pincode: 462022,
+//   },
+// ];
+
+// let newData = ["polo"];
+
+// localStorage.setItem("fam-people", JSON.stringify(data));
+
+// const lsd = localStorage.getItem("fam-people");
+
+// let value = JSON.parse(lsd);
+
+// console.log(value);
