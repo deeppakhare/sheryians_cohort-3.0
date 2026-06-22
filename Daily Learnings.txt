@@ -118,6 +118,8 @@
 • Learning how to work with APIs and asynchronous data
 • Better understanding of real-world asynchronous workflows
 
+\*\*\*\*\*\*\*\*\*\*\*\*\*\* DOM By Devendra Bhaya \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+
 
 # 9 June 2026
 1. Introduction to DOM
@@ -185,3 +187,16 @@
     for parsing  JSON.parse(stringData)
 6. fetch vs axios 
   And the Dom is end here and in upcoming code the React will start
+
+
+\*\*\*\*\*\*\*\*\*\*\*\*\*\* React By Devendra Bhaya \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+
+
+# 22 June 2026
+1. What is React. (JS library found in 2013)
+2. SPA vs MPA
+3. RDOM vs VDOM
+4. React CDN
+5. ESM
+
+https://medium.com/@ddhote780/react-behind-the-scenes-virtual-dom-reconciliation-render-phase-commit-phase-fiber-explained-c7625609491a
