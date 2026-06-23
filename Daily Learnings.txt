@@ -200,3 +200,14 @@
 5. ESM
 
 https://medium.com/@ddhote780/react-behind-the-scenes-virtual-dom-reconciliation-render-phase-commit-phase-fiber-explained-c7625609491a
+
+
+# 23 June 2026
+1. Recounciliation (Diffing algorithm) (render phase & commit phase)
+2. React 2015 -> Recouncilation -> Stack Engine
+    React 2016 -> Fiber -> New Engine
+3. installing node for npm (node package manager)
+4. installing react and react-dom using terminal
+5. creating new project using react and vite 
+
+https://medium.com/@ddhote780/babel-vs-oxc-understanding-the-future-of-javascript-tooling-3c0da1509844
