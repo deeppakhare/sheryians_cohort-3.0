@@ -211,3 +211,19 @@ https://medium.com/@ddhote780/react-behind-the-scenes-virtual-dom-reconciliation
 5. creating new project using react and vite 
 
 https://medium.com/@ddhote780/babel-vs-oxc-understanding-the-future-of-javascript-tooling-3c0da1509844
+
+# 24 June 2026
+1. npm run dev
+    - Compile
+    - Babel
+    - Transpile -> Babel
+    - Execute
+    - RDOM -> Update
+2. Components -> functions
+    * Rules *
+    - file first letter should be uppercase
+    - functions first  letter should be uppercase
+    - call will be like element
+3. Components
+4. JSX
+5. Props
