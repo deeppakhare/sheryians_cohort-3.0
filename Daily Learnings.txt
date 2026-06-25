@@ -227,3 +227,12 @@ https://medium.com/@ddhote780/babel-vs-oxc-understanding-the-future-of-javascrip
 3. Components
 4. JSX
 5. Props
+
+# 25 June 2026
+• Organizing React projects using JSX component files
+• Revising Components and Props
+• Introduction to React Hooks
+• Understanding the useState Hook
+• Learning how setState works
+• Understanding the rules and best practices of state update functions
+• Building a stronger foundation for creating dynamic and interactive React applications
