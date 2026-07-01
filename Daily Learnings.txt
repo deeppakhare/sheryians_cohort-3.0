@@ -236,3 +236,13 @@ https://medium.com/@ddhote780/babel-vs-oxc-understanding-the-future-of-javascrip
 • Learning how setState works
 • Understanding the rules and best practices of state update functions
 • Building a stronger foundation for creating dynamic and interactive React applications
+
+# 1 July 2026
+
+1. inplementaion of tailwind css in react 
+2. tailwind css installation in vite project 
+3. adding tailwind to project globally 
+4. tailwind css classes from official website
+5. use of useState in rect 
+6. dev bhaya tske 20 product data from fake store api and make a cart component in react 
+    in it desplay all product and add delete button when user click on it the product get delete.
