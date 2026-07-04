@@ -246,3 +246,10 @@ https://medium.com/@ddhote780/babel-vs-oxc-understanding-the-future-of-javascrip
 5. use of useState in rect 
 6. dev bhaya tske 20 product data from fake store api and make a cart component in react 
     in it desplay all product and add delete button when user click on it the product get delete.
+
+
+# 2 July 2026
+
+1. what is use of useState in js 
+2. The Evolution of Form Handling in React
+    -
