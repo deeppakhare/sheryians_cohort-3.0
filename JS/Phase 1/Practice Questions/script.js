@@ -1,5 +1,7 @@
 // ## Console & Basics
 
+const PromptSync = require("prompt-sync");
+
 // 1. Print `"Hello JavaScript"` in the console.
 // console.log("Hello Javascript");
 
@@ -719,22 +721,35 @@
 //     - For multiples of 5, print "Buzz"
 //     - For multiples of both, print "FizzBuzz"
 
-for(let i = 1; i <= 50; i++){
-    if(i % 3 == 0 && i % 5 == 0){
-        console.log("FizzBuzz");
-        continue;
-    }else if(i % 3 == 0) {
-        console.log("Fizz");
-        continue;
-    } else if (i % 5 == 0){
-        console.log("Buzz");
-        continue;
-    } 
-    console.log(i);
-    
-}
+// for(let i = 1; i <= 50; i++){
+//     if(i % 3 == 0 && i % 5 == 0){
+//         console.log("FizzBuzz");
+//         continue;
+//     }else if(i % 3 == 0) {
+//         console.log("Fizz");
+//         continue;
+//     } else if (i % 5 == 0){
+//         console.log("Buzz");
+//         continue;
+//     } 
+//     console.log(i);
+// }
+
 
 // ### Project 3: Number Guessing Game
+const prompt = require('prompt-sync')();
+let num = Number(prompt("Guess number in 1 to 10:- "));
+
+let random = Math.floor(Math.random() * (10 - 1 + 1) + 1);
+if(random == num) {
+    console.log("You are correct");
+} else {
+    console.log(`wrong! please retry number is ${random}`);
+
+}
+
+
+
 // ### Project 4: Temperature Converter
 //     Take a temperature and a unit (C or F), convert to the other.
 // ### Project 5: Count Vowels in a String
