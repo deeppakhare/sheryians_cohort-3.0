@@ -740,7 +740,7 @@ const PromptSync = require("prompt-sync");
 const prompt = require('prompt-sync')();
 let num = Number(prompt("Guess number in 1 to 10:- "));
 
-let random = Math.floor(Math.random() * (10 - 1 + 1) + 1);
+let random = Math.floor(Math.random() * 10)+1;
 if(random == num) {
     console.log("You are correct");
 } else {
