@@ -672,3 +672,27 @@
 // else if (marks >= 65 && marks <= 74) console.log("You got D grade");
 // else if (marks >= 55 && marks <= 64) console.log("You got E grade");
 // else console.log("You are Fail");
+
+
+// ## Mini Project
+
+// ### Project 1: Simple Calculator
+    // Take user input;
+
+const prompt = require('prompt-sync')();
+let num1 = Number(prompt("Enter the first number"));
+
+
+
+
+
+
+// ### Project 2: FizzBuzz (the classic interview question)
+//     Print numbers 1 to 50. But:
+//     - For multiples of 3, print "Fizz"
+//     - For multiples of 5, print "Buzz"
+//     - For multiples of both, print "FizzBuzz"
+// ### Project 3: Number Guessing Game
+// ### Project 4: Temperature Converter
+//     Take a temperature and a unit (C or F), convert to the other.
+// ### Project 5: Count Vowels in a String

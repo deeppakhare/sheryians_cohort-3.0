@@ -180,4 +180,18 @@ The more you practice on your own, the faster your JavaScript skills will improv
 7. Find whether a number is a 2-digit or 3-digit number.
 8. Create a mini ATM balance checker.
 9. Simulate a traffic light system using `switch`.
-10. Build a small marksheet generator using variables and conditionals.
+10. Build a small marksheet generator using variables and conditionals.\
+
+
+## Mini Project
+
+### Project 1: Simple Calculator
+### Project 2: FizzBuzz (the classic interview question)
+    Print numbers 1 to 50. But:
+    - For multiples of 3, print "Fizz"
+    - For multiples of 5, print "Buzz"
+    - For multiples of both, print "FizzBuzz"
+### Project 3: Number Guessing Game
+### Project 4: Temperature Converter
+    Take a temperature and a unit (C or F), convert to the other.
+### Project 5: Count Vowels in a String
