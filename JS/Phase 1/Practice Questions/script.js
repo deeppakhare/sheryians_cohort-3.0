@@ -737,19 +737,33 @@ const PromptSync = require("prompt-sync");
 
 
 // ### Project 3: Number Guessing Game
-const prompt = require('prompt-sync')();
-let num = Number(prompt("Guess number in 1 to 10:- "));
 
-let random = Math.floor(Math.random() * 10)+1;
-if(random == num) {
-    console.log("You are correct");
-} else {
-    console.log(`wrong! please retry number is ${random}`);
+// const prompt = require('prompt-sync')();
+// let num = Number(prompt("Guess number in 1 to 10:- "));
 
-}
+// let random = Math.floor(Math.random() * 10)+1;
+// if(random == num) {
+//     console.log("You are correct");
+// } else {
+//     console.log(`wrong! please retry number is ${random}`);
 
+// }
 
 
 // ### Project 4: Temperature Converter
 //     Take a temperature and a unit (C or F), convert to the other.
+
+// const prompt = require('prompt-sync')();
+// let temp = Number(prompt("Enter temperature:"));
+// let unit = prompt("Is it in C or F?").toUpperCase();
+
+// if (unit === "C") {
+//     console.log(`${temp}°C = ${(temp * 9/5) + 32}°F`);
+// } else if (unit === "F") {
+//     console.log(`${temp}°F = ${((temp - 32) * 5/9).toFixed(2)}°C`);
+// } else {
+//     console.log("Invalid unit");
+// }
+
+
 // ### Project 5: Count Vowels in a String
