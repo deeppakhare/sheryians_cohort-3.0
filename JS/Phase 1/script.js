@@ -25,3 +25,10 @@
 // } while(pass != '123')
 
 // console.log("Welcome");
+
+let max = 10;
+let min = 9;
+let x = Math.floor(Math.random() * (max - min + 1) + min);
+
+console.log(x);
+
