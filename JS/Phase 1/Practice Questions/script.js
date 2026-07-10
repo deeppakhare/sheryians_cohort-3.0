@@ -679,12 +679,38 @@
 // ### Project 1: Simple Calculator
     // Take user input;
 
-const prompt = require('prompt-sync')();
-let num1 = Number(prompt("Enter the first number"));
+// const prompt = require('prompt-sync')();
+// let num1 = Number(prompt("Enter the first number "));
+// let operator = prompt("Enter operator (+, -, /, %, *) ");
+// let num2 = Number(prompt("Enter the second number "));
 
+// let result;
 
+// if(operator == "+" || operator == "-" || operator == "/" || operator == "%" || operator == "*" ){
+//     switch(operator){
+//     case "+" :
+//         result = num1 + num2;
+//         break;
+//     case "-" :
+//         result = num1 - num2;
+//         break;
+//     case "*" :
+//         result = num1 * num2;
+//         break;
+//     case "/":
+//         result = num1 / num2;
+//         break;
+//     case "%":
+//         result = num1 % num2;
+//         break;
+//     default:
+//         break;
+// }
+// } else{
+//    return console.log("Invalid please select proper operator ");
+// }
 
-
+// console.log(`Calulation is ${num1} ${operator} ${num2} = ${result}`);
 
 
 // ### Project 2: FizzBuzz (the classic interview question)
@@ -692,6 +718,9 @@ let num1 = Number(prompt("Enter the first number"));
 //     - For multiples of 3, print "Fizz"
 //     - For multiples of 5, print "Buzz"
 //     - For multiples of both, print "FizzBuzz"
+
+
+
 // ### Project 3: Number Guessing Game
 // ### Project 4: Temperature Converter
 //     Take a temperature and a unit (C or F), convert to the other.
