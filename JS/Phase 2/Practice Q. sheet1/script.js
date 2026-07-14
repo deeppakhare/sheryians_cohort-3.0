@@ -221,7 +221,32 @@
 
 
 // 6. Create a closure counter function.
+
+// function counter(){
+//     let count = 0;
+    
+//     return function (){
+//         count++;
+//         return count
+//     }
+// }
+// let count = counter()
+// console.log (count())
+// console.log (count())
+// console.log (count())
+
 // 7. Write a function currying example for addition.
+
+// function addition(a){
+//     return function addition(b){
+//         return function addition(c){
+//             return a+b+c;
+//         };
+//     };
+// }
+// console.log(addition(1)(2)(3));
+
+
 // 8. Create debounce function logic.
 // 9. Create throttle function logic.
 // 10. Write a function that executes only once.
@@ -729,9 +754,23 @@
 // # Ultra Advanced Practice
 
 // 1. Build custom `Array.prototype.map`.
+
+
+
 // 2. Build custom `Array.prototype.filter`.
+
+
 // 3. Build custom `Array.prototype.reduce`.
+
+// let arr = [1,2,3,4,5,6,7,8];
+// let add = arr.reduce((acc,val) => acc + val,0);
+// console.log(add);       
+
+
 // 4. Implement deep clone function.
+
+
+
 // 5. Create student management system.
 // 6. Create library management system.
 // 7. Create expense tracker logic.
