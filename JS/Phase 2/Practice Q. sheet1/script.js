@@ -836,56 +836,103 @@
 
 // 6. Create library management system.
 
-let library = [];
+// let library = [];
 
 
-let addBook = (title, author, year, rating) => {
-    let id = library.length+1;
-    let exesting = library.find(elem => 
-        elem.title === title && elem.author === author && elem.year === year
-    )
-    if(exesting) return "Book Already Exist";
-    library.push({id, title, author, year, rating,isBorrowed:false})
-    return "Book Added Successfully"
-}
+// let addBook = (title, author, year, rating) => {
+//     let id = library.length+1;
+//     let exesting = library.find(elem => 
+//         elem.title === title && elem.author === author && elem.year === year
+//     )
+//     if(exesting) return "Book Already Exist";
+//     library.push({id, title, author, year, rating,isBorrowed:false})
+//     return "Book Added Successfully"
+// }
 
-let borrowBook = (id) => {
-    let check = library.find(book => book.id === id);
-    if(!check) return "Invalid ID";
-    check.isBorrowed = true;
-    return "Borrowed Book Success"
-}
+// let borrowBook = (id) => {
+//     let check = library.find(book => book.id === id);
+//     if(!check) return "Invalid ID";
+//     check.isBorrowed = true;
+//     return "Borrowed Book Success"
+// }
 
-let availableBooks = (library) => {
-    let available = library.filter(elem => elem.isBorrowed === false);
-    available.forEach(element => {
-       console.log(`Available book is "${element.title}" [${element.rating} start rating]`);
-    });
-}
+// let availableBooks = (library) => {
+//     let available = library.filter(elem => elem.isBorrowed === false);
+//     available.forEach(element => {
+//        console.log(`Available book is "${element.title}" [${element.rating} start rating]`);
+//     });
+// }
 
-let getAll = (library) => {
-    return library.forEach(elem => {
-        console.log(`Name:- ${elem.title} || Anthor:- ${elem.author} || Rating:- ${elem.rating}`);
-    })
-}
-
-
-console.log(addBook("Rich Dad Poor Dad", "XYZ", 1990, 6));
-console.log(addBook("Antha Asthi Prarmbh", "Mr. Dhus", 2025, 10));
-console.log(addBook("Kapad Udyog", "Sachin Narwade", 2026, 9));
-console.log(addBook("Shetitil Chuka", "Allganic Farm", 2026, 7));
-
-getAll(library);
-
-console.log(borrowBook(2));
-console.log(borrowBook(4));
-
-availableBooks(library);
+// let getAll = (library) => {
+//     return library.forEach(elem => {
+//         console.log(`Name:- ${elem.title} || Anthor:- ${elem.author} || Rating:- ${elem.rating}`);
+//     })
+// }
 
 
+// console.log(addBook("Rich Dad Poor Dad", "XYZ", 1990, 6));
+// console.log(addBook("Antha Asthi Prarmbh", "Mr. Dhus", 2025, 10));
+// console.log(addBook("Kapad Udyog", "Sachin Narwade", 2026, 9));
+// console.log(addBook("Shetitil Chuka", "Allganic Farm", 2026, 7));
+
+// getAll(library);
+
+// console.log(borrowBook(2));
+// console.log(borrowBook(4));
+
+// availableBooks(library);
 
 
 // 7. Create expense tracker logic.
+
+// let account = [];
+
+// const addSalary = (amount) => {
+//     account.push({salary:amount});
+//     return `${amount} salary added`
+// }
+
+// let addExpense = (type, amount) => {
+//     let check = account.find(elem => elem.type === type)    
+//     if(check){
+//         check.amount += amount;
+//         return "Expense added"
+//     }
+//     account.push({type, amount})
+//     return "expense added"
+// }
+
+// let getTotal = (account) => {
+//     let expense = 0;
+//     account.filter(elem => {
+//         if(elem.amount){
+//             expense += elem.amount;
+//         }
+//     });
+//     return expense;
+// }
+
+// let checkBalance = (account) => {
+//     let balance = account[0].salary - getTotal(account)
+//     return `Available balance is ${balance}`
+// }
+
+// console.log(addSalary(20000));
+
+// console.log(addExpense("Food", 100));
+// console.log(addExpense("Food", 100));
+// console.log(addExpense("Recharge", 100));
+// console.log(addExpense("Extra", 100));
+// console.log(addExpense("Food", 100));
+// console.log(addExpense("Rent", 3500));
+
+// console.log(getTotal(account));
+
+// console.log(checkBalance(account));
+
+// console.log(account);
+
+
 // 8. Build inventory management system.
 // 9. Create function composition utility.
 // 10. Build calculator using objects and methods.
@@ -895,7 +942,78 @@ availableBooks(library);
 // # Scenario-Based Questions
 
 // 1. You have an array of users. Return only active users.
+
+// let array = [
+//     {
+//         user:"deep",
+//         active:true
+//     },
+//     {
+//         user:"pawan",
+//         active:false
+//     },
+//     {
+//         user:"nayan",
+//         active:true
+//     },
+//     {
+//         user:"Saurav",
+//         active:false
+//     },
+//     {
+//         user:"Santosh",
+//         active:false
+//     },
+//     {
+//         user:"Om",
+//         active:true
+//     },
+// ]
+
+// let active = array.filter(elem => {
+//     if(elem.active == true){
+//         console.log(elem.user);
+//     }
+// });
+
+// console.log(active);
+
+
+
 // 2. Calculate total revenue from orders array.
+
+let array = [
+    {
+        product:"Jeans",
+        price:999
+    },
+    {
+        product:"Crocks",
+        price:399
+    },
+    {
+        product:"Socks",
+        price:199
+    },
+    {
+        product:"Polo T-Shirt",
+        price:299
+    },
+    {
+        product:"T-Shirt",
+        price:399
+    },
+    {
+        product:"Hoodie",
+        price:1200
+    },
+]
+
+let total = (array) => array.reduce((acc, val) => acc + val.price,0);
+
+console.log(total(array));
+
+
 // 3. Find second largest number in array.
 // 4. Find missing number in array.
 // 5. Check whether two objects are equal.
