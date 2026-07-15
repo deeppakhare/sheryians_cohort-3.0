@@ -772,7 +772,119 @@
 
 
 // 5. Create student management system.
+
+// let students = [];
+
+// let addStudent = (name, age, className) => {
+//     let check = students.find(elem => 
+//         elem.name === name && elem.age === age && elem.className === className
+//     )
+//     if(check) {
+//         return "Already available student"
+//     }
+//     let id = students.length + 1;
+//     students.push({id, name, age, className});     
+//     return "Added Successfully"
+// };
+
+// let removeStudent = (id) => {
+//     let check = students.find(elem => elem.id === id)
+//     if(!check) return "Not available ID"
+//     students = students.filter(elem => elem.id !== id);
+//     return "Removed student"
+// }
+
+// let updateSudent = (id ,name, age, className) => {
+//     let check = students.find(elem => elem.id === id)
+//     if(!check) {
+//         return "Not available ID"
+//     }
+//     check.name = name;
+//     check.age = age;
+//     check.className = className;
+//     return "Updated Student data"
+// }
+
+// let getStudent = (id) => {
+//     let check = students.find(elem => elem.id === id)
+//     if(!check) return "Not available ID"
+//     return `Studetn name is ${check.name} [class - ${check.className}] and age is ${check.age}`
+// }
+
+// let getAll = (students) => {
+//     return students.forEach(element => {
+//        console.log(`name - ${element.name} id - ${element.id} age - ${element.age} class - ${element.className}`)
+//     });
+// }
+
+// console.log(addStudent("Deep", 18, 11));
+// console.log(addStudent("Deepak", 19, 12));
+// console.log(addStudent("Vitthal", 18, 11));
+// console.log(addStudent("Nayan", 18, 11));
+// console.log(addStudent("Annya", 19, 12));
+// console.log(addStudent("OM", 18, 11));
+
+// console.log(removeStudent(3));
+
+// console.log(updateSudent(13,"Deep",19,12));
+
+// console.log(getStudent(4));
+
+
+// getAll(students);
+
+
 // 6. Create library management system.
+
+let library = [];
+
+
+let addBook = (title, author, year, rating) => {
+    let id = library.length+1;
+    let exesting = library.find(elem => 
+        elem.title === title && elem.author === author && elem.year === year
+    )
+    if(exesting) return "Book Already Exist";
+    library.push({id, title, author, year, rating,isBorrowed:false})
+    return "Book Added Successfully"
+}
+
+let borrowBook = (id) => {
+    let check = library.find(book => book.id === id);
+    if(!check) return "Invalid ID";
+    check.isBorrowed = true;
+    return "Borrowed Book Success"
+}
+
+let availableBooks = (library) => {
+    let available = library.filter(elem => elem.isBorrowed === false);
+    available.forEach(element => {
+       console.log(`Available book is "${element.title}" [${element.rating} start rating]`);
+    });
+}
+
+let getAll = (library) => {
+    return library.forEach(elem => {
+        console.log(`Name:- ${elem.title} || Anthor:- ${elem.author} || Rating:- ${elem.rating}`);
+    })
+}
+
+
+console.log(addBook("Rich Dad Poor Dad", "XYZ", 1990, 6));
+console.log(addBook("Antha Asthi Prarmbh", "Mr. Dhus", 2025, 10));
+console.log(addBook("Kapad Udyog", "Sachin Narwade", 2026, 9));
+console.log(addBook("Shetitil Chuka", "Allganic Farm", 2026, 7));
+
+getAll(library);
+
+console.log(borrowBook(2));
+console.log(borrowBook(4));
+
+availableBooks(library);
+
+
+
+
 // 7. Create expense tracker logic.
 // 8. Build inventory management system.
 // 9. Create function composition utility.
