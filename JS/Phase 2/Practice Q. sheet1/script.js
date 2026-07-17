@@ -982,39 +982,63 @@
 
 // 2. Calculate total revenue from orders array.
 
-let array = [
-    {
-        product:"Jeans",
-        price:999
-    },
-    {
-        product:"Crocks",
-        price:399
-    },
-    {
-        product:"Socks",
-        price:199
-    },
-    {
-        product:"Polo T-Shirt",
-        price:299
-    },
-    {
-        product:"T-Shirt",
-        price:399
-    },
-    {
-        product:"Hoodie",
-        price:1200
-    },
-]
+// let array = [
+//     {
+//         product:"Jeans",
+//         price:999
+//     },
+//     {
+//         product:"Crocks",
+//         price:399
+//     },
+//     {
+//         product:"Socks",
+//         price:199
+//     },
+//     {
+//         product:"Polo T-Shirt",
+//         price:299
+//     },
+//     {
+//         product:"T-Shirt",
+//         price:399
+//     },
+//     {
+//         product:"Hoodie",
+//         price:1200
+//     },
+// ]
 
-let total = (array) => array.reduce((acc, val) => acc + val.price,0);
+// let total = (array) => array.reduce((acc, val) => acc + val.price,0);
 
-console.log(total(array));
+// console.log(total(array));
 
 
 // 3. Find second largest number in array.
+
+let arr = [12,33,24,64,99,104,56,37];
+
+let i = 2;
+
+let first = [Math.max(arr[0],arr[1])]
+let second = [Math.min(arr[0],arr[1])]
+
+while (i < arr.length){
+    let num = arr[i];
+
+    if(num > first){
+        second = first;
+        first = num;
+    } else if (num > second && num !== first){
+        second = num;
+    }
+    i++;
+}
+
+console.log(second);
+
+
+
 // 4. Find missing number in array.
 // 5. Check whether two objects are equal.
 
