@@ -1016,31 +1016,68 @@
 
 // 3. Find second largest number in array.
 
-let arr = [12,33,24,64,99,104,56,37];
+// let arr = [12,33,24,64,99,104,56,37];
 
-let i = 2;
+// let i = 2;
 
-let first = [Math.max(arr[0],arr[1])]
-let second = [Math.min(arr[0],arr[1])]
+// let first = [Math.max(arr[0],arr[1])]
+// let second = [Math.min(arr[0],arr[1])]
 
-while (i < arr.length){
-    let num = arr[i];
+// while (i < arr.length){
+//     let num = arr[i];
 
-    if(num > first){
-        second = first;
-        first = num;
-    } else if (num > second && num !== first){
-        second = num;
-    }
-    i++;
-}
+//     if(num > first){
+//         second = first;
+//         first = num;
+//     } else if (num > second && num !== first){
+//         second = num;
+//     }
+//     i++;
+// }
 
-console.log(second);
+// console.log(second);
 
 
 
 // 4. Find missing number in array.
+
+// let arr = [1, 2,4 ];
+
+// function duplicate(arr){
+//     let n = arr.length +1;
+
+//     let total = (n * (n + 1))/2;
+
+//     let actual = arr.reduce((acc, val) => acc + val,0);
+
+//     let missing = total - actual;
+
+//     return missing
+// }
+
+// console.log(duplicate(arr))
+
+
+
 // 5. Check whether two objects are equal.
+
+let obj1 = {
+    name : "Deep",
+    age : 34
+}
+
+let obj2 = {
+    name : "Deep",
+    age : 34
+}
+
+function equal(obj1, obj2){
+    if(obj1.length === obj2.length){
+        
+    } else{
+        return "It completely different"
+    }
+}
 
 // ---
 
