@@ -1061,23 +1061,36 @@
 
 // 5. Check whether two objects are equal.
 
-let obj1 = {
-    name : "Deep",
-    age : 34
-}
+function areObjectsEqual(obj1, obj2) {
+    if (obj1 === obj2) return true;
 
-let obj2 = {
-    name : "Deep",
-    age : 34
-}
-
-function equal(obj1, obj2){
-    if(obj1.length === obj2.length){
-        
-    } else{
-        return "It completely different"
+    if (typeof obj1 !== 'object' || typeof obj2 !== 'object' || obj1 === null || obj2 === null) {
+        return false;
     }
+
+    const keys1 = Object.keys(obj1);
+    const keys2 = Object.keys(obj2);
+
+    if (keys1.length !== keys2.length) return false;
+
+    for (let key of keys1) {
+        if (!obj2.hasOwnProperty(key) || obj1[key] !== obj2[key]) {
+            return false;
+        }
+    }
+
+    return true;
 }
+
+
+let obj1 = { name: "Deep", age: 34 };
+let obj2 = { name: "Deep", age: 34 };
+let obj3 = { name: "Deep", age: 35 }; 
+let obj4 = { name: "Deep", age: 34, city: "NY" }; 
+
+console.log("obj1 vs obj2:", areObjectsEqual(obj1, obj2)); 
+console.log("obj1 vs obj3:", areObjectsEqual(obj1, obj3)); 
+console.log("obj1 vs obj4:", areObjectsEqual(obj1, obj4)); 
 
 // ---
 
