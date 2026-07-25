@@ -69,10 +69,10 @@
 // // Output: 20
 // ```
 
-function max(a,b){
-    return a > b ? a : b;
-}
-console.log(max(10,20));
+// function max(a,b){
+//     return a > b ? a : b;
+// }
+// console.log(max(10,20));
 
 
 // ---
@@ -84,6 +84,12 @@ console.log(max(10,20));
 
 // // Output: Eligible
 // ```
+
+function isEligible(age){
+    return age >= 18 ? "Eligible" : "Not eligible";
+}
+console.log(isEligible(18));
+
 
 // ---
 
