@@ -97,16 +97,22 @@
 
 // ### Q6. Print numbers from 1 to 50 using a loop.
 
-let num = 50;
-for(let i = 1; i <= num; i++){
-    console.log(i);
-}
-
+// let num = 50;
+// for(let i = 1; i <= num; i++){
+//     console.log(i);
+// }
 
 // ---
 
-
 // ### Q7. Print all even numbers between 1 and 100.
+
+let num = 100;
+for(let i = 1; i <= num; i++){
+    if(i % 2 === 0){
+        console.log(i);
+    }
+}
+
 
 // ---
 
