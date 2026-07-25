@@ -21,10 +21,10 @@
 // // Output: 30
 // ```
 
-let add = (a,b) => {
-    return a+b;
-}
-console.log(add(10,20));
+// let add = (a,b) => {
+//     return a+b;
+// }
+// console.log(add(10,20));
 
 
 // ---
@@ -36,6 +36,12 @@ console.log(add(10,20));
 
 // // Output: 25
 // ```
+
+function square(a){
+    return a*a;
+}
+console.log(square(5));
+
 
 // ---
 
