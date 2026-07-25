@@ -37,10 +37,10 @@
 // // Output: 25
 // ```
 
-function square(a){
-    return a*a;
-}
-console.log(square(5));
+// function square(a){
+//     return a*a;
+// }
+// console.log(square(5));
 
 
 // ---
@@ -52,6 +52,12 @@ console.log(square(5));
 
 // // Output: Odd
 // ```
+
+function checkEvenOdd(num){
+    return num % 2 === 0 ? "Even" : "Odd";
+}
+console.log(checkEvenOdd(7));
+
 
 // ---
 
