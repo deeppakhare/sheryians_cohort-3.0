@@ -21,6 +21,12 @@
 // // Output: 30
 // ```
 
+let add = (a,b) => {
+    return a+b;
+}
+console.log(add(10,20));
+
+
 // ---
 
 // ### Q2. Create a function that returns the square of a number.
