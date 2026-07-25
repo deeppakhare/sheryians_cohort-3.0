@@ -53,10 +53,10 @@
 // // Output: Odd
 // ```
 
-function checkEvenOdd(num){
-    return num % 2 === 0 ? "Even" : "Odd";
-}
-console.log(checkEvenOdd(7));
+// function checkEvenOdd(num){
+//     return num % 2 === 0 ? "Even" : "Odd";
+// }
+// console.log(checkEvenOdd(7));
 
 
 // ---
@@ -68,6 +68,12 @@ console.log(checkEvenOdd(7));
 
 // // Output: 20
 // ```
+
+function max(a,b){
+    return a > b ? a : b;
+}
+console.log(max(10,20));
+
 
 // ---
 
