@@ -14,6 +14,7 @@
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
+  --times: Roboto
 
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
@@ -108,4 +109,18 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+button{
+  padding: 10px;
+  margin-bottom: 20px;
+  font-family: var(--times);
+  width: 150px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 1.3rem;
+  background-color: var(--accent);
+  border: none;
+  color: #08060d;
+  border-radius: 15px;
 }
