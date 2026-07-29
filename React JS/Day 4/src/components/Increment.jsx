@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 
-const Increment = () => {
-    let [count, setCount] = useState(0);
+const Increment = ({count,setCount}) => {
+    console.log(count);
+    console.log(setCount);
+    
+    
   return (
     <div>
       <h1>Increment - {count}</h1>
