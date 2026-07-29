@@ -119,7 +119,7 @@ button{
   height: 50px;
   font-weight: 700;
   font-size: 1.3rem;
-  background-color: var(--accent);
+  background-color: white;
   border: none;
   color: #08060d;
   border-radius: 15px;
@@ -132,9 +132,15 @@ div{
 }
 
 
-button {
-  transition: transform 0.3s ease-in-out;
+.button {
+  transition: all 0.3s ease-in-out;
 }
-button:hover {
+.button:hover {
   transform: scale(1.1);
+  background-color: black;
+  color: white;
+}
+
+h1:hover {
+  color: lightblue;
 }
