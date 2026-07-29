@@ -1,11 +1,11 @@
 import React from 'react'
-import Contact from './components/Contact'
+import Increment from './components/Increment'
 
 const App = () => {
   return (
     <div>
       <h1>Hello</h1>
-      <Contact/>
+      <Increment/>
     </div>
   )
 }

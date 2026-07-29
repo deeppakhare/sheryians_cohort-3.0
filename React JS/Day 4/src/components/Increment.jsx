@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Contact = () => {
+const Increment = () => {
     let [count, setCount] = useState(0);
   return (
     <div>
@@ -12,4 +12,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Increment
