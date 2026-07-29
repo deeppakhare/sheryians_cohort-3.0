@@ -9,13 +9,14 @@ const App = () => {
   return (
     <div>
       <h1>Hello</h1>
+      <h1>Count is :- {count}</h1>
       <Increment
       count = {count}
-      setcount = {setCount}
+      setCount = {setCount}
       />
       <Decrement
       count = {count}
-      setcount = {setCount}
+      setCount = {setCount}
       />
     </div>
   )

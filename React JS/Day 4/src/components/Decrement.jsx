@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 
-const Decrement = ({count,setcount}) => {
+const Decrement = ({count,setCount}) => {
+    if (count <= 0) {
+        alert("count is 0, Please increment")
+    }
   return (
     <div>
       <button onClick={() => {
         setCount(count - 1);
       }}>Decrement</button>
-      <h1>Decrement :- {count}</h1>
     </div>
   )
 }
