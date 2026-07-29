@@ -6,7 +6,7 @@ const Decrement = ({count,setCount}) => {
     }
   return (
     <div>
-      <button className='right' onClick={() => {
+      <button className='button' onClick={() => {
         setCount(count - 1);
       }}>Decrement</button>
     </div>

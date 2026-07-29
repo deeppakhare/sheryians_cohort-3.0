@@ -123,4 +123,18 @@ button{
   border: none;
   color: #08060d;
   border-radius: 15px;
+
+}
+
+div{
+  position: relative;
+  width: 100%;
+}
+
+
+button {
+  transition: transform 0.3s ease-in-out;
+}
+button:hover {
+  transform: scale(1.1);
 }
