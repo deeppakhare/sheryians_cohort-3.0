@@ -244,15 +244,15 @@ const App = () => {
     }
   }
   ];
-
-  console.log(productData);
   
 
   return (
     <div>
-      <div>
-        <h1>Welcome, Available Products are</h1>
-        <ProductCard/>
+       <h1>Welcome, Available Products are</h1>
+      <div className='flex flex-wrap gap-3'>
+        {productData.map((elem) => {
+          return <ProductCard product = {elem}/>
+        })}
       </div>
     </div>
   )
