@@ -1,0 +1,56 @@
+
+
+
+.card{
+    width: 350px;
+    height: 550px;
+    background-color: antiquewhite;
+    border: 5px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.card img{
+    width: 90%;
+    height: 100%;
+}
+.img{
+    width: 90%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 5px 5px 5px;
+}
+
+.text{
+    margin-left: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.button{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button button{
+    border: none;
+    color: black;
+    background-color: gold;
+    border: darkmagenta 5px double;
+    width: 50%;
+    height: 100%;
+    font-family: fantasy;
+    font-size: x-large;
+    transition: background-color 0.5s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #000000;
+  color: gold;
+  transform: scale(1.05);
+  border: white 5px double;
+}
