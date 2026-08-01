@@ -6,7 +6,7 @@ const ProductCard = ({product,del}) => {
   return (
     <div className='main'>
       <div className='card'>
-        <div className='img'>
+        <div className='img'> 
             <img src={product.image} alt="" />
         </div>
         <div className='text'>
@@ -18,7 +18,7 @@ const ProductCard = ({product,del}) => {
         <div className='button'>
         <button onClick={() => {
             return del(product.id)
-        }} >Delete</button>
+        }}>Delete</button>
         </div>
       </div>
     </div>
