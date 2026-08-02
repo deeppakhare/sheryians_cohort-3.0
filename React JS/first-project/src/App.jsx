@@ -645,20 +645,7 @@ const App = () => {
     setproduct(products);
   };
 
-  const addProduct = (title, category, description, price,image) => {
-    const newProduct ={
-      id:product.length + 1,
-      title,
-      category,
-      description,
-      price: Number(price),
-      image
-    };
 
-    setproduct([...product,newProduct]);
-    console.log(product);
-    
-  };
   
   return (
     <div>
