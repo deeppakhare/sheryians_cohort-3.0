@@ -3,15 +3,12 @@ import { useState } from 'react'
 
 const App = () => {
   const [formdata, setFormdata] = useState({
-    name: "",
-    email: "",
-    password: ""
   })
 
   // const handelChange = (e) => {
   //   setFormdata(...formdata, name: e.target.value);
   // }
-  // console.log(formdata);
+  console.log(formdata);
   
   return (
     <div className='w-screen h-screen bg-amber-600 flex justify-center items-center border-50 border-amber-50'>
