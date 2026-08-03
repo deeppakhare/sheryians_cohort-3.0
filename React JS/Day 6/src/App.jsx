@@ -9,7 +9,8 @@ const App = () => {
   })
 
   const handelChange = (e) => {
-    setFormdata({...formdata, [e.target.name] : e.target.value});
+    let {name,value} = e.target
+    setFormdata({...formdata, [name] : value});
   }
   console.log(formdata);
   
