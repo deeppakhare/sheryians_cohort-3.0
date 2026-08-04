@@ -8,11 +8,7 @@ const App = () => {
     password: ""
   })
 
-  const handelChange = (e) => {
-    let {name,value} = e.target
-    setFormdata({...formdata, [name] : value});
-  }
-  console.log(formdata);
+
   
   return (
     <div className='w-screen h-screen bg-amber-600 flex justify-center items-center border-50 border-amber-50'>
