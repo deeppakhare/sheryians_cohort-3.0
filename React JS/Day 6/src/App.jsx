@@ -2,18 +2,19 @@ import React from 'react'
 import { useState } from 'react'
 
 const App = () => {
-  const [formdata, setFormdata] = useState({
-    name: "",
-    email: "",
-    password: ""
-  })
+const [formdata, setFormdata] = useState({
+  name: "",
+  email: "",
+  password: "",
+})
 
-  const handelChange = (e) => {
-    let {name,value} = e.target
-    setFormdata({...formdata, [name] : value});
-  }
-  console.log(formdata);
-  
+const handelChange = (e) => {
+  let {name, value} = e.target;
+  setFormdata({...formdata,[name]:value})
+}
+
+console.log(formdata);
+
   return (
     <div className='w-screen h-screen bg-amber-600 flex justify-center items-center border-50 border-amber-50'>
       <div className='h-[70%] w-[70%] bg-blue-400 flex flex-col justify-evenly items-center'>
