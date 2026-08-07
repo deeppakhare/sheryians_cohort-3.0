@@ -8,7 +8,6 @@ const Usercard = ({ user }) => {
       </div>
       <div>
         <h1>{user.name}</h1>
-        <p>{user.email}</p>
       </div>
       <button>Delete</button>
     </div>
