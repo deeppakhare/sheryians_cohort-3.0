@@ -67,7 +67,6 @@ const Register = ({ setToggle, setUsers }) => {
         <button className="p-2 bg-blue-600 text-white rounded">Register</button>
       </form>
       <p>
-        Already have an Account?{" "}
         <span
           onClick={() => setToggle((prev) => !prev)}
           className="text-blue-600 cursor-pointer"
