@@ -5,5 +5,11 @@
 }
 
 body{
-  background-color: white;
+  background-color: black;
+}
+
+.box{
+  height: 300px;
+  width: 300px;
+  background-color: red;
 }
