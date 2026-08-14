@@ -11,7 +11,7 @@ const App = () => {
   return (
     <div className="bg-gray-300 h-screen  flex flex-col justify-center items-center ">
       {toggle ? (
-        <Login setToggle={setToggle} />
+        <Login setToggle={setToggle} user={user} />
       ) : (
         <Register setToggle={setToggle} setUser={setUser}/>
       )}
