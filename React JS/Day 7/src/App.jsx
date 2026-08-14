@@ -1,14 +1,23 @@
-import React from 'react'
-import Login from './components/Login'
-import Register from './components/Register'
+import React, { useState } from "react";
+import Login from "./components/Login";
+import Register from "./components/Register";
 
 const App = () => {
-  return (
-    <div className='bg-gray-300 h-screen  flex flex-col justify-center items-center '>
-      <Login/>
-      <Register/>
-    </div>
-  )
-}
+  const [toggle, setToggle] = useState(false);
 
-export default App
+  const [user, setUser] = useState([]); 
+  console.log(user);
+  
+  return (
+    <div className="bg-gray-300 h-screen  flex flex-col justify-center items-center ">
+      {toggle ? (
+        <Login setToggle={setToggle} />
+      ) : (
+        <Register setToggle={setToggle} setUser={setUser}/>
+      )}
+
+    </div>
+  );
+};
+
+export default App;
