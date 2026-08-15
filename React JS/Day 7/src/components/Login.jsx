@@ -12,17 +12,15 @@ const Login = ({ setToggle, user }) => {
   
   const handelChnage = (e) => {
     let {name,value} = e.target;
-    setCheck({...check,[name]:value})
+    setCheck((prev) => ({...prev,[name]:value}))
     console.log(check);
     
   }
   const handelLogIn = (e) => {
-    if(check.email == user.email && check.password == user.password){
-      <Welcome/>
-    } else {
-      console.alert("Invalid data ");
-    }
-  }
+    e.preventDefault();
+    alert("Enter valid data")
+  };
+
   return (
     <div className="bg-green-200 flex flex-col justify-evenly border-2 rounded-2xl w-100 h-90 gap-3 p-6 text-2xl font-mono">
       <div className="flex justify-center items-center">

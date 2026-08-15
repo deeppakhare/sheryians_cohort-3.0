@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import Welcome from "./components/Welcome";
+
 
 const App = () => {
   const [toggle, setToggle] = useState(false);
@@ -15,7 +17,7 @@ const App = () => {
       ) : (
         <Register setToggle={setToggle} setUser={setUser}/>
       )}
-
+        
     </div>
   );
 };
