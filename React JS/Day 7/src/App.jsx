@@ -77,7 +77,7 @@ const App = () => {
   
   return (
     <div>
-      <Login/>
+      { authenticate? <Login/> : <Register/>}
     </div>
   )
 }
