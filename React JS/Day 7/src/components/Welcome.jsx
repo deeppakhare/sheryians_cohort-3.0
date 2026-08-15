@@ -1,18 +1,69 @@
-import React from "react";
-import { useState } from "react";
+// import React from "react";
+// import { useState } from "react";
 
-const Welcome = ({user}) => {
+// const Welcome = ({user}) => {
 
+//   return (
+//     <div>
+//       <div className="bg-pink-300 flex flex-col justify-center items-center w-100 h-100 border-2 border-amber-900 rounded-2xl">
+//         <h1 className="text-3xl font-mono font-extrabold underline">
+//           Welcome Back {user.name}
+//         </h1>
+//         <p>We are here to develope the welcome page </p>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Welcome;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import React from 'react'
+
+const Welcome = () => {
   return (
     <div>
-      <div className="bg-pink-300 flex flex-col justify-center items-center w-100 h-100 border-2 border-amber-900 rounded-2xl">
-        <h1 className="text-3xl font-mono font-extrabold underline">
-          Welcome Back {user.name}
-        </h1>
-        <p>We are here to develope the welcome page </p>
-      </div>
+      <h1>Welcome page</h1>
     </div>
-  );
-};
+  )
+}
 
-export default Welcome;
+export default Welcome
