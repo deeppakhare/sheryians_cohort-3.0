@@ -69,14 +69,19 @@
 import React from 'react'
 import { useState } from 'react'
 import Login from './components/Login';
+import Register from './components/Register';
 
 
 const App = () => {
 
   const [authenticate, setAuthenticate] = useState(false);
+  const [user, setUser] = useState([]);
+  
+  console.log(user);
   
   return (
     <div>
+      {authenticate? <Login user={setUser} auth={setAuthenticate}/> : <Register user={setUser} auth={setAuthenticate}/>}
     </div>
   )
 }
