@@ -9,6 +9,7 @@ const Welcome = ({user}) => {
         <h1 className="text-3xl font-mono font-extrabold underline">
           Welcome Back {user.name}
         </h1>
+        <p>We are here to develope the welcome page </p>
       </div>
     </div>
   );
