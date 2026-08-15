@@ -81,30 +81,29 @@
 import React from "react";
 import { useState } from "react";
 
-const Register = ({ auth , user}) => {
-
+const Register = ({ auth, user }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     password: "",
-  })
+  });
 
   const handelFormData = (e) => {
-    let {name, value} = e.target;
-    setFormData((prev) => ({...prev,[name]:value}));
-  }
-  
+    let { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
   const handelSumbit = (e) => {
     e.preventDefault();
-    user((prev) => ([...prev, formData]));
+    user((prev) => [...prev, formData]);
     setFormData({
-      name:"",
-      email:"",
-      password:""
+      name: "",
+      email: "",
+      password: "",
     });
-    alert("Successfully regesterd")
+    alert("Successfully regesterd");
     auth(true);
-  }
+  };
 
   return (
     <div>
@@ -199,7 +198,7 @@ const Register = ({ auth , user}) => {
                 </div>
 
                 <input
-                value={formData.email}
+                  value={formData.email}
                   onChange={handelFormData}
                   name="email"
                   required
@@ -288,7 +287,10 @@ const Register = ({ auth , user}) => {
           <div className="text-center">
             <p className="text-sm text-slate-500">
               Already have an account?{" "}
-              <span onClick={(e) => auth(true)} className="cursor-pointer font-semibold text-indigo-600 hover:text-indigo-800">
+              <span
+                onClick={(e) => auth(true)}
+                className="cursor-pointer font-semibold text-indigo-600 hover:text-indigo-800"
+              >
                 Log in
               </span>
             </p>

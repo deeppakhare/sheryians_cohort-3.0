@@ -63,8 +63,34 @@
 // export default Login;
 
 import React from "react";
+import { useState } from "react";
 
-const Login = ({ auth }) => {
+const Login = ({ auth, user }) => {
+  const [checkUser, setCheckUser] = useState({
+    email: "",
+    password: "",
+  });
+  const [isLogged, setIsLogged] = useState(false);
+
+  const handelCheck = (e) => {
+    let { name, value } = e.target;
+    setCheckUser((prev) => ({ ...prev, [name]: value }));
+
+  };
+
+  const handelSubmitData = (e) => {
+    e.preventDefault();
+
+    const foundUser = user.find((elem) => elem.email === check.email && elem.password === check.password);
+    
+    
+    if(foundUser){
+      alert("Correct");
+    } else {
+      alert("Wrong");
+    }
+  };
+
   return (
     <div>
       <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 px-4">
@@ -94,7 +120,7 @@ const Login = ({ auth }) => {
           </div>
 
           {/* Form */}
-          <form className="space-y-5">
+          <form onClick={handelSubmitData} className="space-y-5">
             {/* Email */}
             <div>
               <label className="mb-2 block text-sm font-medium text-slate-700">
@@ -120,6 +146,10 @@ const Login = ({ auth }) => {
                 </div>
 
                 <input
+                  onChange={handelCheck}
+                  name="email"
+                  value={checkUser.email}
+                  required
                   type="email"
                   placeholder="you@example.com"
                   className="w-full rounded-xl border border-slate-200 bg-slate-50 py-3 pl-10 pr-4 text-sm outline-none transition-all placeholder:text-slate-400 focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-500/10"
@@ -152,6 +182,10 @@ const Login = ({ auth }) => {
                 </div>
 
                 <input
+                  onChange={handelCheck}
+                  name="password"
+                  value={checkUser.password}
+                  required
                   type="password"
                   placeholder="••••••••"
                   className="w-full rounded-xl border border-slate-200 bg-slate-50 py-3 pl-10 pr-4 text-sm outline-none transition-all placeholder:text-slate-400 focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-500/10"
@@ -181,7 +215,10 @@ const Login = ({ auth }) => {
           <div className="text-center">
             <p className="text-sm text-slate-500">
               Already have an account?{" "}
-              <span onClick={(e) => auth(false)} className="cursor-pointer font-semibold text-indigo-600 hover:text-indigo-800">
+              <span
+                onClick={(e) => auth(false)}
+                className="cursor-pointer font-semibold text-indigo-600 hover:text-indigo-800"
+              >
                 Sign in
               </span>
             </p>
