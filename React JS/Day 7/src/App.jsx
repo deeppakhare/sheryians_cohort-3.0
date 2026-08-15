@@ -68,6 +68,8 @@
 
 import React from 'react'
 import { useState } from 'react'
+import Login from './components/Login';
+
 
 const App = () => {
 
@@ -75,7 +77,7 @@ const App = () => {
   
   return (
     <div>
-      
+      <Login/>
     </div>
   )
 }
