@@ -22,6 +22,7 @@ const Register = ({ setToggle,setUser }) => {
       email: "",
       password: "",
     });
+    setToggle(true);
   };
 
   return (

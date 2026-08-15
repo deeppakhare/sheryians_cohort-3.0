@@ -1,26 +1,36 @@
 import React, { useState } from "react";
+import Welcome from "./Welcome";
 
 const Login = ({ setToggle, user }) => {
-
-  // console.log("USERS", user);
   
   const [check, setCheck] = useState({
     email:"",
     password:""
   });
 
-  
+    const [isLogged, setIsLogged] = useState(false);
+    const [loggedInUser, setLoggedInUser] = useState(null);
   const handelChnage = (e) => {
     let {name,value} = e.target;
     setCheck((prev) => ({...prev,[name]:value}))
-    console.log(check);
     
   }
   const handelLogIn = (e) => {
     e.preventDefault();
-    alert("Enter valid data")
+    
+    const foundUSer = user.find((elem) => elem.email === check.email && elem.password === check.password);
+
+    if(foundUSer) {
+      setLoggedInUser(foundUSer);
+      setIsLogged(true);
+    } else {
+      alert("Invalid email & password")
+    }
   };
 
+  if(isLogged) {
+    return <Welcome user={loggedInUser}/>
+  }
   return (
     <div className="bg-green-200 flex flex-col justify-evenly border-2 rounded-2xl w-100 h-90 gap-3 p-6 text-2xl font-mono">
       <div className="flex justify-center items-center">
