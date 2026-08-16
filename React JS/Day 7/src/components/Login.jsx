@@ -81,7 +81,6 @@ const Login = ({ auth, user }) => {
   const handelSubmitData = (e) => {
     e.preventDefault();
 
-    const foundUser = user.find((elem) => elem.email === check.email && elem.password === check.password);
     
     
     if(foundUser){
