@@ -15,75 +15,33 @@
 //       ) : (
 //         <Register setToggle={setToggle} setUser={setUser} />
 //       )}
-      
+
 //     </div>
 //   );
 // };
 
 // export default App;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-import React from 'react'
-import { useState } from 'react'
-import Login from './components/Login';
-import Register from './components/Register';
-
+import React from "react";
+import { useState } from "react";
+import Login from "./components/Login";
+import Register from "./components/Register";
 
 const App = () => {
-
   const [authenticate, setAuthenticate] = useState(false);
   const [user, setUser] = useState([]);
-  
+
   console.log(user);
-  
+
   return (
     <div>
-      {authenticate? <Login user={setUser} auth={setAuthenticate}/> : <Register user={setUser} auth={setAuthenticate}/>}
+      {authenticate ? (
+        <Login user={user} auth={setAuthenticate} />
+      ) : (
+        <Register user={setUser} auth={setAuthenticate} />
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

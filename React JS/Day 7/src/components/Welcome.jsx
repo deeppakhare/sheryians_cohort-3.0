@@ -58,7 +58,13 @@
 
 import React from 'react'
 
-const Welcome = () => {
+const Welcome = ({data, login}) => {
+    console.log(data);
+
+    const handelSubmit = (e) => {
+        login(false);
+    }
+    
   return (
     <div>
        <div className="min-h-screen w-full bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 flex items-center justify-center px-4">
@@ -88,12 +94,12 @@ const Welcome = () => {
             Logged in as
           </p>
 
-          <p className="mt-1 text-lg font-semibold text-slate-800">
-            User
+          <p className="mt-1 mb-2 text-2xl font-semibold text-slate-800">
+            {data.name}
           </p>
 
           <p className="mt-1 text-sm text-slate-500">
-            user@example.com
+            {data.email}
           </p>
         </div>
 
@@ -111,6 +117,7 @@ const Welcome = () => {
 
           {/* Logout Button */}
           <button
+          onClick={handelSubmit}
             type="button"
             className="flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-7 py-3.5 text-sm font-semibold text-slate-700 transition-all duration-200 hover:-translate-y-0.5 hover:border-red-200 hover:bg-red-50 hover:text-red-600 active:translate-y-0"
           >

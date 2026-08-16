@@ -64,6 +64,7 @@
 
 import React from "react";
 import { useState } from "react";
+import Welcome from "./Welcome";
 
 const Login = ({ auth, user }) => {
   const [checkUser, setCheckUser] = useState({
@@ -71,26 +72,38 @@ const Login = ({ auth, user }) => {
     password: "",
   });
   const [isLogged, setIsLogged] = useState(false);
+  const [loggedUser, setLoggedUser] = useState(null);
 
   const handelCheck = (e) => {
     let { name, value } = e.target;
     setCheckUser((prev) => ({ ...prev, [name]: value }));
-
   };
 
   const handelSubmitData = (e) => {
     e.preventDefault();
 
-    const foundUser = user.find((elem) => elem.email === check.email && elem.password === check.password);
-    
-    
-    if(foundUser){
-      alert("Correct");
+    const foundUser = user.find(
+      (a) => a.email === checkUser.email && a.password === checkUser.password,
+    );
+
+    if (foundUser) {
+      setIsLogged(true);
+      setLoggedUser(foundUser);
+      setCheckUser({
+        email:"",
+        password:""
+      })
+      alert("Log in Sucess");
     } else {
-      alert("Wrong");
+      alert("Invalid Data plese recheck");
+      setCheckUser({
+        email:"",
+        password:""
+      })
     }
   };
 
+  if (isLogged) return <Welcome data={loggedUser} login={setIsLogged} />;
   return (
     <div>
       <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 px-4">
@@ -120,7 +133,7 @@ const Login = ({ auth, user }) => {
           </div>
 
           {/* Form */}
-          <form onClick={handelSubmitData} className="space-y-5">
+          <form onSubmit={handelSubmitData} className="space-y-5">
             {/* Email */}
             <div>
               <label className="mb-2 block text-sm font-medium text-slate-700">
