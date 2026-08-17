@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import Form from "./components/Form";
 
 const App = () => {
   return (
-    <div>
-      
+    <div className="h-screen w-screen flex flex-col justify-center items-center text-amber-500">
+      <Form />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
