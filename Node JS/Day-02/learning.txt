@@ -10,4 +10,5 @@
     POST -> Create / Save something
     PUT / PATCH -> Update something
     DELETE -> Delete anything
-    
+6. CRUD Operatios through Postman
+7. used app.use(express.json()) middleware for accepting data from frontend through postman
