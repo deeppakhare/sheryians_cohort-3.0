@@ -1,11 +1,31 @@
-let http = require("http");
+// let http = require("http");
 
-let server = http.createServer((req, res) => {
-    console.log("hey");
-    res.end("Ok get it");
+// let server = http.createServer((req, res) => {
+//     if(req.url === "/users"){
+//         res.end("me in users")
+//     }
+//     if(req.url === "/cart"){
+//         res.end("me in cart")
+//     }
+// })
+
+// server.listen(3000, () => {
+//     console.log("Server chalu he");
+    
+// })
+
+
+// *************** Express ******************************
+// ------------(Express se server banana) *****************
+
+const express = require('express');
+const app = express()
+
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
 })
 
-server.listen(3000, () => {
-    console.log("Server chalu he");
-    
+app.listen(3000, () => {
+  console.log(`Example app listening on port ${port}`)
 })

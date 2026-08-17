@@ -1,2 +1,13 @@
         Day 02 
- 
+1. installing express in folder
+2. create server from express 
+3. protocol (req, res) 
+    - req -> accepting any API 
+    - res -> response to that API (send) 
+4. types of protocols - HTTP (req, res), HTTPS (req, res), FTP (req, file, callback), SMTP (from, to, subject, massage), Web-socket
+5. Methods :- Rest API's
+    GET -> Send Data
+    POST -> Create / Save something
+    PUT / PATCH -> Update something
+    DELETE -> Delete anything
+    
