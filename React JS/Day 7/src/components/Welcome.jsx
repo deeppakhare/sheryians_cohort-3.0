@@ -67,7 +67,7 @@ const Welcome = ({data, login}) => {
     
   return (
     <div>
-       <div className="min-h-screen w-full bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 flex items-center justify-center px-4">
+       <div className="min-h-screen w-full bg-linear-to-br from-slate-950 via-slate-900 to-indigo-950 flex items-center justify-center px-4">
 
       {/* Welcome Card */}
       <div className="w-full max-w-2xl rounded-3xl bg-white p-8 sm:p-12 text-center shadow-2xl">

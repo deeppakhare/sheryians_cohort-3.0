@@ -106,7 +106,7 @@ const Login = ({ auth, user }) => {
   if (isLogged) return <Welcome data={loggedUser} login={setIsLogged} />;
   return (
     <div>
-      <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 px-4">
+      <div className="min-h-screen w-full flex items-center justify-center bg-linear-to-br from-slate-950 via-slate-900 to-indigo-950 px-4">
         {/* Register Card */}
         <div className="w-full max-w-md rounded-3xl bg-white p-8 shadow-2xl sm:p-10">
           {/* Header */}
