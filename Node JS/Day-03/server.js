@@ -24,6 +24,8 @@ app.delete("/delete/:id", (req, res) => {
   res.send("User deleted success");
 });
 
+// Update api
+
 app.put("/update/:id", (req, res) => {
   let { id } = req.params;
   let { name } = req.body;
