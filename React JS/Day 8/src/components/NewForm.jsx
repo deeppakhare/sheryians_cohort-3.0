@@ -442,7 +442,7 @@ const NewForm = () => {
                 <p className="text-xs font-bold uppercase text-slate-400">
                   Skills
                 </p>
-                <p className="mt-1 text-slate-800">{data.fullName ? data.fullName : "No data" }</p>
+                <p className="mt-1 text-slate-800">{data.skills ? data.fullName : "No data" }</p>
               </div>
 
               <div className="rounded-xl bg-slate-50 p-4">
