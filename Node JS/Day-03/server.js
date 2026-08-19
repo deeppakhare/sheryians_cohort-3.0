@@ -17,6 +17,8 @@ app.post("/create", (req, res) => {
   res.send("user saved success");
 });
 
+// Delete
+
 app.delete("/delete/:id", (req, res) => {
   let { id } = req.params;
   let userData = users.filter((val) => val.id !== id);
