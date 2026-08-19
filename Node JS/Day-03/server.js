@@ -5,6 +5,9 @@ app.use(express.json());
 
 let users = [];
 
+// CRUD OPerations
+
+
 app.get("/", (req, res) => {
   res.send(users);
 });
