@@ -11,6 +11,7 @@ let users = [];
 app.get("/", (req, res) => {
   res.send(users);
 });
+// create
 app.post("/create", (req, res) => {
   let body = req.body;
   users.push(body);
