@@ -1,0 +1,9 @@
+1. What is Data and how data generated.
+2. Types of Databases 
+    - Sequential Database (SQL, MySql, Postgress etc,.)
+    - Non-Sequential Database (MongoDB, GraphQL, Prisma etc,. )
+3. MongoDB --> DB (Storage)
+           --> Atlas (Storage provider)
+           --> Compass (GUI)
+4. Implementaion Of MongoDB
+    --> Install MongoDB from official website
