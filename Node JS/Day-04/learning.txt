@@ -7,3 +7,5 @@
            --> Compass (GUI)
 4. Implementaion Of MongoDB
     --> Install MongoDB from official website
+    --> Creating MongoDB atlas Account and creating new organization and create new cluster with AWS service provider 
+    --> Connecting Cluster with Compass 
