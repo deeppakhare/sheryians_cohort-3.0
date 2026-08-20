@@ -452,6 +452,13 @@ const NewForm = () => {
                 <p className="mt-1 text-slate-800">{data.experience ? data.exper : "No data" }</p>
               </div>
 
+              <div className="rounded-xl bg-slate-50 p-4">
+                <p className="text-xs font-bold uppercase text-slate-400">
+                  Job Type
+                </p>
+                <p className="mt-1 text-slate-800">No data</p>
+              </div>
+            </div>
 
             {/* Tip */}
             <div className="mt-6 rounded-xl border border-indigo-100 bg-indigo-50 p-4">
