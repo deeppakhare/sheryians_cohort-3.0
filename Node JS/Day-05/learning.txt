@@ -1,0 +1,5 @@
+1. Client Side Arcitecture and how it work with example of restaurant 
+2. We learn about Status codes 
+3. We connect mongodb to backend through connection key of cluster
+4. we create a basic notes apis and connect with backend
+5. we first post or push database to mongodb compass via postman
