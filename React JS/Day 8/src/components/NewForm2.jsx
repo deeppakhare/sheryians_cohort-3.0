@@ -1,33 +1,21 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 
-const NewForm = ({toggle}) => {
-  const ref = useRef({});
+const NewForm = ({ toggle }) => {
   const [data, setData] = useState({});
 
-  const handelSubmit = (e) => {
-    e.preventDefault();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
 
-    const obj = {
-      fullName: ref.current.fullName.value,
-      email: ref.current.email.value,
-      password: ref.current.password.value,
-      confirmPassword: ref.current.confirmPassword.value,
-      age: ref.current.age.value,
-      mobileNo: ref.current.mobileNo.value,
-      gender: ref.current.gender.value,
-      city: ref.current.city.value,
-      dateOfBirth: ref.current.dateOfBirth.value,
-      portfolio: ref.current.portfolio.value,
-      skills: ref.current.skills.value,
-      textArea: ref.current.textArea.value,
-      experience: ref.current.experience.value,
-      job: ref.current.job.value,
-
-    };
-
-    setData(obj);
+  const onSubmit = (e) => {
+    setData(e);
+    reset();
   };
-  // console.log(data);
+  console.log(data);
 
   return (
     <div className="min-h-screen w-full bg-linear-to-br from-slate-950 via-slate-900 to-indigo-950 p-6">
@@ -45,21 +33,19 @@ const NewForm = ({toggle}) => {
 
         {/* Toggle Buttons */}
         <div className="mb-8 flex justify-center gap-4">
-        
-
           <button
-            onClick={(e) => toggle(false)}
+            onClick={(e) => toggle(true)}
             type="button"
-            className="rounded-xl border border-green-500 bg-green-600 px-7 py-3 font-semibold text-white transition hover:bg-green-700"
+            className="rounded-xl border border-blue-500 bg-blue-600 px-7 py-3 font-semibold text-white transition hover:bg-blue-700"
           >
-            Try React Hook Form
+            Try useRef
           </button>
         </div>
 
         {/* Current Mode */}
         <div className="mb-6 text-center">
           <span className="rounded-full bg-white/10 px-5 py-2 text-sm font-semibold text-slate-300">
-            Current Mode: useRef
+            Current Mode: React Hook Form
           </span>
         </div>
 
@@ -79,7 +65,10 @@ const NewForm = ({toggle}) => {
             </div>
 
             {/* Form */}
-            <form onSubmit={handelSubmit} className="grid gap-5 md:grid-cols-2">
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              className="grid gap-5 md:grid-cols-2"
+            >
               {/* Full Name */}
               <div>
                 <label className="mb-2 block text-sm font-semibold text-slate-700">
@@ -87,10 +76,8 @@ const NewForm = ({toggle}) => {
                 </label>
 
                 <input
-                  ref={(e) => (ref.current.fullName = e)}
-                  required
+                  {...register("name", { required: true })}
                   type="text"
-                  name="name"
                   placeholder="Enter your full name"
                   className="w-full rounded-xl border border-slate-300 bg-white p-3 text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
                 />
@@ -103,10 +90,8 @@ const NewForm = ({toggle}) => {
                 </label>
 
                 <input
-                  ref={(e) => (ref.current.email = e)}
-                  required
+                  {...register("email", { required: true })}
                   type="email"
-                  name="email"
                   placeholder="example@gmail.com"
                   className="w-full rounded-xl border border-slate-300 bg-white p-3 text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
                 />
@@ -119,10 +104,8 @@ const NewForm = ({toggle}) => {
                 </label>
 
                 <input
-                  ref={(e) => (ref.current.password = e)}
-                  required
+                  {...register("password")}
                   type="password"
-                  name="password"
                   placeholder="Enter password"
                   className="w-full rounded-xl border border-slate-300 bg-white p-3 text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
                 />
@@ -135,10 +118,8 @@ const NewForm = ({toggle}) => {
                 </label>
 
                 <input
-                  ref={(e) => (ref.current.confirmPassword = e)}
-                  required
+                  {...register("password")}
                   type="password"
-                  name="confirmPassword"
                   placeholder="Confirm password"
                   className="w-full rounded-xl border border-slate-300 bg-white p-3 text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
                 />
@@ -151,10 +132,8 @@ const NewForm = ({toggle}) => {
                 </label>
 
                 <input
-                  ref={(e) => (ref.current.age = e)}
-                  required
+                  {...register("age", { required: true })}
                   type="number"
-                  name="age"
                   placeholder="Enter your age"
                   className="w-full rounded-xl border border-slate-300 bg-white p-3 text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
                 />
@@ -167,10 +146,8 @@ const NewForm = ({toggle}) => {
                 </label>
 
                 <input
-                  ref={(e) => (ref.current.mobileNo = e)}
-                  required
+                  {...register("number")}
                   type="tel"
-                  name="phone"
                   placeholder="+91 98765 43210"
                   className="w-full rounded-xl border border-slate-300 bg-white p-3 text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
                 />
@@ -183,9 +160,7 @@ const NewForm = ({toggle}) => {
                 </label>
 
                 <select
-                  ref={(e) => (ref.current.gender = e)}
-                  required
-                  name="gender"
+                  {...register("gender")}
                   className="w-full rounded-xl border border-slate-300 bg-white p-3 text-slate-700 outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
                 >
                   <option value="">Select Gender</option>
@@ -202,9 +177,7 @@ const NewForm = ({toggle}) => {
                 </label>
 
                 <select
-                  ref={(e) => (ref.current.city = e)}
-                  required
-                  name="city"
+                  {...register("city", { required: true })}
                   className="w-full rounded-xl border border-slate-300 bg-white p-3 text-slate-700 outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
                 >
                   <option value="">Select City</option>
@@ -223,10 +196,8 @@ const NewForm = ({toggle}) => {
                 </label>
 
                 <input
-                  ref={(e) => (ref.current.dateOfBirth = e)}
-                  required
+                  {...register("DOB")}
                   type="date"
-                  name="dob"
                   className="w-full rounded-xl border border-slate-300 bg-white p-3 text-slate-700 outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
                 />
               </div>
@@ -238,10 +209,8 @@ const NewForm = ({toggle}) => {
                 </label>
 
                 <input
-                  ref={(e) => (ref.current.portfolio = e)}
-                  required
+                  {...register("portfolio")}
                   type="url"
-                  name="website"
                   placeholder="https://example.com"
                   className="w-full rounded-xl border border-slate-300 bg-white p-3 text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
                 />
@@ -254,10 +223,8 @@ const NewForm = ({toggle}) => {
                 </label>
 
                 <input
-                  ref={(e) => (ref.current.skills = e)}
-                  required
+                  {...register("skills", { required: true })}
                   type="text"
-                  name="skills"
                   placeholder="React, JavaScript, Tailwind CSS..."
                   className="w-full rounded-xl border border-slate-300 bg-white p-3 text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
                 />
@@ -270,9 +237,7 @@ const NewForm = ({toggle}) => {
                 </label>
 
                 <textarea
-                  ref={(e) => (ref.current.textArea = e)}
-                  required
-                  name="bio"
+                  {...register("about")}
                   rows="4"
                   placeholder="Tell us something about yourself..."
                   className="w-full resize-none rounded-xl border border-slate-300 bg-white p-3 text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
@@ -286,9 +251,7 @@ const NewForm = ({toggle}) => {
                 </label>
 
                 <select
-                  ref={(e) => (ref.current.experience = e)}
-                  required
-                  name="experience"
+                  {...register("experience", { required: true })}
                   className="w-full rounded-xl border border-slate-300 bg-white p-3 text-slate-700 outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
                 >
                   <option value="">Select Experience</option>
@@ -306,9 +269,7 @@ const NewForm = ({toggle}) => {
                 </label>
 
                 <select
-                  ref={(e) => (ref.current.job = e)}
-                  required
-                  name="jobType"
+                  {...register("jobType", { required: true })}
                   className="w-full rounded-xl border border-slate-300 bg-white p-3 text-slate-700 outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
                 >
                   <option value="">Select Job Type</option>
@@ -328,9 +289,8 @@ const NewForm = ({toggle}) => {
                 <div className="flex flex-wrap gap-6">
                   <label className="flex cursor-pointer items-center gap-2">
                     <input
-                      required
+                      {...register("contact")}
                       type="radio"
-                      name="contact"
                       value="email"
                       className="h-4 w-4 accent-indigo-600"
                     />
@@ -339,8 +299,8 @@ const NewForm = ({toggle}) => {
 
                   <label className="flex cursor-pointer items-center gap-2">
                     <input
+                      {...register("contact")}
                       type="radio"
-                      name="contact"
                       value="phone"
                       className="h-4 w-4 accent-indigo-600"
                     />
@@ -349,8 +309,8 @@ const NewForm = ({toggle}) => {
 
                   <label className="flex cursor-pointer items-center gap-2">
                     <input
+                      {...register("contact")}
                       type="radio"
-                      name="contact"
                       value="both"
                       className="h-4 w-4 accent-indigo-600"
                     />
@@ -363,9 +323,8 @@ const NewForm = ({toggle}) => {
               <div className="md:col-span-2">
                 <label className="flex cursor-pointer items-center gap-3">
                   <input
-                    required
+                    {...register("check")}
                     type="checkbox"
-                    name="terms"
                     className="h-5 w-5 accent-indigo-600"
                   />
 
@@ -385,7 +344,8 @@ const NewForm = ({toggle}) => {
                 </button>
 
                 <button
-                  type="reset"
+                  type="button"
+                  onClick={() => reset()}
                   className="rounded-xl border border-slate-300 bg-white px-6 py-3.5 font-semibold text-slate-700 transition hover:bg-slate-100"
                 >
                   Reset
@@ -410,49 +370,51 @@ const NewForm = ({toggle}) => {
                 <p className="text-xs font-bold uppercase text-slate-400">
                   Name
                 </p>
-                <p className="mt-1 text-slate-800">{data.fullName ? data.fullName : "No data" }</p>
+                <p className="mt-1 text-slate-800">
+                  {data.name ? data.name : "No Data Available"}
+                </p>
               </div>
 
               <div className="rounded-xl bg-slate-50 p-4">
                 <p className="text-xs font-bold uppercase text-slate-400">
                   Email
                 </p>
-                <p className="mt-1 text-slate-800">{data.email ? data.email : "No data" }</p>
+                <p className="mt-1 text-slate-800"> {data.email ? data.email : "No Data Available"}</p>
               </div>
 
               <div className="rounded-xl bg-slate-50 p-4">
                 <p className="text-xs font-bold uppercase text-slate-400">
                   Age
                 </p>
-                <p className="mt-1 text-slate-800">{data.age ? data.age : "No data" }</p>
+                <p className="mt-1 text-slate-800">{data.age ? data.age : "No Data Available"}</p>
               </div>
 
               <div className="rounded-xl bg-slate-50 p-4">
                 <p className="text-xs font-bold uppercase text-slate-400">
                   City
                 </p>
-                <p className="mt-1 text-slate-800">{data.city ? data.city : "No data" }</p>
+                <p className="mt-1 text-slate-800">{data.city ? data.city : "No Data Available"} </p>
               </div>
 
               <div className="rounded-xl bg-slate-50 p-4">
                 <p className="text-xs font-bold uppercase text-slate-400">
                   Skills
                 </p>
-                <p className="mt-1 text-slate-800">{data.skills ? data.skills : "No data" }</p>
+                <p className="mt-1 text-slate-800"> {data.skills ? data.skills : "No Data Available"}</p>
               </div>
 
               <div className="rounded-xl bg-slate-50 p-4">
                 <p className="text-xs font-bold uppercase text-slate-400">
                   Experience
                 </p>
-                <p className="mt-1 text-slate-800">{data.experience ? data.experience : "No data" }</p>
+                <p className="mt-1 text-slate-800"> {data.experience ? data.experience : "No Data Available"} </p>
               </div>
 
               <div className="rounded-xl bg-slate-50 p-4">
                 <p className="text-xs font-bold uppercase text-slate-400">
                   Job Type
                 </p>
-                <p className="mt-1 text-slate-800">{data.job ? data.job : "No data" }</p>
+                <p className="mt-1 text-slate-800"> {data.jobType ? data.jobType : "No Data Available"} </p>
               </div>
             </div>
 
