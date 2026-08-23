@@ -1,6 +1,6 @@
 import React from "react";
 
-const Usercard = () => {
+const Usercard = ({user}) => {
   return (
     <article className="group overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 shadow-xl transition duration-300 hover:-translate-y-1 hover:border-slate-700">
       {/* Cover */}
@@ -11,6 +11,10 @@ const Usercard = () => {
         <div className="absolute right-4 top-4 flex items-center gap-2 rounded-full border border-white/10 bg-black/30 px-3 py-1.5 text-xs font-medium text-white backdrop-blur">
           <span className="h-2 w-2 rounded-full bg-emerald-400"></span>
           Active
+        </div>
+        <div className="absolute right-25 top-4 flex items-center gap-2 rounded-full border border-white/10 bg-black/30 px-3 py-1.5 text-xs font-medium text-white backdrop-blur">
+          <span className="h-2 w-2 rounded-full bg-yellow-400"></span>
+          Male
         </div>
       </div>
 
@@ -27,13 +31,9 @@ const Usercard = () => {
 
         {/* User Information */}
         <div className="mb-5">
-          <h2 className="text-xl font-bold text-white">
-            Pandu Kumar
-          </h2>
+          <h2 className="text-xl font-bold text-white">{user.name}</h2>
 
-          <p className="mt-1 text-sm text-slate-400">
-            pandu@gmail.com
-          </p>
+          <p className="mt-1 text-sm text-slate-400">pandu@gmail.com</p>
 
           <div className="mt-3 flex flex-wrap gap-2">
             <span className="rounded-full bg-indigo-500/10 px-3 py-1 text-xs font-medium text-indigo-300">
@@ -49,9 +49,7 @@ const Usercard = () => {
         {/* Details */}
         <div className="mb-5 grid grid-cols-2 gap-3">
           <div className="rounded-xl border border-slate-800 bg-slate-950 p-3">
-            <p className="text-xs text-slate-500">
-              Mobile
-            </p>
+            <p className="text-xs text-slate-500">Mobile</p>
 
             <p className="mt-1 text-sm font-medium text-slate-300">
               +91 98765 43210
@@ -59,24 +57,15 @@ const Usercard = () => {
           </div>
 
           <div className="rounded-xl border border-slate-800 bg-slate-950 p-3">
-            <p className="text-xs text-slate-500">
-              Joined
-            </p>
+            <p className="text-xs text-slate-500">DOB</p>
 
-            <p className="mt-1 text-sm font-medium text-slate-300">
-              Aug 2026
-            </p>
+            <p className="mt-1 text-sm font-medium text-slate-300">Aug 2026</p>
           </div>
         </div>
 
         {/* Actions */}
         <div className="flex gap-3">
-          <button
-            type="button"
-            className="flex-1 rounded-xl border border-slate-700 px-4 py-2.5 text-sm font-semibold text-slate-300 transition hover:bg-slate-800"
-          >
-            View
-          </button>
+          
 
           <button
             type="button"

@@ -1,6 +1,20 @@
 import React from "react";
+import { useForm } from "react-hook-form";
 
-const Form = () => {
+const Form = ({ addUser }) => {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm({
+    mode: "onchange",
+  });
+
+  const onSubmit = (data) => {
+    addUser((prev) => [...prev, data]);
+  };
+
   return (
     <div className="min-h-screen w-full bg-slate-950 px-4 py-10 text-white">
       <div className="mx-auto max-w-3xl">
@@ -15,13 +29,16 @@ const Form = () => {
           </h1>
 
           <p className="mt-2 max-w-xl text-sm leading-6 text-slate-400">
-            Add a new user by providing their personal information,
-            contact details, and profile information.
+            Add a new user by providing their personal information, contact
+            details, and profile information.
           </p>
         </div>
 
         {/* Form Card */}
-        <form className="rounded-2xl border border-slate-800 bg-slate-900 p-5 shadow-2xl sm:p-8">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="rounded-2xl border border-slate-800 bg-slate-900 p-5 shadow-2xl sm:p-8"
+        >
           {/* Personal Information */}
           <div className="mb-8">
             <div className="mb-5">
@@ -41,6 +58,7 @@ const Form = () => {
                 </label>
 
                 <input
+                  {...register("name")}
                   type="text"
                   placeholder="Enter full name"
                   className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
@@ -54,6 +72,7 @@ const Form = () => {
                 </label>
 
                 <input
+                {...register("email")}
                   type="email"
                   placeholder="example@gmail.com"
                   className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
@@ -67,21 +86,9 @@ const Form = () => {
                 </label>
 
                 <input
+                {...register("number")}
                   type="tel"
                   placeholder="+91 98765 43210"
-                  className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
-                />
-              </div>
-
-              {/* Age */}
-              <div>
-                <label className="mb-2 block text-sm font-medium text-slate-300">
-                  Age
-                </label>
-
-                <input
-                  type="number"
-                  placeholder="Enter age"
                   className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
                 />
               </div>
@@ -93,6 +100,7 @@ const Form = () => {
                 </label>
 
                 <input
+                {...register("dob")}
                   type="date"
                   className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-slate-300 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
                 />
@@ -104,66 +112,12 @@ const Form = () => {
                   Gender
                 </label>
 
-                <select className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-slate-300 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10">
+                <select {...register("gender")} className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-slate-300 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10">
                   <option value="">Select gender</option>
                   <option value="male">Male</option>
                   <option value="female">Female</option>
                   <option value="other">Other</option>
                 </select>
-              </div>
-            </div>
-          </div>
-
-          {/* Account Information */}
-          <div className="mb-8 border-t border-slate-800 pt-8">
-            <div className="mb-5">
-              <h2 className="text-lg font-semibold text-white">
-                Account Information
-              </h2>
-
-              <p className="mt-1 text-sm text-slate-500">
-                Configure the user's account credentials.
-              </p>
-            </div>
-
-            <div className="grid gap-5 sm:grid-cols-2">
-              {/* Username */}
-              <div>
-                <label className="mb-2 block text-sm font-medium text-slate-300">
-                  Username
-                </label>
-
-                <input
-                  type="text"
-                  placeholder="Enter username"
-                  className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
-                />
-              </div>
-
-              {/* Password */}
-              <div>
-                <label className="mb-2 block text-sm font-medium text-slate-300">
-                  Password
-                </label>
-
-                <input
-                  type="password"
-                  placeholder="Create password"
-                  className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
-                />
-              </div>
-
-              {/* Confirm Password */}
-              <div className="sm:col-span-2">
-                <label className="mb-2 block text-sm font-medium text-slate-300">
-                  Confirm Password
-                </label>
-
-                <input
-                  type="password"
-                  placeholder="Confirm password"
-                  className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
-                />
               </div>
             </div>
           </div>
@@ -188,21 +142,9 @@ const Form = () => {
                 </label>
 
                 <input
+                {...register("url")}
                   type="url"
                   placeholder="https://example.com/avatar.jpg"
-                  className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
-                />
-              </div>
-
-              {/* Website */}
-              <div>
-                <label className="mb-2 block text-sm font-medium text-slate-300">
-                  Portfolio Website
-                </label>
-
-                <input
-                  type="url"
-                  placeholder="https://yourwebsite.com"
                   className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
                 />
               </div>
@@ -213,7 +155,7 @@ const Form = () => {
                   City
                 </label>
 
-                <select className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-slate-300 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10">
+                <select {...register("city")} className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-slate-300 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10">
                   <option value="">Select city</option>
                   <option value="pune">Pune</option>
                   <option value="mumbai">Mumbai</option>
@@ -230,84 +172,11 @@ const Form = () => {
                 </label>
 
                 <input
+                {...register("occupation")}
                   type="text"
                   placeholder="e.g. Software Developer"
                   className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
                 />
-              </div>
-
-              {/* Bio */}
-              <div className="sm:col-span-2">
-                <label className="mb-2 block text-sm font-medium text-slate-300">
-                  About
-                </label>
-
-                <textarea
-                  rows="4"
-                  placeholder="Write a short introduction about the user..."
-                  className="w-full resize-none rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
-                ></textarea>
-              </div>
-            </div>
-          </div>
-
-          {/* Preferences */}
-          <div className="mb-8 border-t border-slate-800 pt-8">
-            <div className="mb-5">
-              <h2 className="text-lg font-semibold text-white">
-                Preferences
-              </h2>
-
-              <p className="mt-1 text-sm text-slate-500">
-                Configure communication preferences.
-              </p>
-            </div>
-
-            {/* Contact Method */}
-            <div className="mb-6">
-              <label className="mb-3 block text-sm font-medium text-slate-300">
-                Preferred Contact Method
-              </label>
-
-              <div className="flex flex-wrap gap-3">
-                <label className="flex cursor-pointer items-center gap-2 rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-slate-300">
-                  <input type="radio" value="email" />
-                  Email
-                </label>
-
-                <label className="flex cursor-pointer items-center gap-2 rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-slate-300">
-                  <input type="radio" value="phone" />
-                  Phone
-                </label>
-
-                <label className="flex cursor-pointer items-center gap-2 rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-slate-300">
-                  <input type="radio" value="both" />
-                  Both
-                </label>
-              </div>
-            </div>
-
-            {/* Notifications */}
-            <div>
-              <label className="mb-3 block text-sm font-medium text-slate-300">
-                Notifications
-              </label>
-
-              <div className="space-y-3">
-                <label className="flex cursor-pointer items-center gap-3 text-sm text-slate-400">
-                  <input type="checkbox" />
-                  Receive email notifications
-                </label>
-
-                <label className="flex cursor-pointer items-center gap-3 text-sm text-slate-400">
-                  <input type="checkbox" />
-                  Receive product updates
-                </label>
-
-                <label className="flex cursor-pointer items-center gap-3 text-sm text-slate-400">
-                  <input type="checkbox" />
-                  Receive promotional emails
-                </label>
               </div>
             </div>
           </div>
@@ -319,8 +188,8 @@ const Form = () => {
 
               <span>
                 I agree to the{" "}
-                <span className="text-indigo-400">Terms & Conditions</span>{" "}
-                and confirm that the information provided is correct.
+                <span className="text-indigo-400">Terms & Conditions</span> and
+                confirm that the information provided is correct.
               </span>
             </label>
           </div>
