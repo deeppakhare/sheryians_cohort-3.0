@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 
-const Form = ({ addUser }) => {
+const Form = ({ addUser, users, editUser, setToggle }) => {
   const {
     register,
     handleSubmit,
@@ -9,11 +9,31 @@ const Form = ({ addUser }) => {
     formState: { errors },
   } = useForm({
     mode: "onchange",
+    defaultValues: editUser,
   });
 
-  const onSubmit = (data) => {
-    addUser((prev) => [...prev, data]);
+  const getNextId = () => {
+    if (users.length === 0) {
+      return 1;
+    }
+    return Math.max(...users.map((user) => user.id)) + 1;
   };
+
+  const onSubmit = (data) => {
+    const newUser = {
+      id: getNextId(),
+      ...data,
+    };
+    addUser((prev) => [...prev, newUser]);
+    reset();
+    setToggle(false)
+  };
+
+  useEffect(() => {
+  if(editUser) {
+    reset(editUser);
+  }
+  }, [editUser, reset])
 
   return (
     <div className="min-h-screen w-full bg-slate-950 px-4 py-10 text-white">
@@ -58,11 +78,20 @@ const Form = ({ addUser }) => {
                 </label>
 
                 <input
-                  {...register("name")}
+                  {...register("name", {
+                    required: "Enter full name",
+                    pattern: {
+                      value: /^\S.*$/,
+                      message: "Blank space is not required",
+                    },
+                  })}
                   type="text"
                   placeholder="Enter full name"
                   className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
                 />
+                {errors.name && (
+                  <p className="text-red-500 ml-2">{errors.name.message}</p>
+                )}
               </div>
 
               {/* Email */}
@@ -72,11 +101,20 @@ const Form = ({ addUser }) => {
                 </label>
 
                 <input
-                {...register("email")}
+                  {...register("email", {
+                    required: "Enter valid email id",
+                    pattern: {
+                      value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                      message: "Please enter a valid email address",
+                    },
+                  })}
                   type="email"
                   placeholder="example@gmail.com"
                   className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
                 />
+                {errors.email && (
+                  <p className="text-red-500 ml-2">{errors.email.message}</p>
+                )}
               </div>
 
               {/* Mobile */}
@@ -86,11 +124,20 @@ const Form = ({ addUser }) => {
                 </label>
 
                 <input
-                {...register("number")}
+                  {...register("number", {
+                    required: "Enter correct mobile no",
+                    pattern: {
+                      value: /^[6-9]\d{9}$/,
+                      message: "Enter a valid 10-digit mobile number",
+                    },
+                  })}
                   type="tel"
                   placeholder="+91 98765 43210"
                   className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
                 />
+                {errors.number && (
+                  <p className="text-red-500 ml-2">{errors.number.message}</p>
+                )}
               </div>
 
               {/* Date of Birth */}
@@ -100,10 +147,15 @@ const Form = ({ addUser }) => {
                 </label>
 
                 <input
-                {...register("dob")}
+                  {...register("dob", {
+                    required: "Enter your vaild DOB",
+                  })}
                   type="date"
                   className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-slate-300 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
                 />
+                {errors.dob && (
+                  <p className="text-red-500 ml-2">{errors.dob.message}</p>
+                )}
               </div>
 
               {/* Gender */}
@@ -112,12 +164,20 @@ const Form = ({ addUser }) => {
                   Gender
                 </label>
 
-                <select {...register("gender")} className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-slate-300 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10">
+                <select
+                  {...register("gender", {
+                    required: "Select your gender",
+                  })}
+                  className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-slate-300 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
+                >
                   <option value="">Select gender</option>
                   <option value="male">Male</option>
                   <option value="female">Female</option>
                   <option value="other">Other</option>
                 </select>
+                {errors.gender && (
+                  <p className="text-red-500 ml-2">{errors.gender.message}</p>
+                )}
               </div>
             </div>
           </div>
@@ -142,11 +202,21 @@ const Form = ({ addUser }) => {
                 </label>
 
                 <input
-                {...register("url")}
+                  {...register("url", {
+                    required: "Enter valid url",
+                    pattern: {
+                      value:
+                        /^(https?:\/\/)?([\w-]+\.)+[\w-]+(\/[\w\-._~:/?#[\]@!$&'()*+,;=%]*)?$/,
+                      message: "Please enter a valid URL",
+                    },
+                  })}
                   type="url"
                   placeholder="https://example.com/avatar.jpg"
                   className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
                 />
+                {errors.url && (
+                  <p className="text-red-500 ml-2">{errors.url.message}</p>
+                )}
               </div>
 
               {/* City */}
@@ -155,7 +225,12 @@ const Form = ({ addUser }) => {
                   City
                 </label>
 
-                <select {...register("city")} className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-slate-300 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10">
+                <select
+                  {...register("city", {
+                    required: "Enter your city",
+                  })}
+                  className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-slate-300 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
+                >
                   <option value="">Select city</option>
                   <option value="pune">Pune</option>
                   <option value="mumbai">Mumbai</option>
@@ -163,6 +238,9 @@ const Form = ({ addUser }) => {
                   <option value="bangalore">Bangalore</option>
                   <option value="hyderabad">Hyderabad</option>
                 </select>
+                {errors.city && (
+                  <p className="text-red-500 ml-2">{errors.city.message}</p>
+                )}
               </div>
 
               {/* Occupation */}
@@ -172,11 +250,18 @@ const Form = ({ addUser }) => {
                 </label>
 
                 <input
-                {...register("occupation")}
+                  {...register("occupation", {
+                    required: "Enter your occupation",
+                  })}
                   type="text"
                   placeholder="e.g. Software Developer"
                   className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
                 />
+                {errors.occupation && (
+                  <p className="text-red-500 ml-2">
+                    {errors.occupation.message}
+                  </p>
+                )}
               </div>
             </div>
           </div>
@@ -204,6 +289,7 @@ const Form = ({ addUser }) => {
             </button>
 
             <button
+           
               type="submit"
               className="rounded-xl bg-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-600/20 transition hover:bg-indigo-500"
             >

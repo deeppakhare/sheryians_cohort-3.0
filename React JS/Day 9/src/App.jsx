@@ -6,16 +6,28 @@ import Form from "./components/Form";
 const App = () => {
   const [users, setUsers] = useState([]);
   const [toggle, setToggle] = useState(false);
+  const [editUser, setEditUser] = useState(null);
 
   console.log(users);
-  
+
+  const handelDelete = (id) => {
+    setUsers((prev) => {
+      return prev.filter((user) => user.id !== id);
+    });
+  };
+
+  const handelEdit = (user) => {
+    setEditUser(user);
+    setToggle(true);
+    reset();
+  };
 
   return (
     <main className="min-h-screen bg-slate-950 text-white">
       {/* Navbar */}
       <Navbar toggle={setToggle} />
       {toggle ? (
-        <Form addUser={setUsers} />
+        <Form setToggle={setToggle} editUser={editUser} addUser={setUsers} users={users} />
       ) : (
         <section className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
           {/* Page Header */}
@@ -109,18 +121,20 @@ const App = () => {
             ) : (
               <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {users.map((elem) => {
-                  return <Usercard profile={elem.name} user={elem} />
+                  return (
+                    <Usercard
+                      handelEdit={handelEdit}
+                      handelDelete={handelDelete}
+                      key={elem.id}
+                      user={elem}
+                    />
+                  );
                 })}
               </div>
             )}
           </div>
         </section>
       )}
-      {/* Main Content */}
-
-      <div className="hidden">
-        <Form />
-      </div>
     </main>
   );
 };
