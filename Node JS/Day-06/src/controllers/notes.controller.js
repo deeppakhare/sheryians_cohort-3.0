@@ -45,8 +45,44 @@ const getSingleNoteController = async (req, res) => {
   }
 };
 
+const updateNoteController = async (req, res) => {
+  try {
+    let noteId = req.params.id;
+    let body = req.body;
+    const updateNote = await NotesModel.findByIdAndUpdate(noteId, body, {
+      new: true,
+    });
+
+    return res.status(200).json({
+      message: "Updated successfully",
+      data: updateNote,
+    });
+  } catch (error) {
+    res.status(500).json({
+      message: "Internal api error",
+    });
+  }
+};
+
+const deleteNoteController = async (req, res) => {
+  try {
+    let noteId = req.params.id;
+    await NotesModel.findByIdAndDelete(noteId);
+
+    return res.status(200).json({
+      message: "Note deleted successfully",
+    });
+  } catch (error) {
+    res.status(500).json({
+      message: "Invalid api found ",
+    });
+  }
+};
+
 module.exports = {
   createNotesController,
   getAllNotesController,
   getSingleNoteController,
+  updateNoteController,
+  deleteNoteController
 };
