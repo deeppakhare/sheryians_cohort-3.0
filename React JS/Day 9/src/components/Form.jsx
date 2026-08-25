@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 
-const Form = ({ addUser, users, editUser, setToggle }) => {
+const Form = ({ addUser, users, editUser, setToggle, setEditUser }) => {
   const {
     register,
     handleSubmit,
@@ -9,7 +9,7 @@ const Form = ({ addUser, users, editUser, setToggle }) => {
     formState: { errors },
   } = useForm({
     mode: "onchange",
-    defaultValues: editUser,
+    defaultValues: { editUser },
   });
 
   const getNextId = () => {
@@ -20,20 +20,34 @@ const Form = ({ addUser, users, editUser, setToggle }) => {
   };
 
   const onSubmit = (data) => {
-    const newUser = {
-      id: getNextId(),
-      ...data,
-    };
-    addUser((prev) => [...prev, newUser]);
+    if (editUser) {
+      // Update existing user
+      addUser((prevUsers) =>
+        prevUsers.map((user) =>
+          user.id === editUser.id ? { ...user, ...data } : user,
+        ),
+      );
+
+      setEditUser(null);
+    } else {
+      // Create new user
+      const newUser = {
+        id: getNextId(),
+        ...data,
+      };
+
+      addUser((prevUsers) => [...prevUsers, newUser]);
+    }
+
     reset();
-    setToggle(false)
+    setToggle(false);
   };
 
   useEffect(() => {
-  if(editUser) {
-    reset(editUser);
-  }
-  }, [editUser, reset])
+    if (editUser) {
+      reset(editUser);
+    }
+  }, [editUser, reset]);
 
   return (
     <div className="min-h-screen w-full bg-slate-950 px-4 py-10 text-white">
@@ -289,11 +303,10 @@ const Form = ({ addUser, users, editUser, setToggle }) => {
             </button>
 
             <button
-           
               type="submit"
               className="rounded-xl bg-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-600/20 transition hover:bg-indigo-500"
             >
-              Create User
+              {editUser ? "Update User" : "Create user"}
             </button>
           </div>
         </form>

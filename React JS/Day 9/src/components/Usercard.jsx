@@ -68,14 +68,11 @@ const Usercard = ({ user, handelDelete, handelEdit }) => {
         {/* Actions */}
         <div className="flex gap-3">
           <button
-            onClick={() => {
-                handelEdit(user)
-
-            }}
+            onClick={() => handelEdit(user)}
             type="button"
             className="flex-1 rounded-xl bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-indigo-500"
           >
-            Edit
+            Edit user
           </button>
 
           <button
@@ -83,7 +80,7 @@ const Usercard = ({ user, handelDelete, handelEdit }) => {
             type="button"
             className="rounded-xl border border-red-500/20 bg-red-500/10 px-4 py-2.5 text-sm font-semibold text-red-400 transition hover:bg-red-500/20"
           >
-            Delete
+            Delete user
           </button>
         </div>
       </div>

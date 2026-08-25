@@ -8,7 +8,7 @@ const App = () => {
   const [toggle, setToggle] = useState(false);
   const [editUser, setEditUser] = useState(null);
 
-  console.log(users);
+  // console.log(users.length);
 
   const handelDelete = (id) => {
     setUsers((prev) => {
@@ -19,15 +19,23 @@ const App = () => {
   const handelEdit = (user) => {
     setEditUser(user);
     setToggle(true);
-    reset();
   };
+
+  console.log("users:", users);
+console.log("users type:", typeof users);
 
   return (
     <main className="min-h-screen bg-slate-950 text-white">
       {/* Navbar */}
       <Navbar toggle={setToggle} />
       {toggle ? (
-        <Form setToggle={setToggle} editUser={editUser} addUser={setUsers} users={users} />
+        <Form
+          editUser={editUser}
+          setToggle={setToggle}
+          setEditUser={setEditUser}
+          addUser={setUsers}
+          users={users}
+        />
       ) : (
         <section className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
           {/* Page Header */}

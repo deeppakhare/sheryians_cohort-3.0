@@ -22,7 +22,7 @@ const Navbar = ({ toggle }) => {
         {/* Navigation */}
         <nav className="hidden items-center gap-8 md:flex">
           <a
-          onClick={() => toggle(false)}
+            onClick={() => toggle(false)}
             href="#"
             className="text-sm font-medium text-white transition hover:text-indigo-400"
           >
@@ -61,7 +61,7 @@ const Navbar = ({ toggle }) => {
           </button>
 
           <button
-          onClick={() => toggle((prev) => !prev)}
+            onClick={() => toggle((prev) => !prev)}
             type="button"
             className="rounded-xl bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-indigo-600/20 transition hover:bg-indigo-500"
           >
