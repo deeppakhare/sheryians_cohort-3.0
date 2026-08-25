@@ -31,4 +31,22 @@ const getAllNotesController = async (req, res) => {
   }
 };
 
-module.exports = { createNotesController, getAllNotesController };
+const getSingleNoteController = async (req, res) => {
+  try {
+    let noteId = req.params.id;
+    const singleNote = await NotesModel.findById(noteId);
+
+    res.status(200).json({
+      message: "note is featched",
+      data: singleNote,
+    });
+  } catch (error) {
+    console.log("Error in get note api", error);
+  }
+};
+
+module.exports = {
+  createNotesController,
+  getAllNotesController,
+  getSingleNoteController,
+};
