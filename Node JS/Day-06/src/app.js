@@ -1,30 +1,16 @@
 const express = require("express");
-
+const connectDb = require("./config/db");
+const notesRoute = require("./routes/notes.route");
 const app = express();
 
 app.use(express.json());
+
+connectDb();
 
 app.get("/", (req, res) => {
   res.send("ok got it");
 });
 
-app.post("/create", async (req, res) => {
-  try {
-    let { title, description } = req.body;
-
-    const newNote = await NotesModel.create({
-      title,
-      description,
-    });
-
-    return res.status(201).json({
-        message:"Note created successfully",
-        data:newNote
-    });
-  } catch (error) {
-    console.log("Error in creation", error);
-  }
-});
-
+app.use("/notes", notesRoute);
 
 module.exports = app;
