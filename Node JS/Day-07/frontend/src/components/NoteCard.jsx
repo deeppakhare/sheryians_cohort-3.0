@@ -77,7 +77,7 @@ const App = () => {
 
   return (
     <div className="h-screen p-5 flex flex-col gap-5">
-      <h1 className="text-3xl font-semibold">Notes app</h1>
+      <h1 className="text-3xl font-semibold">Notes app UI</h1>
 
       <form
         onSubmit={handleSubmit}
