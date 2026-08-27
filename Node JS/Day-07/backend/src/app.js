@@ -1,11 +1,19 @@
 const express = require("express");
-const connectDb = require("./config/db");
+const cors = require("cors");
+const connectDB = require("./config/db");
 const notesRoute = require("./routes/notes.route");
+
 const app = express();
 
-app.use(express.json());
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+  }),
+);
 
-connectDb();
+connectDB();
+
+app.use(express.json());
 
 app.get("/", (req, res) => {
   res.send("ok got it");
