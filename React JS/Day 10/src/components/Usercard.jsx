@@ -1,6 +1,6 @@
 import React from "react";
 
-const Usercard = () => {
+const Usercard = ({ users }) => {
   return (
     <article className="group overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 shadow-xl transition duration-300 hover:-translate-y-1 hover:border-slate-700">
       {/* Cover */}
@@ -15,7 +15,7 @@ const Usercard = () => {
 
         {/* Gender */}
         <div className="absolute left-4 top-4 rounded-full border border-white/10 bg-black/30 px-3 py-1.5 text-xs font-medium capitalize text-white backdrop-blur">
-          Male
+          {users.gender}
         </div>
       </div>
 
@@ -24,7 +24,7 @@ const Usercard = () => {
         {/* Avatar */}
         <div className="-mt-12 mb-4 h-24 w-24 overflow-hidden rounded-2xl border-4 border-slate-900 bg-slate-800 shadow-xl">
           <img
-            src="https://i.pravatar.cc/300?img=12"
+            src={users.url}
             alt="User profile"
             className="h-full w-full object-cover"
           />
@@ -32,24 +32,18 @@ const Usercard = () => {
 
         {/* User Information */}
         <div className="mb-5">
-          <h2 className="text-xl font-bold text-white">
-            Deep Pakhare
-          </h2>
+          <h2 className="text-xl font-bold text-white">{users.fullName}</h2>
 
-          <p className="mt-1 text-sm text-slate-400">
-            +91 9370758231
-          </p>
+          <p className="mt-1 text-sm text-slate-400">+91 {users.mobileNo}</p>
         </div>
 
         {/* Details */}
         <div className="mb-5">
           <div className="rounded-xl border border-slate-800 bg-slate-950 p-3">
-            <p className="text-xs text-slate-500">
-              Profile
-            </p>
+            <p className="text-xs text-slate-500">Profile</p>
 
             <p className="mt-1 truncate text-sm font-medium text-slate-300">
-              Profile Image
+              {users.url}
             </p>
           </div>
         </div>

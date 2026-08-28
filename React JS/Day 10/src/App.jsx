@@ -6,12 +6,11 @@ import Form from "./components/Form";
 const App = () => {
   const [toggle, setToggle] = useState(false);
   const [users, setUsers] = useState(() => {
-      let newArr = localStorage.getItem("users");
-      return newArr ? JSON.parse(newArr) : []
+    let newArr = localStorage.getItem("users");
+    return newArr ? JSON.parse(newArr) : [];
   });
 
-  console.log(users.length);
-
+  console.log(users);
 
   return (
     <main className="min-h-screen bg-slate-950 text-white">
@@ -94,7 +93,9 @@ const App = () => {
               </div>
             ) : (
               <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                <Usercard />
+                {users.map((elem, index) => {
+                  return <Usercard key={index} users={elem} />;
+                })}
               </div>
             )}
           </div>

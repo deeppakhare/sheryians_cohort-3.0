@@ -14,10 +14,8 @@ const Form = ({ setUsers, users, setToggle }) => {
     setUsers(arr);
     localStorage.setItem("users", JSON.stringify(arr));
     reset();
-    setToggle((prev) => !prev)
+    setToggle((prev) => !prev);
   };
-
-
 
   return (
     <div className="mx-auto max-w-2xl">
