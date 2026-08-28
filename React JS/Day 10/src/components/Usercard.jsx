@@ -1,10 +1,10 @@
 import React from "react";
 
-const Usercard = ({ user, handelDelete, handelEdit }) => {
+const Usercard = () => {
   return (
     <article className="group overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 shadow-xl transition duration-300 hover:-translate-y-1 hover:border-slate-700">
       {/* Cover */}
-      <div className="relative h-28 bg-linear-to-br from-indigo-600 via-purple-600 to-slate-900">
+      <div className="relative h-28 bg-gradient-to-br from-indigo-600 via-purple-600 to-slate-900">
         <div className="absolute inset-0 bg-black/10"></div>
 
         {/* Status */}
@@ -12,9 +12,10 @@ const Usercard = ({ user, handelDelete, handelEdit }) => {
           <span className="h-2 w-2 rounded-full bg-emerald-400"></span>
           Active
         </div>
-        <div className="absolute right-25 top-4 flex items-center gap-2 rounded-full border border-white/10 bg-black/30 px-3 py-1.5 text-xs font-medium text-white backdrop-blur">
-          <span className="h-2 w-2 rounded-full bg-yellow-400"></span>
-          {user.gender}
+
+        {/* Gender */}
+        <div className="absolute left-4 top-4 rounded-full border border-white/10 bg-black/30 px-3 py-1.5 text-xs font-medium capitalize text-white backdrop-blur">
+          Male
         </div>
       </div>
 
@@ -23,7 +24,7 @@ const Usercard = ({ user, handelDelete, handelEdit }) => {
         {/* Avatar */}
         <div className="-mt-12 mb-4 h-24 w-24 overflow-hidden rounded-2xl border-4 border-slate-900 bg-slate-800 shadow-xl">
           <img
-            src={user.url}
+            src="https://i.pravatar.cc/300?img=12"
             alt="User profile"
             className="h-full w-full object-cover"
           />
@@ -31,36 +32,24 @@ const Usercard = ({ user, handelDelete, handelEdit }) => {
 
         {/* User Information */}
         <div className="mb-5">
-          <h2 className="text-xl font-bold text-white">{user.name}</h2>
+          <h2 className="text-xl font-bold text-white">
+            Deep Pakhare
+          </h2>
 
-          <p className="mt-1 text-sm text-slate-400">{user.email}</p>
-
-          <div className="mt-3 flex flex-wrap gap-2">
-            <span className="rounded-full bg-indigo-500/10 px-3 py-1 text-xs font-medium text-indigo-300">
-              {user.occupation}
-            </span>
-
-            <span className="rounded-full bg-slate-800 px-3 py-1 text-xs font-medium text-slate-400">
-              {user.city}
-            </span>
-          </div>
+          <p className="mt-1 text-sm text-slate-400">
+            +91 9370758231
+          </p>
         </div>
 
         {/* Details */}
-        <div className="mb-5 grid grid-cols-2 gap-3">
+        <div className="mb-5">
           <div className="rounded-xl border border-slate-800 bg-slate-950 p-3">
-            <p className="text-xs text-slate-500">Mobile</p>
-
-            <p className="mt-1 text-sm font-medium text-slate-300">
-              +91 {user.number}
+            <p className="text-xs text-slate-500">
+              Profile
             </p>
-          </div>
 
-          <div className="rounded-xl border border-slate-800 bg-slate-950 p-3">
-            <p className="text-xs text-slate-500">DOB</p>
-
-            <p className="mt-1 text-sm font-medium text-slate-300">
-              {user.dob}
+            <p className="mt-1 truncate text-sm font-medium text-slate-300">
+              Profile Image
             </p>
           </div>
         </div>
@@ -68,19 +57,17 @@ const Usercard = ({ user, handelDelete, handelEdit }) => {
         {/* Actions */}
         <div className="flex gap-3">
           <button
-            onClick={() => handelEdit(user)}
             type="button"
             className="flex-1 rounded-xl bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-indigo-500"
           >
-            Edit user
+            Edit User
           </button>
 
           <button
-            onClick={() => handelDelete(user.id)}
             type="button"
             className="rounded-xl border border-red-500/20 bg-red-500/10 px-4 py-2.5 text-sm font-semibold text-red-400 transition hover:bg-red-500/20"
           >
-            Delete user
+            Delete
           </button>
         </div>
       </div>
