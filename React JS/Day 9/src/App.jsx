@@ -8,7 +8,8 @@ const App = () => {
   const [toggle, setToggle] = useState(false);
   const [editUser, setEditUser] = useState(null);
 
-  // console.log(users.length);
+
+  console.log(users);
 
   const handelDelete = (id) => {
     setUsers((prev) => {
@@ -22,7 +23,7 @@ const App = () => {
   };
 
   console.log("users:", users);
-console.log("users type:", typeof users);
+
 
   return (
     <main className="min-h-screen bg-slate-950 text-white">
