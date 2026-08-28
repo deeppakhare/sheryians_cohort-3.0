@@ -1,6 +1,23 @@
 import React from "react";
+import { useForm } from "react-hook-form";
 
-const Form = () => {
+const Form = ({setUsers, users}) => {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+
+  const formSubmit = (data) => {
+    let arr = [...users,data]
+   setUsers(arr)
+    localStorage.setItem("users",JSON.stringify(arr));
+    reset();
+    console.log(arr);
+  };
+  
+
   return (
     <div className="mx-auto max-w-2xl">
       {/* Header */}
@@ -19,7 +36,10 @@ const Form = () => {
       </div>
 
       {/* Form */}
-      <form className="rounded-3xl border border-slate-800 bg-slate-900 p-6 shadow-2xl sm:p-8">
+      <form
+        onSubmit={handleSubmit(formSubmit)}
+        className="rounded-3xl border border-slate-800 bg-slate-900 p-6 shadow-2xl sm:p-8"
+      >
         {/* Name */}
         <div className="mb-6">
           <label className="mb-2 block text-sm font-medium text-slate-300">
@@ -27,10 +47,20 @@ const Form = () => {
           </label>
 
           <input
+            {...register("fullName", {
+              required: "Enter full name",
+              pattern: {
+                value: /^\S.*$/,
+                message: "Blank space is not required",
+              },
+            })}
             type="text"
             placeholder="Enter full name"
             className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
           />
+          {errors.fullName && (
+            <p className="text-red-500 ml-2">{errors.fullName.message}</p>
+          )}
         </div>
 
         {/* Mobile */}
@@ -40,10 +70,20 @@ const Form = () => {
           </label>
 
           <input
+            {...register("mobileNo", {
+              required: "Enter mobile No",
+              pattern: {
+                value: /^[6-9]\d{9}$/,
+                message: "Enter the valid number",
+              },
+            })}
             type="tel"
             placeholder="Enter 10-digit mobile number"
             className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
           />
+          {errors.mobileNo && (
+            <p className="text-red-500 ml-2"> {errors.mobileNo.message}</p>
+          )}
         </div>
 
         {/* Profile Image URL */}
@@ -53,10 +93,16 @@ const Form = () => {
           </label>
 
           <input
+            {...register("url", {
+              required: "Enter url for profile image",
+            })}
             type="url"
             placeholder="https://example.com/profile.jpg"
             className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
           />
+          {errors.url && (
+            <p className="text-red-500 ml-2"> {errors.url.message}</p>
+          )}
         </div>
 
         {/* Gender */}
@@ -65,12 +111,20 @@ const Form = () => {
             Gender
           </label>
 
-          <select className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-slate-400 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10">
+          <select
+            {...register("gender", {
+              required: "Select Gender",
+            })}
+            className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-slate-400 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
+          >
             <option value="">Select gender</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
             <option value="other">Other</option>
           </select>
+          {errors.gender && (
+            <p className="text-red-500 ml-2"> {errors.gender.message}</p>
+          )}
         </div>
 
         {/* Actions */}

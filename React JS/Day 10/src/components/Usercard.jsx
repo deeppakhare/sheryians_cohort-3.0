@@ -4,7 +4,7 @@ const Usercard = () => {
   return (
     <article className="group overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 shadow-xl transition duration-300 hover:-translate-y-1 hover:border-slate-700">
       {/* Cover */}
-      <div className="relative h-28 bg-gradient-to-br from-indigo-600 via-purple-600 to-slate-900">
+      <div className="relative h-28 bg-linear-to-br from-indigo-600 via-purple-600 to-slate-900">
         <div className="absolute inset-0 bg-black/10"></div>
 
         {/* Status */}
