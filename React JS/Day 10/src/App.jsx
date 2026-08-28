@@ -5,17 +5,20 @@ import Form from "./components/Form";
 
 const App = () => {
   const [toggle, setToggle] = useState(false);
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState(() => {
+      let newArr = localStorage.getItem("users");
+      return newArr ? JSON.parse(newArr) : []
+  });
 
-  console.log(users);
-  
+  console.log(users.length);
+
 
   return (
     <main className="min-h-screen bg-slate-950 text-white">
       <Navbar setToggle={setToggle} />
 
       {toggle ? (
-        <Form users={users} setUsers={setUsers}/>
+        <Form setToggle={setToggle} users={users} setUsers={setUsers} />
       ) : (
         <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
           {/* Page Header */}
@@ -47,7 +50,7 @@ const App = () => {
 
               <div>
                 <p className="text-xs text-slate-500">Total Users</p>
-                <p className="text-lg font-bold text-white">0</p>
+                <p className="text-lg font-bold text-white">{users.length}</p>
               </div>
             </div>
           </div>

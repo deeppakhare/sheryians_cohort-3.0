@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 
-const Form = ({setUsers, users}) => {
+const Form = ({ setUsers, users, setToggle }) => {
   const {
     register,
     handleSubmit,
@@ -10,13 +10,14 @@ const Form = ({setUsers, users}) => {
   } = useForm();
 
   const formSubmit = (data) => {
-    let arr = [...users,data]
-   setUsers(arr)
-    localStorage.setItem("users",JSON.stringify(arr));
+    let arr = [...users, data];
+    setUsers(arr);
+    localStorage.setItem("users", JSON.stringify(arr));
     reset();
-    console.log(arr);
+    setToggle((prev) => !prev)
   };
-  
+
+
 
   return (
     <div className="mx-auto max-w-2xl">
