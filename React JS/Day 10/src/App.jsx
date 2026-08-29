@@ -12,11 +12,7 @@ const App = () => {
 
   const [updatedData, setUpdatedData] = useState(null);
 
-  const handelDelete = (prev) => {
-    let newUserr = users.filter((elem) => elem.id !== prev);
-    setUsers(newUserr);
-    localStorage.setItem("users", JSON.stringify(newUserr));
-  };
+  
 
   console.log(users);
 
