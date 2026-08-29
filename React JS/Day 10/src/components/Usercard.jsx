@@ -1,6 +1,6 @@
 import React from "react";
 
-const Usercard = ({ users, setUpdatedData, setToggle }) => {
+const Usercard = ({ users, setUpdatedData, setToggle, handelDelete }) => {
   return (
     <article className="group overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 shadow-xl transition duration-300 hover:-translate-y-1 hover:border-slate-700">
       {/* Cover */}
@@ -52,7 +52,7 @@ const Usercard = ({ users, setUpdatedData, setToggle }) => {
         <div className="flex gap-3">
           <button
             onClick={() => {
-              setToggle((prev) => !prev)
+              setToggle((prev) => !prev);
               setUpdatedData(users);
             }}
             type="button"
@@ -62,6 +62,9 @@ const Usercard = ({ users, setUpdatedData, setToggle }) => {
           </button>
 
           <button
+          onClick={() => {
+            handelDelete(users.id)
+          }}
             type="button"
             className="rounded-xl border border-red-500/20 bg-red-500/10 px-4 py-2.5 text-sm font-semibold text-red-400 transition hover:bg-red-500/20"
           >

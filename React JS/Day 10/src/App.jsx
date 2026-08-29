@@ -12,8 +12,11 @@ const App = () => {
 
   const [updatedData, setUpdatedData] = useState(null);
 
-console.log(Math.max(users.map((elem) => elem.id)));
-
+  const handelDelete = (prev) => {
+    let newUserr = users.filter((elem) => elem.id !== prev);
+    setUsers(newUserr);
+    localStorage.setItem("users", JSON.stringify(newUserr));
+  };
 
   console.log(users);
 
@@ -106,6 +109,7 @@ console.log(Math.max(users.map((elem) => elem.id)));
                 {users.map((elem, index) => {
                   return (
                     <Usercard
+                      handelDelete={handelDelete}
                       setToggle={setToggle}
                       setUpdatedData={setUpdatedData}
                       key={index}
