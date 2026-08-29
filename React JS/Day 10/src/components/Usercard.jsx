@@ -1,6 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Usercard = ({ users, setUpdatedData, setToggle, handelDelete }) => {
+  const [copied, setCopied] = useState(false);
+
+  const copyLink = () => {
+    let link = users.url;
+    navigator.clipboard.writeText(link);
+    setCopied(true);
+    setTimeout(() => {
+      setCopied(false);
+    }, 2000);
+  };
+
   return (
     <article className="group overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 shadow-xl transition duration-300 hover:-translate-y-1 hover:border-slate-700">
       {/* Cover */}
@@ -39,9 +50,15 @@ const Usercard = ({ users, setUpdatedData, setToggle, handelDelete }) => {
 
         {/* Details */}
         <div className="mb-5">
-          <div className="rounded-xl border border-slate-800 bg-slate-950 p-3">
-            <p className="text-xs text-slate-500">Profile</p>
-
+          <div className="relative rounded-xl border border-slate-800 bg-slate-950 p-3">
+            <p className=" text-xs text-slate-500">Profile pic url</p>
+            <button
+              onClick={copyLink}
+              type="button"
+              className="rounded-xl border border-slate-700 bg-slate-800 px-2 py-1 text-[8px] font-semibold text-slate-300 transition hover:bg-slate-700 absolute top-1.5 right-1.5"
+            >
+              {copied ? "✓ Link Copied" : "📋 Copy Link"}
+            </button>
             <p className="mt-1 truncate text-sm font-medium text-slate-300">
               {users.url}
             </p>
@@ -62,9 +79,9 @@ const Usercard = ({ users, setUpdatedData, setToggle, handelDelete }) => {
           </button>
 
           <button
-          onClick={() => {
-            handelDelete(users.id)
-          }}
+            onClick={() => {
+              handelDelete(users.id);
+            }}
             type="button"
             className="rounded-xl border border-red-500/20 bg-red-500/10 px-4 py-2.5 text-sm font-semibold text-red-400 transition hover:bg-red-500/20"
           >
