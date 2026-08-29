@@ -52,12 +52,7 @@ const Usercard = ({ users, setUpdatedData, setToggle, handelDelete }) => {
         <div className="mb-5">
           <div className="relative rounded-xl border border-slate-800 bg-slate-950 p-3">
             <p className=" text-xs text-slate-500">Profile pic url</p>
-            <button
-              onClick={copyLink}
-              type="button"
-              className="rounded-xl border border-slate-700 bg-slate-800 px-2 py-1 text-[8px] font-semibold text-slate-300 transition hover:bg-slate-700 absolute top-1.5 right-1.5"
-            >
-              {copied ? "✓ Link Copied" : "📋 Copy Link"}
+            
             </button>
             <p className="mt-1 truncate text-sm font-medium text-slate-300">
               {users.url}
