@@ -1,18 +1,38 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 
-const Form = ({ setUsers, users, setToggle }) => {
+const Form = ({ setUsers, users, setToggle, updatedData }) => {
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    defaultValues: updatedData,
+  });
+
+  let userId = () => {
+    if (users.length === 0) {
+      return 1;
+    } else {
+      return Math.max(...users.map((elem) => elem.id)) + 1;
+    }
+  };
 
   const formSubmit = (data) => {
-    let arr = [...users, data];
-    setUsers(arr);
-    localStorage.setItem("users", JSON.stringify(arr));
+    if (updatedData) {
+      const updatedUser = users.map((val) => {
+        return val.id === updatedData.id ? { ...data } : val;
+      });
+
+      setUsers(updatedUser);
+      localStorage.setItem("users", JSON.stringify(updatedUser));
+    } else {
+      let arr = [...users, { ...data, id: userId() }];
+      setUsers(arr);
+      localStorage.setItem("users", JSON.stringify(arr));
+    }
+
     reset();
     setToggle((prev) => !prev);
   };

@@ -10,6 +10,11 @@ const App = () => {
     return newArr ? JSON.parse(newArr) : [];
   });
 
+  const [updatedData, setUpdatedData] = useState(null);
+
+console.log(Math.max(users.map((elem) => elem.id)));
+
+
   console.log(users);
 
   return (
@@ -17,7 +22,12 @@ const App = () => {
       <Navbar setToggle={setToggle} />
 
       {toggle ? (
-        <Form setToggle={setToggle} users={users} setUsers={setUsers} />
+        <Form
+          updatedData={updatedData}
+          setToggle={setToggle}
+          users={users}
+          setUsers={setUsers}
+        />
       ) : (
         <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
           {/* Page Header */}
@@ -94,7 +104,14 @@ const App = () => {
             ) : (
               <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {users.map((elem, index) => {
-                  return <Usercard key={index} users={elem} />;
+                  return (
+                    <Usercard
+                      setToggle={setToggle}
+                      setUpdatedData={setUpdatedData}
+                      key={index}
+                      users={elem}
+                    />
+                  );
                 })}
               </div>
             )}
