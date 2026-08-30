@@ -9,7 +9,7 @@ const CartContextProvider = ({ children }) => {
     setCart((prevCart) => {
       const existingProduct = prevCart.find(
         (item) => item.id === product.id
-      );
+      );  
 
       if (existingProduct) {
         return prevCart.map((item) =>
