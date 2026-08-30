@@ -1,9 +1,16 @@
 import React from "react";
+import Navbar from "./components/Navbar";
+import Products from "./components/Products";
+import ProductCard from "./components/ProductCard";
+import Cart from "./components/Cart";
 
 const App = () => {
   return (
     <div>
-      <h1>I am app</h1>
+      <Navbar/>
+      <Products />
+      {/* <ProductCard /> */}
+      {/* <Cart/> */}
     </div>
   );
 };
