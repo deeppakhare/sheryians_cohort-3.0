@@ -13,6 +13,6 @@ const postScheme = new mongoose.Schema({
     }
 },{timestamps:true});
 
-const postModel = mongoose.model("posts",postScheme)
+const PostModel = mongoose.model("posts",postScheme)
 
-export default postModel;
+export default PostModel;
