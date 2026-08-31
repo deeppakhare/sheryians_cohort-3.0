@@ -1,17 +1,30 @@
-import PostModel from "../models/post.model";
+import PostModel from "../models/post.model.js";
+import { sentFiles } from "../services/storage.service.js";
 
-const createPost = async (req, res) => {
+export const createPost = async (req, res) => {
   try {
-    let { caption, image } = req.body;
+    let { caption } = req.body;
+    let  file  = req.file;
 
-    const newPost = await postModel.create({
-      caption,
-      image,
+    if(!caption || !file) return res.status(400).json({
+        success:false,
+        message:"fielda are required"
+    })
+    
+    const uploadImage = await sentFiles(file.buffer,file.orignalname)
+
+
+    const post = await PostModel.create({
+        caption,
+        image:uploadImage.url
+    })
+
+     res.status(200).json({
+        success:true,
+      message: "Post created success",
     });
-    return res.status(201).json({
-      message: "Post created successfully",
-      data: newPost,
-    });
+
+
   } catch (error) {
     res.status(500).json({
       message: "Internal api error",
@@ -19,6 +32,13 @@ const createPost = async (req, res) => {
   }
 };
 
-export default {
-  createPost,
-};
+export const getAllPost = async (req, res) => {
+    const posts = PostModel.find()
+
+    return res.statu(200).json({
+        success:true,
+        message:"All post featched"
+    })
+}
+
+
