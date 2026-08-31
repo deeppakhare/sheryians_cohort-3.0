@@ -2,13 +2,9 @@ import React, { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
 const Cart = () => {
-  const {
-    cart,
-    removeFromCart,
-    increaseQuantity,
-    decreaseQuantity,
-    cartTotal,
-  } = useContext(CartContext);
+  let { cart, setCart } = useContext(CartContext);
+  console.log(cart);
+  
 
   return (
     <main className="min-h-screen bg-slate-950 px-5 py-10 text-white">
@@ -54,27 +50,18 @@ const Cart = () => {
 
                     <div className="mt-4 flex items-center justify-between">
                       <div className="flex items-center gap-3">
-                        <button
-                          onClick={() => decreaseQuantity(item.id)}
-                          className="h-8 w-8 rounded-lg bg-slate-800"
-                        >
+                        <button className="h-8 w-8 rounded-lg bg-slate-800">
                           -
                         </button>
 
-                        <span>{item.quantity}</span>
+                        <span>1</span>
 
-                        <button
-                          onClick={() => increaseQuantity(item.id)}
-                          className="h-8 w-8 rounded-lg bg-slate-800"
-                        >
+                        <button className="h-8 w-8 rounded-lg bg-slate-800">
                           +
                         </button>
                       </div>
 
-                      <button
-                        onClick={() => removeFromCart(item.id)}
-                        className="text-sm text-red-400 hover:text-red-300"
-                      >
+                      <button className="text-sm text-red-400 hover:text-red-300">
                         Remove
                       </button>
                     </div>
@@ -89,9 +76,7 @@ const Cart = () => {
               <div className="mt-6 flex justify-between border-b border-slate-800 pb-4">
                 <span className="text-slate-400">Total</span>
 
-                <span className="text-xl font-bold">
-                  ${cartTotal.toFixed(2)}
-                </span>
+                <span className="text-xl font-bold">0.00</span>
               </div>
 
               <button className="mt-6 w-full rounded-xl bg-indigo-600 px-5 py-3 font-semibold hover:bg-indigo-500">
