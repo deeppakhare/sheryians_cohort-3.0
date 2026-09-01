@@ -33,7 +33,7 @@ export const createPost = async (req, res) => {
 };
 
 export const getAllPost = async (req, res) => {
-    const posts = PostModel.find()
+    const posts = await PostModel.find()
 
     return res.statu(200).json({
         success:true,
