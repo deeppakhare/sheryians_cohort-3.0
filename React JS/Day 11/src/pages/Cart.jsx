@@ -2,9 +2,8 @@ import React, { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
 const Cart = () => {
-  let { cart, setCart } = useContext(CartContext);
+  let { cart, increaeQuantity } = useContext(CartContext);
   console.log(cart);
-  
 
   return (
     <main className="min-h-screen bg-slate-950 px-5 py-10 text-white">
