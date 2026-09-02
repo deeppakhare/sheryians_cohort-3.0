@@ -2,8 +2,7 @@ import React, { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
 const Cart = () => {
-  let { cart, increaeQuantity } = useContext(CartContext);
-  console.log(cart);
+  let { cart, increaeQuantity, removeFromCart } = useContext(CartContext);
 
   return (
     <main className="min-h-screen bg-slate-950 px-5 py-10 text-white">
@@ -55,12 +54,18 @@ const Cart = () => {
 
                         <span>1</span>
 
-                        <button className="h-8 w-8 rounded-lg bg-slate-800">
+                        <button
+                          onClick={() => increaeQuantity(item.id)}
+                          className="h-8 w-8 rounded-lg bg-slate-800"
+                        >
                           +
                         </button>
                       </div>
 
-                      <button className="text-sm text-red-400 hover:text-red-300">
+                      <button
+                        onClick={() => removeFromCart(item.id)}
+                        className="text-sm text-red-400 hover:text-red-300"
+                      >
                         Remove
                       </button>
                     </div>

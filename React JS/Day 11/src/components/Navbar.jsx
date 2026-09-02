@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
 const Navbar = ({ setToggle }) => {
+  const { cart, allCartCount } = useContext(CartContext);
   return (
     <header className="sticky top-0 z-50 border-b border-slate-800 bg-slate-950">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
@@ -18,10 +20,10 @@ const Navbar = ({ setToggle }) => {
             Home
           </button>
 
-          <button 
+          <button
             onClick={() => setToggle("home")}
-  
-          className="text-sm text-slate-300 hover:text-white">
+            className="text-sm text-slate-300 hover:text-white"
+          >
             Products
           </button>
 
@@ -31,7 +33,7 @@ const Navbar = ({ setToggle }) => {
           >
             Cart
             <span className="absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-xs">
-              Count
+              {allCartCount}
             </span>
           </button>
         </nav>

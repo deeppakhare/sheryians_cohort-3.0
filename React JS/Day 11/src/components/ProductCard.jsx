@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
 const ProductCard = ({ items }) => {
-  const { addCart, increaeQuantity } = useContext(CartContext);
+  const { addCart } = useContext(CartContext);
 
   return (
     <article className="overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 shadow-xl">
@@ -26,16 +26,7 @@ const ProductCard = ({ items }) => {
         <div className="mt-5 flex items-center justify-between">
           <span className="text-xl font-bold text-white">${items.price}</span>
 
-          <button className="h-8 w-8 rounded-lg bg-slate-800">-</button>
-
-          <span>1</span>
-
-          <button
-            onClick={() => increaeQuantity()}
-            className="h-8 w-8 rounded-lg bg-slate-800"
-          >
-            +
-          </button>
+         
 
           <button
             onClick={() => {

@@ -20,13 +20,30 @@ export const CreateCartContextProvider = ({ children }) => {
       }
     });
   };
+  console.log(cart);
 
-  const increaeQuantity = (item) => {
-    cart.map
+  const removeFromCart = (id) => {
+    setCart((product) => {
+      product.map((item) => item.id !== id);
+    });
+  };
+
+  const allCartCount = cart.reduce((total, item) => total + item.quantity, 0);
+
+  const increaeQuantity = (id) => {
+    setCart((item) => {
+      item.map((product) =>
+        product.id === id
+          ? [{ ...product, quantity: product.quantity + 1 }]
+          : product,
+      );
+    });
   };
 
   return (
-    <CartContext.Provider value={{ cart, setCart, addCart, increaeQuantity }}>
+    <CartContext.Provider
+      value={{ cart, addCart, allCartCount, increaeQuantity, removeFromCart }}
+    >
       {children}
     </CartContext.Provider>
   );
