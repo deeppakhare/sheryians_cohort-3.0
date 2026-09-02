@@ -40,4 +40,6 @@ app.post("/api/auth/register", async (req, res) => {
   });
 });
 
+app.get
+
 export default app;
