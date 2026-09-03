@@ -1,6 +1,6 @@
 import React from "react";
 import ProductCard from "../components/ProductCard";
-import Products from "../data/products";
+import products from "../data/products";
 
 const Home = () => {
   return (
@@ -19,7 +19,7 @@ const Home = () => {
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {Products.map((items) => (
+          {products.map((items) => (
             <ProductCard 
             key={items.id}
             items={items}

@@ -9,8 +9,8 @@ const App = () => {
     <div className="min-h-screen bg-slate-950">
       <Navbar setToggle={setToggle} />
 
-      {toggle == "home" ? <Home /> : console.log("not found")}
-      {toggle == "cart" ? <Cart /> : console.log("not found")}
+      {toggle == "home" && <Home />}
+      {toggle == "cart" && <Cart /> }
     </div>
   );
 };

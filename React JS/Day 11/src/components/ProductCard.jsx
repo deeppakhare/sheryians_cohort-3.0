@@ -26,13 +26,8 @@ const ProductCard = ({ items }) => {
         <div className="mt-5 flex items-center justify-between">
           <span className="text-xl font-bold text-white">${items.price}</span>
 
-         
-
           <button
-            onClick={() => {
-              addCart(items);
-              alert("Added to cart");
-            }}
+            onClick={() => addCart(items)}
             className="rounded-xl bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-indigo-500"
           >
             Add to Cart
