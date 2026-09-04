@@ -2,7 +2,8 @@ import React, { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
 const Cart = () => {
-  let { cart, increaeQuantity,decreaseQuantity, removeFromCart, totalAmount } = useContext(CartContext);
+  let { cart, increaeQuantity, decreaseQuantity, removeFromCart, totalAmount } =
+    useContext(CartContext);
 
   return (
     <main className="min-h-screen bg-slate-950 px-5 py-10 text-white">
@@ -49,12 +50,13 @@ const Cart = () => {
                     <div className="mt-4 flex items-center justify-between">
                       <div className="flex items-center gap-3">
                         <button
-                        onClick={() => decreaseQuantity(item.id)}
-                        className="h-8 w-8 rounded-lg bg-slate-800">
+                          onClick={() => decreaseQuantity(item.id)}
+                          className="h-8 w-8 rounded-lg bg-slate-800"
+                        >
                           -
                         </button>
 
-                        <span>1</span>
+                        <span>{item.quantity}</span>
 
                         <button
                           onClick={() => increaeQuantity(item.id)}

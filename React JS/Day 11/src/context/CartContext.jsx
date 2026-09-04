@@ -23,9 +23,7 @@ const CreateCartContextProvider = ({ children }) => {
   console.log(cart);
 
   const removeFromCart = (id) => {
-    setCart((product) => {
-      product.filter((item) => item.id !== id);
-    });
+    setCart((prevCart) => prevCart.filter((item) => item.id !== id));
   };
 
   const allCartCount = cart.reduce((total, item) => total + item.quantity, 0);
@@ -36,25 +34,25 @@ const CreateCartContextProvider = ({ children }) => {
   );
 
   const increaeQuantity = (id) => {
-    setCart((item) => {
-      item.map((product) =>
+    setCart((prevCart) =>
+      prevCart.map((product) =>
         product.id === id
           ? { ...product, quantity: product.quantity + 1 }
           : product,
-      );
-    });
+      ),
+    );
   };
 
   const decreaseQuantity = (id) => {
-    setCart((item) => {
-      item
+    setCart((prevCart) =>
+      prevCart
         .map((product) =>
           product.id === id
             ? { ...product, quantity: product.quantity - 1 }
             : product,
         )
-        .filter((item) => item.quantity > 0);
-    });
+        .filter((item) => item.quantity > 0),
+    );
   };
 
   return (
