@@ -2,7 +2,6 @@ import userModel from "../models/user.model.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
-
 export const registerController = async (req, res) => {
   try {
     const { userName, email, password } = req.body;
@@ -10,7 +9,7 @@ export const registerController = async (req, res) => {
     if (!(userName || email || password))
       return res.status(400).json({
         sucess: false,
-        message: "Emil,data password required",
+        message: "Email, username and password required",
       });
 
     const alreadyRegister = await userModel.findOne({ email });
@@ -45,12 +44,41 @@ export const registerController = async (req, res) => {
 };
 
 export const loginController = async (req, res) => {
-    try {
-        
-    } catch (error) {
-        res.status(500).json({
-            message:"Internal api error"
-        })
-        
-    }
-}
+  try {
+    const { email, password } = req.body;
+
+    if (!email || !password)
+      return res.status(400).json({
+        message: "Enter email & password",
+      });
+
+    const findUser = await userModel.findOne({ email });
+
+    if (!findUser)
+      return res.status(400).json({
+        message: "User not find",
+      });
+
+    const isMatch = await bcrypt.compare(password, findUser.password);
+
+    if (!isMatch)
+      return res.status(401).json({
+        message: "Invalid password enter",
+      });
+
+    const token = jwt.sign({ id: user._id }, process.env.SECREATY_KEY);
+
+    res.status(200).json({
+      status: true,
+      message: "User logged in",
+      findUser,
+      token,
+    });
+  } catch (error) {
+    res.status(500).json({
+      message: "Internal api error",
+    });
+  }
+};
+
+
