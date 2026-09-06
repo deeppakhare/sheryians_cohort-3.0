@@ -1,7 +1,7 @@
 import userModel from "../models/user.model.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import dotenv from "dotenv";
+
 
 export const registerController = async (req, res) => {
   try {
@@ -23,15 +23,13 @@ export const registerController = async (req, res) => {
 
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    const user = await userModel
-      .create({
-        userName,
-        email,
-        password: hashedPassword,
-      })
-      .select("-password");
+    const user = await userModel.create({
+      userName,
+      email,
+      password: hashedPassword,
+    });
 
-    const token = jwt.sign(user._id, process.env.SECREATY_KEY);
+    const token = jwt.sign({ id: user._id }, process.env.SECREATY_KEY);
 
     return res.status(201).json({
       sucess: true,
@@ -45,3 +43,14 @@ export const registerController = async (req, res) => {
     });
   }
 };
+
+export const loginController = async (req, res) => {
+    try {
+        
+    } catch (error) {
+        res.status(500).json({
+            message:"Internal api error"
+        })
+        
+    }
+}
