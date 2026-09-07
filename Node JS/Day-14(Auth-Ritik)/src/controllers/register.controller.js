@@ -6,7 +6,7 @@ export const registerController = async (req, res) => {
   try {
     const { userName, email, password } = req.body;
 
-    if (!(userName || email || password))
+    if (!userName || !email || !password)
       return res.status(400).json({
         sucess: false,
         message: "Email, username and password required",
@@ -44,41 +44,83 @@ export const registerController = async (req, res) => {
 };
 
 export const loginController = async (req, res) => {
-  try {
-    const { email, password } = req.body;
+  const { email, password } = req.body;
 
-    if (!email || !password)
-      return res.status(400).json({
-        message: "Enter email & password",
-      });
+  if (!email || !password)
+    return res.status(401).json({
+      success: false,
+      message: "Enter email & password",
+    });
 
-    const findUser = await userModel.findOne({ email });
+  const findUser = await userModel.findOne({ email });
 
-    if (!findUser)
-      return res.status(400).json({
-        message: "User not find",
-      });
+  if (!findUser)
+    return res.status(401).json({
+      success: false,
+      message: "User not found",
+    });
 
-    const isMatch = await bcrypt.compare(password, findUser.password);
 
-    if (!isMatch)
-      return res.status(401).json({
-        message: "Invalid password enter",
-      });
+  const isMatch = await bcrypt.compare( password , findUser.password);
 
-    const token = jwt.sign({ id: user._id }, process.env.SECREATY_KEY);
+  if (!isMatch)
+    return res.status(401).json({
+      success: false,
+      message: "Invalid password",
+    });
 
-    res.status(200).json({
-      status: true,
-      message: "User logged in",
+    const token = jwt.sign({id:findUser._id},process.env.SECREATY_KEY);
+
+    return res.status(200).json({
+      status:true,
+      message:"Login successfully",
       findUser,
-      token,
-    });
-  } catch (error) {
-    res.status(500).json({
-      message: "Internal api error",
-    });
-  }
+      token
+    })
+
 };
 
+// export const loginController = async (req, res) => {
+//   try {
+//     const { email, password } = req.body;
 
+//     if (!email || !password)
+//       return res.status(400).json({
+//         message: "Enter email & password",
+//       });
+
+//     const findUser = await userModel.findOne({ email });
+
+//     if (!findUser)
+//       return res.status(400).json({
+//         message: "User not find",
+//       });
+
+//     const isMatch = await bcrypt.compare(password, findUser.password);
+
+//     if (!isMatch)
+//       return res.status(401).json({
+//         message: "Invalid password enter",
+//       });
+
+//     const token = jwt.sign({ id: findUser._id }, process.env.SECREATY_KEY);
+
+//     return res.status(200).json({
+//       status: true,
+//       message: "User logged in",
+//       user: {
+//         id: findUser._id,
+//         userName: findUser.userName,
+//         email: findUser.email,
+//       },
+//       token,
+//     });
+//   } catch (error) {
+//     console.error(error);
+
+//     return res.status(500).json({
+//       success: false,
+//       message: "Internal API error",
+//     });
+//   }
+// };
