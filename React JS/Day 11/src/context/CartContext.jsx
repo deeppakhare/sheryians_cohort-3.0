@@ -20,7 +20,8 @@ const CreateCartContextProvider = ({ children }) => {
       return [...elem, { ...product, quantity: 1 }];
     });
   };
-  console.log(cart);
+                                                                                                                                                                                                                                                            
+  
 
   const removeFromCart = (id) => {
     setCart((prevCart) => prevCart.filter((item) => item.id !== id));

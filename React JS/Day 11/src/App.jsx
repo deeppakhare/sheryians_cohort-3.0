@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
+import Wishlist from "./pages/Wishlist";
 
 const App = () => {
   const [toggle, setToggle] = useState("home");
@@ -11,6 +12,7 @@ const App = () => {
 
       {toggle == "home" && <Home />}
       {toggle == "cart" && <Cart /> }
+      {toggle == "wishlist" && <Wishlist /> }
     </div>
   );
 };

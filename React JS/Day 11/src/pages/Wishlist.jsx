@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
+import { WishlistContext } from "../context/WishlistContext";
 
 const Wishlist = () => {
+  const { wishlist, removeWishlistItem, removeAllItems } =
+    useContext(WishlistContext);
+  console.log(wishlist);
+
   return (
-    <div className="min-h-screen bg-gray-50 px-6 py-10">
-      
+    <div className="min-h-screen bg-slate-950 px-6 py-10">
       {/* Header */}
       <div className="max-w-7xl mx-auto mb-8">
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-3xl font-bold text-gray-900">
-              My Wishlist
-            </h1>
+            <h1 className="text-3xl font-bold text-gray-900">My Wishlist</h1>
 
             <p className="mt-2 text-gray-500">
               Save your favorite products for later.
@@ -19,205 +21,54 @@ const Wishlist = () => {
 
           {/* You will connect this button to clearWishlist() */}
           <button
+            onClick={() => removeAllItems()}
             className="rounded-lg border border-red-200 bg-white px-5 py-2.5
                        text-sm font-semibold text-red-600
                        transition hover:bg-red-50"
           >
-            Clear Wishlist
+            Clear WishlistX
           </button>
         </div>
       </div>
-
 
       {/* Wishlist Content */}
-      <div className="max-w-7xl mx-auto">
-
-        {/* Wishlist Products */}
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-
-          {/* Product Card */}
-          <div className="group relative overflow-hidden rounded-2xl bg-white shadow-sm
-                          ring-1 ring-gray-200 transition duration-300
-                          hover:-translate-y-1 hover:shadow-lg">
-
-            {/* Remove Button */}
-            <button
-              className="absolute right-3 top-3 z-10 flex h-9 w-9 items-center
-                         justify-center rounded-full bg-white text-red-500 shadow-md
-                         transition hover:bg-red-50"
-            >
-              ♥
-            </button>
-
-
-            {/* Product Image */}
-            <div className="flex h-64 items-center justify-center bg-gray-100 p-6">
-              <img
-                src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png"
-                alt="Product"
-                className="h-full w-full object-contain transition duration-300
-                           group-hover:scale-105"
-              />
-            </div>
-
-
-            {/* Product Information */}
-            <div className="p-5">
-
-              <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-gray-400">
-                Men's Clothing
-              </p>
-
-              <h2 className="line-clamp-2 text-lg font-semibold text-gray-900">
-                Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops
-              </h2>
-
-
-              {/* Rating */}
-              <div className="mt-3 flex items-center gap-2">
-                <div className="flex text-yellow-400">
-                  ★ ★ ★ ★ ★
-                </div>
-
-                <span className="text-sm text-gray-500">
-                  3.9
-                </span>
-              </div>
-
-
-              {/* Price */}
-              <div className="mt-4">
-                <span className="text-2xl font-bold text-gray-900">
-                  $109.95
-                </span>
-              </div>
-
-
-              {/* Actions */}
-              <div className="mt-5 flex gap-3">
-
-                {/* You will connect this to addToCart() */}
-                <button
-                  className="flex-1 rounded-lg bg-black px-4 py-3
-                             text-sm font-semibold text-white
-                             transition hover:bg-gray-800"
-                >
-                  Add to Cart
-                </button>
-
-                {/* You can connect this to Product Details later */}
-                <button
-                  className="rounded-lg border border-gray-300 px-4 py-3
-                             text-sm font-semibold text-gray-700
-                             transition hover:bg-gray-100"
-                >
-                  View
-                </button>
-
-              </div>
-            </div>
+      {wishlist.map((item) => (
+        <div
+          key={item.id}
+          className="flex gap-5 rounded-2xl border border-slate-800 bg-slate-900 p-5"
+        >
+          <div className="flex h-28 w-28 shrink-0 items-center justify-center rounded-xl bg-white p-3">
+            <img
+              src={item.image}
+              alt={item.title}
+              className="h-full w-full object-contain"
+            />
           </div>
 
+          <div className="flex flex-1 flex-col justify-between">
+            <div>
+              <h2 className="font-semibold text-amber-300">{item.title}</h2>
 
-          {/* Duplicate this card while practicing */}
-          <div className="group relative overflow-hidden rounded-2xl bg-white shadow-sm
-                          ring-1 ring-gray-200 transition duration-300
-                          hover:-translate-y-1 hover:shadow-lg">
-
-            <button
-              className="absolute right-3 top-3 z-10 flex h-9 w-9 items-center
-                         justify-center rounded-full bg-white text-red-500 shadow-md
-                         transition hover:bg-red-50"
-            >
-              ♥
-            </button>
-
-            <div className="flex h-64 items-center justify-center bg-gray-100 p-6">
-              <img
-                src="https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg"
-                alt="Product"
-                className="h-full w-full object-contain transition duration-300
-                           group-hover:scale-105"
-              />
+              <p className="mt-2 text-indigo-400">${item.price}</p>
             </div>
 
-            <div className="p-5">
-              <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-gray-400">
-                Men's Clothing
-              </p>
-
-              <h2 className="line-clamp-2 text-lg font-semibold text-gray-900">
-                Mens Casual Premium Slim Fit T-Shirts
-              </h2>
-
-              <div className="mt-3 flex items-center gap-2">
-                <div className="flex text-yellow-400">
-                  ★ ★ ★ ★ ★
-                </div>
-
-                <span className="text-sm text-gray-500">
-                  4.1
-                </span>
-              </div>
-
-              <div className="mt-4">
-                <span className="text-2xl font-bold text-gray-900">
-                  $22.30
-                </span>
-              </div>
-
-              <div className="mt-5 flex gap-3">
-                <button
-                  className="flex-1 rounded-lg bg-black px-4 py-3
-                             text-sm font-semibold text-white
-                             transition hover:bg-gray-800"
-                >
-                  Add to Cart
-                </button>
-
-                <button
-                  className="rounded-lg border border-gray-300 px-4 py-3
-                             text-sm font-semibold text-gray-700
-                             transition hover:bg-gray-100"
-                >
-                  View
-                </button>
-              </div>
+            <div className="mt-4 flex items-center justify-between">
+              <button
+                onClick={() => removeFromCart(item.id)}
+                className="text-sm p-2 rounded-2xl bg-blue-700 text-black-400 hover:text-red-50 "
+              >
+                Add to Cart
+              </button>
+              <button
+                onClick={() => removeWishlistItem(item.id)}
+                className="text-sm text-red-400 hover:text-red-300"
+              >
+                Remove
+              </button>
             </div>
           </div>
-
         </div>
-
-
-        {/* Empty Wishlist UI
-            Later, conditionally show this when wishlist.length === 0
-        */}
-        <div className="hidden flex-col items-center justify-center py-24 text-center">
-
-          <div className="mb-6 flex h-24 w-24 items-center justify-center
-                          rounded-full bg-gray-100 text-5xl">
-            ♡
-          </div>
-
-          <h2 className="text-2xl font-bold text-gray-900">
-            Your Wishlist is Empty
-          </h2>
-
-          <p className="mt-2 max-w-md text-gray-500">
-            You haven't added any products to your wishlist yet.
-            Start exploring and save products you love.
-          </p>
-
-          <button
-            className="mt-6 rounded-lg bg-black px-6 py-3
-                       font-semibold text-white transition hover:bg-gray-800"
-          >
-            Continue Shopping
-          </button>
-
-        </div>
-
-      </div>
+      ))}
     </div>
   );
 };

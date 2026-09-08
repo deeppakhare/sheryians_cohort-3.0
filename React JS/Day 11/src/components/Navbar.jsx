@@ -26,6 +26,12 @@ const Navbar = ({ setToggle }) => {
           >
             Products
           </button>
+          <button
+            onClick={() => setToggle("wishlist")}
+            className="text-sm text-slate-300 hover:text-white"
+          >
+            Wishlist
+          </button>
 
           <button
             onClick={() => setToggle("cart")}
