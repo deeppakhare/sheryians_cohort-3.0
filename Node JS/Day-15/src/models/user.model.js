@@ -1,27 +1,28 @@
-import mongoose from "mongoose";
+import mongoose from "mongoose"
 
-const usersScheme = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true,
-    minLength: 3,
-    maxLength: 50,
-  },
-  email: {
-    type: String,
-    required: true,
-    unique: true,
-    match: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-  },
-  password: {
-    type: String,
-    required: true,
-  },
-  refreshToken: {
-    type: String,
-  },
-});
 
-const userModel = mongoose.model("access/refresh-token", usersScheme);
+const userSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true,
+        minLength: [ 3, "Name must be at least 3 characters long" ],
+        maxLength: [ 50, "Name must be at most 50 characters long" ]
+    },
+    email: {
+        type: String,
+        required: true,
+        unique: true,
+        match: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
+    },
+    passwordHash: {
+        type: String,
+        required: true
+    },
+    refreshToken: {
+        type: String,
+    }
+})
 
-export default userModel;
+const userModel = mongoose.model("users", userSchema)
+
+export default userModel

@@ -1,11 +1,10 @@
-import app from './app/app.js'
-import config from './config/config.js';
-import { connectToDB } from './config/db.js';
+import app from "./app/app.js";
+import connectDB from "./config/db.js"
 
-connectToDB()
 
-let port = config.PORT
 
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+await connectDB()
+
+app.listen(3000, () => {
+    console.log("Server is running on port 3000")
 })
