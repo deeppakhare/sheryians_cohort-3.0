@@ -1019,7 +1019,7 @@
       "strokeColor": "#f08c00",
       "backgroundColor": "transparent",
       "width": 160.5168340571253,
-      "height": 107.21227915590337,
+      "height": 107.21227915590339,
       "seed": 737881083,
       "groupIds": [
         "mMcGQXh4Zd0m7foqHtjzF"
@@ -1151,7 +1151,7 @@
       "y": 1068.5746142186822,
       "strokeColor": "#f08c00",
       "backgroundColor": "transparent",
-      "width": 108.72517791136254,
+      "width": 108.72517791136255,
       "height": 7.191501510637686,
       "seed": 625603739,
       "groupIds": [
@@ -1563,7 +1563,7 @@
       "strokeColor": "#f08c00",
       "backgroundColor": "transparent",
       "width": 160.5168340571253,
-      "height": 107.21227915590337,
+      "height": 107.21227915590339,
       "seed": 99051931,
       "groupIds": [
         "5rzrU3JxnmQcxoPVCdyWC"
@@ -1695,7 +1695,7 @@
       "y": 1443.3341185612187,
       "strokeColor": "#f08c00",
       "backgroundColor": "transparent",
-      "width": 108.72517791136254,
+      "width": 108.72517791136255,
       "height": 7.191501510637686,
       "seed": 505249339,
       "groupIds": [
@@ -1932,7 +1932,7 @@
       "strokeColor": "#f08c00",
       "backgroundColor": "transparent",
       "width": 160.5168340571253,
-      "height": 107.21227915590337,
+      "height": 107.21227915590339,
       "seed": 1268791643,
       "groupIds": [
         "9Jy7wEyA5L76TR1u7cgCt"
@@ -2064,7 +2064,7 @@
       "y": 1443.2713240315036,
       "strokeColor": "#f08c00",
       "backgroundColor": "transparent",
-      "width": 108.72517791136254,
+      "width": 108.72517791136255,
       "height": 7.191501510637686,
       "seed": 463885819,
       "groupIds": [
@@ -5791,7 +5791,7 @@
       "id": "StOEg1VUOZdfU_8swZ8Kw",
       "type": "text",
       "x": 222.6869227058271,
-      "y": 1220.011665879842,
+      "y": 1231.3938151067466,
       "width": 199.55436277099838,
       "height": 11.629047319380806,
       "angle": 0,
@@ -5807,11 +5807,11 @@
       "index": "b2T",
       "roundness": null,
       "seed": 1451299579,
-      "version": 254,
-      "versionNonce": 525081755,
+      "version": 287,
+      "versionNonce": 848836711,
       "isDeleted": false,
       "boundElements": [],
-      "updated": 1788977962276,
+      "updated": 1788978095464,
       "link": null,
       "locked": false,
       "text": "http://localhost:5173/api/auth/register",
