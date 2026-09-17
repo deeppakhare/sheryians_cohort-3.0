@@ -54,7 +54,24 @@ const Navbar = ({ setToggle }) => {
         </nav>
 
         {/* Actions */}
-        
+        <div className="flex items-center gap-3">
+          <button
+            type="button"
+            className="hidden rounded-xl border border-slate-700 px-4 py-2.5 text-sm font-semibold text-slate-300 transition hover:bg-slate-800 sm:block"
+          >
+            Search
+          </button>
+
+          <button
+            onClick={() => {
+              setToggle(true);
+            }}
+            type="button"
+            className="rounded-xl bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-indigo-600/20 transition hover:bg-indigo-500"
+          >
+            Create User
+          </button>
+        </div>
       </div>
     </header>
   );
