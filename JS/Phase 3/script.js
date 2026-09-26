@@ -179,6 +179,25 @@ for(let i = 1; i <= num; i++){
 
 // ---
 
+// ### Q13. Check whether a string is a palindrome.
+
+// ```jsx
+// isPalindrome("madam");
+
+// // Output: true
+// ```
+
+// ---
+
+// ### Q14. Convert the first letter of every word to uppercase.
+
+// ```jsx
+// capitalize("hello world");
+
+// // Output: Hello World
+// ```
+
+// ---
 
 // ### Q15. Count how many times a character appears in a string.
 
