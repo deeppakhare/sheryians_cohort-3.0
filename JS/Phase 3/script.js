@@ -126,36 +126,7 @@ for(let i = 1; i <= num; i++){
 
 // ---
 
-// ### Q9. Print the multiplication table of a number.
 
-// Example:
-
-// ```jsx
-// table(5);
-// ```
-
-// Output:
-
-// ```jsx
-// 5 x 1 = 5
-// 5 x 2 = 10
-// ...
-// 5 x 10 = 50
-// ```
-
-// ---
-
-// ### Q10. Count how many digits are present in a number.
-
-// Example:
-
-// ```jsx
-// countDigits(12345);
-
-// // Output: 5
-// ```
-
-// ---
 
 // # Part 3: Strings
 
