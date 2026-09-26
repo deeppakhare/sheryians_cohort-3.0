@@ -241,7 +241,15 @@ for(let i = 1; i <= num; i++){
 
 // ---
 
+// ### Q19. Return only even numbers from an array.
 
+// ```jsx
+// [1,2,3,4,5,6]
+
+// // Output: [2,4,6]
+// ```
+
+// ---
 
 // ### Q20. Remove duplicate values from an array.
 
