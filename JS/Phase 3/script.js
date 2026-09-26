@@ -157,6 +157,27 @@ for(let i = 1; i <= num; i++){
 
 // ---
 
+// # Part 3: Strings
+
+// ### Q11. Reverse a string.
+
+// ```jsx
+// reverseString("hello");
+
+// // Output: olleh
+// ```
+
+// ---
+
+// ### Q12. Count vowels in a string.
+
+// ```jsx
+// countVowels("javascript");
+
+// // Output: 3
+// ```
+
+// ---
 
 // ### Q13. Check whether a string is a palindrome.
 
