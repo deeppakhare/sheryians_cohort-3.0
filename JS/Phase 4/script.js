@@ -1,3 +1,29 @@
+console.log(this);
+function MakeStudents(fname, lname, contact, isVerified) {
+    this.fname = fname;
+    this.lname = lname;
+    this.contact = contact;
+    this.isVerified = isVerified;
+}
+
+MakeStudents.prototype.company = 'Sheryians'
+
+let showProfile = function () {
+    if (this.isVerified) {
+        console.log(`Name: ${this.fname} ${this.lname}, Contact: ${this.contact}`);
+    } else {
+        console.log('User Not Verified');
+    }
+}
+
+MakeStudents.prototype.showProfile = showProfile
+
+let s1 = new MakeStudents('Abhishek', 'Mishra', 98765, true)
+let s2 = new MakeStudents('Yash', 'Yadav', 545454, true)
+let s3 = new MakeStudents('Manas', 'Pancholi', 233422, false)
+let s4 = new MakeStudents('Anurag', 'Kulshreshtha', 765656, true)
+
+s1.showProfile()
 
 
 
