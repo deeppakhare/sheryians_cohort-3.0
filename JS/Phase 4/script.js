@@ -29,6 +29,23 @@
 
 
 
+// class MakeStudents {
+//     constructor(fname, lname, contact, isVerified) {
+//         this.fname = fname;
+//         this.lname = lname;
+//         this.contact = contact;
+//         this.isVerified = isVerified;
+//     }
+// }
+// let showProfile = function () {
+//     if (this.isVerified) {
+//         console.log(`Name: ${this.fname} ${this.lname}, Contact: ${this.contact}`);
+//     } else {
+//         console.log('User Not Verified');
+//     }
+// }
+
+// MakeStudents.prototype.showProfile = showProfile
 
 // let s1 = new MakeStudents('Sarthak', 'Sharma', 98789, true)
 // let s2 = new MakeStudents('Abhishek', 'Mishra', 77889, true)
