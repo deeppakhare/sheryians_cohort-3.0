@@ -7,23 +7,6 @@
 // console.log("ebd");
 
 
-// ***************  Creating Promise *******************
-let myOrder = new Promise(function (resolve, reject) {
-    console.log('order is coming...');
-
-
-    let orderStatus = true
-    setTimeout(function () {
-        if (orderStatus) {
-            console.log('Delivery Done ✅');
-            resolve()
-        } else {
-
-            reject()
-        }
-    }, 3000)
-})
-
 myOrder.then(function () {
     console.log('Making payment...💸');
 
