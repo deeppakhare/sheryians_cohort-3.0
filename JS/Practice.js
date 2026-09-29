@@ -1,15 +1,1 @@
-// console.log(1 + 2 + "3")
-
-
-// console.log('1' + 2 + 3);
-
-for (var i = 0; i < 3; i++) {
-//   setTimeout(() => console.log(i), 0);
-(function  (j){
-    setTimeout(() => {
-        console.log(j);
-        
-    }, 0);
-})(i)
-
-}
+Part 1: The "Under the Hood" Theory 🧠How do you think arrays are stored in memory in JavaScript? And based on that, why is looking up something by its index, like arr[2], basically instant ($O(1)$ time complexity)?Part 2: The Code Logic 💻We need to write a function called reverseInPlace(arr) that reverses an array. The catch? You have to modify the original array directly—no creating a brand new array to hold the reversed numbers.
