@@ -1,7 +1,13 @@
-let a = [88, 50, 25, 10];
-let sub = a.reduce(geeks);
+function reverseInPlace(arr) {
+  let left = 0;
+  let right = arr.length - 1;
 
-function geeks(tot, num) {
-    return tot - num;
-}
-console.log(sub);
+  while (left < right) {
+    // Swap elements at both pointers
+    [arr[left], arr[right]] = [arr[right], arr[left]];
+    left++;
+    right--;
+  }
+
+  return arr; // same array reference, modified in place
+}   
