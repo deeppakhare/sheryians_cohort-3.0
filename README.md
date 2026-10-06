@@ -18,7 +18,12 @@
 
     Learned all important types of Math Functions 
 
+> 4. Conditional Statements
 
+    1. if statement
+    2. if-else statement
+    3. if-else-if statement
+    4. ternary operaotr (?:) 
 
 > 4. Switch Cases 
 
