@@ -75,69 +75,7 @@ showTodo(todos)
 // });
 
 
-// ### Project 3: Shopping Cart Logic
 
-// let cart = [];
-
-// let addItem = (name, price, qty) => {
-//   let check = cart.find((n) => n.name === name);
-//   if (check) {
-//     check.qty += qty;
-//     return "Item already exist";
-//   } else {
-//     cart.push({ name, price, qty });
-//   }
-//   return "Item Added";
-// };
-
-// let removeItem = (name) => {
-//   let check = cart.find((n) => n.name === name);
-//   if (check) {
-//     cart = cart.filter((item) => item.name !== name);
-//     return "Removed";
-//   } else {
-//     return "Not found";
-//   }
-// };
-
-// let getTotal = (name) => {
-//     let check = cart.find((n) => n.name === name);
-//   if (check) {
-//     let total = check.qty * check.price;
-//     return total;
-//   } else {
-//     return "Not found";
-//   }
-// };
-
-// let showCart = () => {
-//     cart.forEach((item) => {
-//         console.log(`name -> ${item.name}, price -> ${item.price}, qty-> ${item.qty}`);
-//         console.log(`Total: ₹${getTotal(item.name)}`);
-//     })
-
-// }
-
-// console.log(addItem("Book", 120, 5));
-// console.log(addItem("Pencil", 5, 15));
-// console.log(addItem("BookCover", 15, 10));
-
-// console.log(removeItem("BookCover"));
-
-// console.log(getTotal("Book"));
-
-// console.log(showCart());
-
-// ### Project 4: Word Frequency Counter
-
-// function frequency(text) {
-//     let words = text.toLowerCase().split(/\s+/);
-//     let freq = {};
-//     words.forEach(word => {
-//         freq[word] = (freq[word] || 0) + 1;
-//     })
-//     return freq;
-// }
 
 // let text = "The quick brown fox jumps Over the lazy dog the fox is Quick"
 // console.log(frequency(text));
