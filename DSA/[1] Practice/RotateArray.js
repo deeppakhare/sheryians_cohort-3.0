@@ -7,10 +7,3 @@ var rotate = function(nums, k) {
     reverse(nums, k, nums.length - 1);
 };
 
-function reverse(arr, start, end) {
-    while (start < end) {
-        [arr[start], arr[end]] = [arr[end], arr[start]];        
-        start++;
-        end--;
-    }
-}
