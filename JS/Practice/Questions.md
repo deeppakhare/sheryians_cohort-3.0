@@ -122,3 +122,36 @@ Important: Try predicting the results before executing the code. The goal is to 
 
 ******************************************************************************
 
+Q004 of 100 — Truthy and Falsy Values
+Stage 1
+Topic: Type Conversion
+Level 2 — Basic to Intermediate
+
+Your task
+Predict the output of the following code without running it first.
+console.log(Boolean(0));
+console.log(Boolean("0"));
+console.log(Boolean(""));
+console.log(Boolean("false"));
+console.log(Boolean(null));
+console.log(Boolean([]));
+console.log(Boolean({}));
+
+
+Requirements
+1. Write the exact output of all seven statements.
+2. Identify which values are truthy and which are falsy.
+3. Explain why "0" and 0 behave differently.
+4. Explain why an empty array [] and an empty object {} are truthy in JavaScript.
+Concepts practiced
+- Boolean conversion
+- Truthy and falsy values
+- Strings versus numbers
+- Empty arrays and objects
+- JavaScript type coercion
+Your turn: Send your predicted output with your reasoning for each value. I'll review your understanding before we move on to Q005.
+
+
+******************************************************************************
+
+
