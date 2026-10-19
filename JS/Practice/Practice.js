@@ -140,15 +140,49 @@ console.log(Boolean("0" - 0));
 
 console.log(Boolean("false" === false));
 
-// It get false because we assign the === which we assign the false for the string means it gets false     
+// It get false because we assign the === which we assign the false for the 
+// string means it gets false     
 
-console.log(Boolean([] == false));
+console.log(Boolean(" "));
 
-// I dont understand it 
+// in this the empty space is given in double quote and it makes string so it is truthy
+// Output is :- True
+
+console.log([] == false);
+
+// in double quote the type is not check so the empty array convert into the 
+// empty string so it is falsy value so it indicate the 0 and the false is also
+// the falsy value so it indicate 0 hence both are 0 equals to 0 so it true 
+// Output is :- True
+
+console.log([] === false);
+
+// here the empty arrray is truthy value and false is falsy so true === false 
+// which make the opposite so it gets falsy 
+// Output is :- False
 
 
 // ***********************************************
-// *********        Question 01        *********
+// *********        Question 05        *********
+
+let a = 10;
+
+let b = "10";
+
+console.log(a == b);  // Output is :- True
+console.log(a === b);  // Output is :- False
+console.log(a != b);  // Output is :-  False
+console.log(a !== b);  // Output is :- True
+console.log(a > 5);  // Output is :- True
+console.log(b >= 10);  // Output is :- True
+
+
+//2. Explain the difference between == and ===.
+// 
+
+
+// 3. Explain the difference between != and !==.
+// 4. Explain why b >= 10 can return true even though b is a string.
 
 // ***********************************************
 // *********        Question 01        *********

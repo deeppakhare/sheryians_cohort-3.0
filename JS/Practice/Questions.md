@@ -155,3 +155,56 @@ Your turn: Send your predicted output with your reasoning for each value. I'll r
 ******************************************************************************
 
 
+Q005 of 100 — Comparison Operators
+Stage 1
+Topic: Operators
+Level 2 — Basic to Intermediate
+
+Your task
+Predict the output of each statement without running the code first.
+let a = 10;
+
+let b = "10";
+
+console.log(a == b);
+console.log(a === b);
+console.log(a != b);
+console.log(a !== b);
+console.log(a > 5);
+console.log(b >= 10);
+
+
+Requirements
+1. Write the exact output of all six statements.
+2. Explain the difference between == and ===.
+3. Explain the difference between != and !==.
+4. Explain why b >= 10 can return true even though b is a string.
+Concepts practiced
+- Loose equality and strict equality
+- Inequality operators
+- Type coercion in comparisons
+- Relational operators
+Your turn: Send me your predicted output and explain your reasoning for each statement. We'll review Q005 before moving to Q006.
+
+
+******************************************************************************
+
+
+
+
+******************************************************************************
+
+
+
+
+******************************************************************************
+
+
+
+
+******************************************************************************
+
+
+
+
+******************************************************************************
