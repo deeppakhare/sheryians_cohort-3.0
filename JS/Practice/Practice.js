@@ -112,13 +112,13 @@
 // *********        Question 04        *********
 
 
-console.log(Boolean(0));  // Output is :- False
-console.log(Boolean("0"));  // Output is :- True
-console.log(Boolean(""));  // Output is :- False
-console.log(Boolean("false"));  // Output is :- True
-console.log(Boolean(null)); // // Output is :- False
-console.log(Boolean([]));  // Output is :- True
-console.log(Boolean({}));  // Output is :- True
+// console.log(Boolean(0));  // Output is :- False
+// console.log(Boolean("0"));  // Output is :- True
+// console.log(Boolean(""));  // Output is :- False
+// console.log(Boolean("false"));  // Output is :- True
+// console.log(Boolean(null)); // // Output is :- False
+// console.log(Boolean([]));  // Output is :- True
+// console.log(Boolean({}));  // Output is :- True
 
 
 // 3. Explain why "0" and 0 behave differently. 
@@ -128,34 +128,34 @@ console.log(Boolean({}));  // Output is :- True
 // Because Empty arrays and empty objects are truthy because JavaScript treats all objects as truthy, including empty ones.
 
 
-console.log(Boolean(" "));  
+// console.log(Boolean(" "));  
 
 // Because it is empty string ans it is falsy value
 // Output is :- False
 
-console.log(Boolean("0" - 0)); 
+// console.log(Boolean("0" - 0)); 
 
 // When we perform the coersion in ("0"-0) it form 0 and 0 is falsey value
 // Output is :- False
 
-console.log(Boolean("false" === false));
+// console.log(Boolean("false" === false));
 
 // It get false because we assign the === which we assign the false for the 
 // string means it gets false     
 
-console.log(Boolean(" "));
+// console.log(Boolean(" "));
 
 // in this the empty space is given in double quote and it makes string so it is truthy
 // Output is :- True
 
-console.log([] == false);
+// console.log([] == false);
 
 // in double quote the type is not check so the empty array convert into the 
 // empty string so it is falsy value so it indicate the 0 and the false is also
 // the falsy value so it indicate 0 hence both are 0 equals to 0 so it true 
 // Output is :- True
 
-console.log([] === false);
+// console.log([] === false);
 
 // here the empty arrray is truthy value and false is falsy so true === false 
 // which make the opposite so it gets falsy 
@@ -165,24 +165,48 @@ console.log([] === false);
 // ***********************************************
 // *********        Question 05        *********
 
-let a = 10;
+// let a = 10;
 
-let b = "10";
+// let b = "10";
 
-console.log(a == b);  // Output is :- True
-console.log(a === b);  // Output is :- False
-console.log(a != b);  // Output is :-  False
-console.log(a !== b);  // Output is :- True
-console.log(a > 5);  // Output is :- True
-console.log(b >= 10);  // Output is :- True
+// console.log(a == b);  // Output is :- True
+// console.log(a === b);  // Output is :- False
+// console.log(a != b);  // Output is :-  False
+// console.log(a !== b);  // Output is :- True
+// console.log(a > 5);  // Output is :- True
+// console.log(b >= 10);  // Output is :- True
 
 
 //2. Explain the difference between == and ===.
-// 
+// The difference is the == did't check the data type and === check the data type
+// this is the major difference in both
 
 
 // 3. Explain the difference between != and !==.
+// Same here the != not check the data type of the both side and the !== check the 
+// data type of the both side
+
+
 // 4. Explain why b >= 10 can return true even though b is a string.
+// Because the if b is string value but it looks like the 10 so there the >= greater 
+// than equal to sign is so here the if both are lookingly same so it becomes true and 
+// here also "10" is equal to the 10 so it becomes the true  
+
+
+console.log("20" > "100");
+//  When both operands are strings, JavaScript compares them lexicographically (character by character), not numerically.
+// - First characters: "2" versus "1".
+// - Since "2" comes after "1", "20" is considered greater than "100".
+
+
+console.log("20" > 100); // Output is :- False
+// Because in this the string value treat as the number so 20 is not greater than 
+// 100 so it is false 
+
+console.log(null == undefined); // Output is :- True
+// In this question the both side have the falsy values so the false == false so it 
+// output is True
+
 
 // ***********************************************
 // *********        Question 01        *********
