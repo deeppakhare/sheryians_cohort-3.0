@@ -288,10 +288,68 @@ Explain why each student is or isn't eligible.
 
 ******************************************************************************
 
+Q009 of 100 — Logical NOT (!)
+Stage 1
+Topic: Logical Operators
+Level 2 — Basic to Intermediate
+
+Your task
+A website allows access only to users who are not blocked.
+Use these variables:
+let isBlocked = false;
+
+
+Write a program that:
+1. Uses the logical NOT (!) operator in an if...else statement.
+2. Prints "Access granted" if the user is not blocked.
+3. Otherwise, prints "Access denied".
+Expected output
+Access granted
+
+
+Challenge
+Predict the output in both cases:
+let isBlocked = true;
+and
+let isBlocked = false;
+Explain how ! changes the Boolean value.
 
 ******************************************************************************
 
+Q010 of 100 — Combining Logical Operators
+Stage 1
+Topic: Logical Operators
+Level 3 — Intermediate
 
+Your task
+A user can enter a website if:
+- They are logged in, and
+- They are either an administrator or an approved user.
+Use these variables:
+let isLoggedIn = true;
+let isAdmin = false;
+let isApproved = true;
+
+
+Write an if...else statement that prints:
+Access granted
+
+
+if the user meets the requirements; otherwise, print:
+Access denied
+
+
+Requirements
+1. Use && and || in the condition.
+2. Use parentheses to make the intended grouping clear.
+3. Don't use nested if statements.
+Challenge
+Predict the output for each case:
+Logged in	Admin	Approved
+true	false	false
+false	true	true
+true	true	false
+Explain why each user gets access or is denied.
 
 
 ******************************************************************************

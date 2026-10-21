@@ -251,12 +251,68 @@
 // Because the student attendance is not 75 or more than it 
 
 // ***********************************************
-// *********        Question 01        *********
+// *********        Question 08        *********
+
+// let marks = 92;
+// let attendance = 80;
+
+// if(marks >= 90 || attendance >= 95) {
+//     console.log("Scholarship eligible");
+// } else {
+//     console.log("Not eligible");
+// }
+
+// Challenge
+// Predict the output for each case:
+// Marks	Attendance    Output
+// 85	     96 --------> Eligible (because it has attendance greater than 95)          
+// 85	     80 --------> Not Eligible (because the marks is less than 90 and attendance is less than 95)
+// 95	     96 --------> Eigible (Both marks and attendance are greater than requirements)
+// Explain why each student is or isn't eligible.
+
 
 // ***********************************************
-// *********        Question 01        *********
+// *********        Question 09        *********
+
+// let isBlocked = false;
+
+// if (!isBlocked) {
+//    console.log("Access granted");
+// } else {
+//    console.log("Access denied");
+// }
+
+// Challenge
+// Predict the output in both cases:
+// let isBlocked = true; 
+// Output is "Access denied"
+// and
+// let isBlocked = false;
+// Output is "Access granted"
+// Explain how ! changes the Boolean value.
+// The "!" perform the oppositre of the bollean values means if the isBloced is true
+// then !isblocked is the false lie vice versa for the false become the true.
 
 // ***********************************************
-// *********        Question 01        *********
+// *********        Question 10        *********
+
+// let isLoggedIn = true;
+// let isAdmin = false;
+// let isApproved = true;
+
+// if (isLoggedIn && (isAdmin || isApproved)) {
+//         console.log("Access granted");
+// } else {
+//     console.log("Access denied");
+// }
+
+// Challenge
+// Predict the output for each case:
+//      Logged in	Admin	Approved
+//      true	    false	false --------> Access denied because the user is not administrator and not approved user
+//      false	    true	true  --------> Access denied because the user is not logged in 
+//      true	    true	false --------> Access granted because the user is the logged in and also the user is admin.
+// Explain why each user gets access or is denied.
+
 
 // ***********************************************
