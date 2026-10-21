@@ -193,20 +193,68 @@
 // here also "10" is equal to the 10 so it becomes the true  
 
 
-console.log("20" > "100");
+// console.log("20" > "100");
 //  When both operands are strings, JavaScript compares them lexicographically (character by character), not numerically.
 // - First characters: "2" versus "1".
 // - Since "2" comes after "1", "20" is considered greater than "100".
 
 
-console.log("20" > 100); // Output is :- False
+// console.log("20" > 100); // Output is :- False
 // Because in this the string value treat as the number so 20 is not greater than 
 // 100 so it is false 
 
-console.log(null == undefined); // Output is :- True
+// console.log(null == undefined); // Output is :- True
 // In this question the both side have the falsy values so the false == false so it 
 // output is True
 
+
+// ***********************************************
+// *********        Question 06        *********
+
+// let num = 17;
+// let remender = num % 5;
+// console.log(`Remender: ${remender}`);
+
+// if (num % 2 === 0) {
+//     console.log(`${num} is even`)
+// } else{
+//     console.log(`${num} is odd`)
+// }
+
+// Challenge
+// Explain why num % 2 === 0 can be used to check whether an integer is even.
+// Because for when we mod and if the reminder is made 0 then that number is even number 
+// and any other reminder is form rather than the 0 then that number is odd number 
+// means the number is completily divisble (remender is 0))by the given number knows even number 
+// and others number are known as odd number
+
+// ***********************************************
+// *********        Question 07        *********
+
+// let marks = 42;
+// let attendance = 80;
+
+// if (marks >= 35 && attendance >= 75) {
+//     console.log("Student passed");
+// } else {
+//     console.log("Student failed");
+// }
+
+// Challenge
+// Before coding, predict what happens if:
+// marks = 42;
+// attendance = 60;
+
+// Would the student pass or fail? Explain why.
+
+// Output will be :- Student failed 
+// Because the student attendance is not 75 or more than it 
+
+// ***********************************************
+// *********        Question 01        *********
+
+// ***********************************************
+// *********        Question 01        *********
 
 // ***********************************************
 // *********        Question 01        *********

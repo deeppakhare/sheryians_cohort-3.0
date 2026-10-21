@@ -189,12 +189,104 @@ Your turn: Send me your predicted output and explain your reasoning for each sta
 
 ******************************************************************************
 
+Q006 of 100 — The Modulo Operator
+Stage 1
+Topic: Arithmetic Operators
+Level 2 — Basic to Intermediate
 
+Your task
+Write a JavaScript program that:
+1. Declares a variable num with the value 17.
+2. Uses the modulo operator (%) to find the remainder when num is divided by 5.
+3. Prints the remainder.
+4. Checks whether num is even or odd using the modulo operator and a conditional statement.
+Expected output
+Remainder: 2
+17 is odd
+
+
+Concepts practiced
+- Arithmetic operators
+- Modulo (%)
+- if...else
+- Remainders
+- Even and odd numbers
+Challenge
+Explain why num % 2 === 0 can be used to check whether an integer is even.
+Your turn: Solve Q006 in practice.js and send me your code with your explanation.
 
 
 ******************************************************************************
 
+Q007 of 100 — Logical Operators
+Stage 1
+Topic: Operators
+Level 2 — Basic to Intermediate
 
+Your task
+A student passes an exam only if their marks are at least 35 and their attendance is at least 75%.
+Write a JavaScript program with these variables:
+let marks = 42;
+let attendance = 80;
+
+
+Your program must:
+1. Check whether the student passes using the logical && operator.
+2. Print "Student passed" if both conditions are true.
+3. Otherwise, print "Student failed".
+Expected output
+Student passed
+
+
+Concepts practiced
+- Comparison operators
+- Logical AND (&&)
+- Boolean expressions
+- if...else
+- Combining multiple conditions
+Challenge
+Before coding, predict what happens if:
+marks = 42;
+attendance = 60;
+
+
+Would the student pass or fail? Explain why.
+
+
+******************************************************************************
+
+Q008 of 100 — Logical OR (||)
+Stage 1
+Topic: Logical Operators
+Level 2 — Basic to Intermediate
+
+Your task
+A student receives a special scholarship if they satisfy at least one of these conditions:
+- Marks are at least 90.
+- Attendance is at least 95%.
+Use the following variables:
+let marks = 92;
+let attendance = 80;
+
+
+Write a program that:
+1. Uses the logical OR (||) operator.
+2. Prints "Scholarship eligible" if either condition is true.
+3. Otherwise, prints "Not eligible".
+Expected output
+Scholarship eligible
+
+
+Challenge
+Predict the output for each case:
+Marks	Attendance
+85	96
+85	80
+95	96
+Explain why each student is or isn't eligible.
+
+
+******************************************************************************
 
 
 ******************************************************************************
