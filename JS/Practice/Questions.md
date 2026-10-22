@@ -354,7 +354,41 @@ Explain why each user gets access or is denied.
 
 ******************************************************************************
 
+Q011 of 100 — if...else if...else
+Stage 2
+Topic: Conditionals
+Level 2 — Basic to Intermediate
 
+Your task: Grade calculator
+Write a JavaScript program that assigns a grade based on a student's marks.
+Use this variable:
+let marks = 76;
+
+
+Apply these grading rules:
+Marks	Grade
+90–100	A
+80–89	B
+70–79	C
+60–69	D
+Below 60	F
+Your program must print:
+Grade: C
+
+
+Requirements
+1. Use if...else if...else.
+2. Handle all five grade ranges.
+3. Make sure each range has the correct boundary conditions.
+4. Assume marks are between 0 and 100 for this question.
+Challenge
+Predict the grade for each value without running your code:
+- marks = 90
+- marks = 80
+- marks = 60
+- marks = 59
+Explain how the order of your conditions affects the result.
+Your turn: Solve Q011 in practice.js and send me your code with your challenge answers.
 
 
 ******************************************************************************
