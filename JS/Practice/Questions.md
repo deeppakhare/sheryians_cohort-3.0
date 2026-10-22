@@ -392,3 +392,51 @@ Your turn: Solve Q011 in practice.js and send me your code with your challenge a
 
 
 ******************************************************************************
+
+// ==========================================
+// Q012 — Largest of Three Numbers
+// Topic: Conditionals & Loops
+// Subtopic: if...else if...else, Comparison Operators
+// Difficulty: Level 1 — Basic
+// Status: In Progress
+// ==========================================
+
+/*
+Problem Statement:
+Write a JavaScript program to find the largest
+among three numbers.
+
+Example:
+let a = 25;
+let b = 48;
+let c = 36;
+
+Expected Output:
+Largest number: 48
+
+Requirements:
+1. Use if...else if...else.
+2. Compare all three numbers correctly.
+3. Handle cases where two or more numbers are equal.
+4. Test your solution with different values.
+
+Challenge:
+Try these test cases:
+- a = 10, b = 20, c = 30
+- a = 50, b = 50, c = 20
+- a = 15, b = 15, c = 15
+
+Concepts Practiced:
+- Comparison operators
+- Logical operators
+- Conditional statements
+- Equality and boundary cases
+
+My Learning Notes:
+(To be completed after solving and reviewing.)
+*/
+
+******************************************************************************
+******************************************************************************
+******************************************************************************
+******************************************************************************

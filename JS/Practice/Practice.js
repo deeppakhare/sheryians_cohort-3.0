@@ -319,21 +319,21 @@
 
 // *********        Question 11        *********
 
-let marks = 76;
+// let marks = 60;
 
-if(marks >= 90 && marks <= 100){
-    console.log("Grade :- A")
-} else if(marks >= 80 && marks <= 89) {
-    console.log("Grade :- B")
-} else if(marks >= 70 && marks <= 79) {
-    console.log("Grade :- C")
-} else if(marks >= 60 && marks <= 69) {
-    console.log("Grade :- D")
-} else if(marks <= 60 && marks >= 0) {
-    console.log("Grade :- F")
-} else {
-    console.log("Invalid input")
-}
+// if(marks >= 90 && marks <= 100){
+//     console.log("Grade :- A")
+// } else if(marks >= 80 && marks <= 89) {
+//     console.log("Grade :- B")
+// } else if(marks >= 70 && marks <= 79) {
+//     console.log("Grade :- C")
+// } else if(marks >= 60 && marks <= 69) {
+//     console.log("Grade :- D")
+// } else if(marks < 60 && marks >= 0) {
+//     console.log("Grade :- F")
+// } else {
+//     console.log("Invalid input")
+// }
 
 
 // Predict the grade for each value without running your code:
@@ -342,13 +342,32 @@ if(marks >= 90 && marks <= 100){
 // - marks = 60  -----> Grade: D
 // - marks = 59  -----> Grade: F
 // Explain how the order of your conditions affects the result.
-// 
-
+// If the conditions are unordered then the grade system is disturbed the grades are 
+// are posioning to wrong marks the grades are getting unstructured.
 
 
 // ***********************************************
-// *********        Question 10        *********
+// *********        Question 12        *********
 
+let a = 50;
+let b = 50;
+let c = 50;
+
+if (a > b && a > c) {
+    console.log(`Largest number: ${a}`)
+} else if (b > a && b > c) {
+    console.log(`Largest number: ${b}`)
+} else if (c > a && c > b) {
+    console.log(`Largest number: ${c}`)
+} else {
+    console.log("Invalid number")
+}
+
+// Challenge:
+// Try these test cases:
+// - a = 10, b = 20, c = 30  -----> 30
+// - a = 50, b = 50, c = 20  -----> Invalid 
+// - a = 15, b = 15, c = 15
 
 
 // ***********************************************
