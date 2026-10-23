@@ -349,9 +349,9 @@
 // ***********************************************
 // *********        Question 12        *********
 
-let a = 50;
-let b = 50;
-let c = 50;
+let a = 40;
+let b = 25;
+let c = 40;
 
 if (a > b && a > c) {
     console.log(`Largest number: ${a}`)
@@ -359,6 +359,12 @@ if (a > b && a > c) {
     console.log(`Largest number: ${b}`)
 } else if (c > a && c > b) {
     console.log(`Largest number: ${c}`)
+} else if (a == b && b == c) {
+    console.log(`Largest number: ${a}`)
+} else if (a == b && c < a || a == c && b < a) {
+    console.log(`Largest number: ${a}`)
+} else if (b == c && a < b ) {
+    console.log(`Largest number: ${b}`)
 } else {
     console.log("Invalid number")
 }
@@ -366,12 +372,21 @@ if (a > b && a > c) {
 // Challenge:
 // Try these test cases:
 // - a = 10, b = 20, c = 30  -----> 30
-// - a = 50, b = 50, c = 20  -----> Invalid 
-// - a = 15, b = 15, c = 15
+// - a = 50, b = 50, c = 20  -----> 50 
+// - a = 15, b = 15, c = 15  -----> 15
+
+// Your challenge
+// Before I mark Q012 as passed, test the simpler version with these values:
+// a	b	c	Expected output
+// 10	20	30	30
+// 50	50	20	50
+// 15	15	15	15
+// 40	25	40	40
 
 
 // ***********************************************
-// *********        Question 10        *********
+// *********        Question 13        *********
+
 
 
 

@@ -437,6 +437,52 @@ My Learning Notes:
 */
 
 ******************************************************************************
+
+```js
+// ==========================================
+// Q013 — Leap Year Checker
+// Topic: Conditionals & Loops
+// Subtopic: Logical Operators, if...else
+// Difficulty: Level 2 — Basic to Intermediate
+// Status: In Progress
+// ==========================================
+
+/*
+Problem Statement:
+Write a JavaScript program to determine whether
+a given year is a leap year.
+
+Example:
+let year = 2024;
+
+Expected Output:
+2024 is a leap year.
+
+Requirements:
+1. Use if...else.
+2. A year divisible by 400 is a leap year.
+3. Otherwise, a year divisible by 100 is NOT a leap year.
+4. Otherwise, a year divisible by 4 is a leap year.
+5. All other years are NOT leap years.
+
+Challenge:
+Test these years:
+- 2024 → Leap year
+- 2025 → Not a leap year
+- 1900 → Not a leap year
+- 2000 → Leap year
+
+Concepts Practiced:
+- Modulo operator (%)
+- Logical AND (&&)
+- Logical OR (||)
+- Conditional statement ordering
+
+My Learning Notes:
+(To be completed after solving and reviewing.)
+*/
+```
+
 ******************************************************************************
 ******************************************************************************
 ******************************************************************************
