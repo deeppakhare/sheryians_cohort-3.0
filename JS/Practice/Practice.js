@@ -349,25 +349,25 @@
 // ***********************************************
 // *********        Question 12        *********
 
-let a = 40;
-let b = 25;
-let c = 40;
+// let a = 40;
+// let b = 25;
+// let c = 40;
 
-if (a > b && a > c) {
-    console.log(`Largest number: ${a}`)
-} else if (b > a && b > c) {
-    console.log(`Largest number: ${b}`)
-} else if (c > a && c > b) {
-    console.log(`Largest number: ${c}`)
-} else if (a == b && b == c) {
-    console.log(`Largest number: ${a}`)
-} else if (a == b && c < a || a == c && b < a) {
-    console.log(`Largest number: ${a}`)
-} else if (b == c && a < b ) {
-    console.log(`Largest number: ${b}`)
-} else {
-    console.log("Invalid number")
-}
+// if (a > b && a > c) {
+//     console.log(`Largest number: ${a}`)
+// } else if (b > a && b > c) {
+//     console.log(`Largest number: ${b}`)
+// } else if (c > a && c > b) {
+//     console.log(`Largest number: ${c}`)
+// } else if (a == b && b == c) {
+//     console.log(`Largest number: ${a}`)
+// } else if (a == b && c < a || a == c && b < a) {
+//     console.log(`Largest number: ${a}`)
+// } else if (b == c && a < b ) {
+//     console.log(`Largest number: ${b}`)
+// } else {
+//     console.log("Invalid number")
+// }
 
 // Challenge:
 // Try these test cases:
@@ -379,7 +379,7 @@ if (a > b && a > c) {
 // Before I mark Q012 as passed, test the simpler version with these values:
 // a	b	c	Expected output
 // 10	20	30	30
-// 50	50	20	50
+// 50	50	20	50      
 // 15	15	15	15
 // 40	25	40	40
 
@@ -387,21 +387,45 @@ if (a > b && a > c) {
 // ***********************************************
 // *********        Question 13        *********
 
+// let year = 2000;
 
-
-
-// ***********************************************
-// *********        Question 10        *********
-
-
-
-// ***********************************************
-// *********        Question 10        *********
-
+// if (year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0)) {
+//     console.log(`${year} is a leap year`)
+// } else {
+//     console.log(`${year} is not a leap year`)
+// }
 
 
 // ***********************************************
-// *********        Question 10        *********
+// *********        Question 14        *********
+
+// let num = -0.5;
+
+// if(num < 0) {
+//     console.log(`${num} is negative number`)
+// } else if (num === 0) {
+//     console.log(`${num} is zero`)
+// } else if (num > 0) {
+//     console.log(`${num} is positive number`)
+// } else{
+//     console.log("Invalid Number")
+// }
+
+
+// ***********************************************
+// *********        Question 15        *********
+
+// let num = -7;
+
+// if(num % 2 === 0){
+//     console.log(`${num} is Even`)
+// } else{
+//     console.log(`${num} is Odd`)
+// }
+
+
+// ***********************************************
+// *********        Question 16        *********
 
 
 

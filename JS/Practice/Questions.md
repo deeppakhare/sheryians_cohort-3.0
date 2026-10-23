@@ -484,5 +484,146 @@ My Learning Notes:
 ```
 
 ******************************************************************************
+
+```js
+// ==========================================
+// Q014 — Positive, Negative, or Zero
+// Topic: Conditionals & Loops
+// Subtopic: if...else if...else, Comparison Operators
+// Difficulty: Level 1 — Basic
+// Status: In Progress
+// ==========================================
+
+/*
+Problem Statement:
+Write a JavaScript program that checks whether
+a given number is positive, negative, or zero.
+
+Example:
+let num = -12;
+
+Expected Output:
+-12 is a negative number.
+
+Requirements:
+1. Use if...else if...else.
+2. Print "is a positive number" for positive values.
+3. Print "is a negative number" for negative values.
+4. Print "is zero" when the value is exactly zero.
+
+Challenge:
+Test these values:
+- 15 → Positive
+- -8 → Negative
+- 0 → Zero
+- 0.5 → Positive
+- -0.5 → Negative
+
+Concepts Practiced:
+- Comparison operators (>, <, ===)
+- Conditional statements
+- Handling boundary values
+
+My Learning Notes:
+(To be completed after solving and reviewing.)
+*/
+```
+
+******************************************************************************
+
+```js
+// ==========================================
+// Q015 — Even or Odd Checker
+// Topic: Conditionals & Loops
+// Subtopic: Modulo Operator (%), if...else
+// Difficulty: Level 1 — Basic
+// Status: In Progress
+// ==========================================
+
+/*
+Problem Statement:
+Write a JavaScript program to determine whether
+a given integer is even or odd.
+
+Example:
+let num = 17;
+
+Expected Output:
+17 is odd.
+
+Requirements:
+1. Use if...else.
+2. Use the modulo operator (%) to check the remainder.
+3. If the remainder when divided by 2 is zero,
+   print that the number is even.
+4. Otherwise, print that the number is odd.
+
+Challenge:
+Test these values:
+- 24 → Even
+- 17 → Odd
+- 0 → Even
+- -8 → Even
+- -7 → Odd
+
+Concepts Practiced:
+- Modulo operator (%)
+- Strict equality (===)
+- Conditional statements
+- Positive and negative integers
+
+My Learning Notes:
+(To be completed after solving and reviewing.)
+*/
+```
+
+******************************************************************************
+
+```js
+// ==========================================
+// Q016 — Largest of Two Numbers
+// Topic: Conditionals & Loops
+// Subtopic: Ternary Operator (?:)
+// Difficulty: Level 2 — Basic to Intermediate
+// Status: In Progress
+// ==========================================
+
+/*
+Problem Statement:
+Write a JavaScript program to find the larger
+of two numbers using the ternary operator.
+
+Example:
+let a = 25;
+let b = 40;
+
+Expected Output:
+Largest number: 40
+
+Requirements:
+1. Use the ternary operator (? :).
+2. Do not use if...else for the comparison.
+3. Handle the case where both numbers are equal.
+4. Print a clear result.
+
+Challenge:
+Test these cases:
+- a = 25, b = 40 → Largest number: 40
+- a = 80, b = 30 → Largest number: 80
+- a = 15, b = 15 → Both numbers are equal
+
+Concepts Practiced:
+- Ternary operator
+- Comparison operators
+- Conditional expressions
+
+My Learning Notes:
+(To be completed after solving and reviewing.)
+*/
+```
+
+
+******************************************************************************
+******************************************************************************
 ******************************************************************************
 ******************************************************************************
