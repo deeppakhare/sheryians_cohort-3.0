@@ -427,10 +427,12 @@
 // ***********************************************
 // *********        Question 16        *********
 
-let a = 25;
-let b = 40;
+let a = 15;
+let b = 15;
 
-a > b ? `${a} is largest` : `${b} is largest`;
+let result = a === b ? "Both are equal" : a > b ? `${a} is largest` : `${b} is largest`;
+console.log(result);
+
 
 
 // ***********************************************
