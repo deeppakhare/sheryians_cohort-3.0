@@ -681,7 +681,56 @@ My Learning Notes:
 
 ******************************************************************************
 
+```js
+// ==========================================
+// Q018 — Simple Calculator
+// Topic: Conditionals & Loops
+// Subtopic: switch, Arithmetic Operators
+// Difficulty: Level 2 — Basic to Intermediate
+// Status: In Progress
+// ==========================================
 
+/*
+Problem Statement:
+Build a simple calculator that performs addition,
+subtraction, multiplication, or division based
+on the operator provided.
+
+Example:
+let a = 20;
+let b = 5;
+let operator = "*";
+
+Expected Output:
+Result: 100
+
+Requirements:
+1. Use a switch statement.
+2. Support these operators: +, -, *, /
+3. Print the calculated result.
+4. Handle division by zero with an appropriate message.
+5. Use default for an unsupported operator.
+
+Challenge:
+Test these cases:
+- a = 20, b = 5, operator = "+" → Result: 25
+- a = 20, b = 5, operator = "-" → Result: 15
+- a = 20, b = 5, operator = "*" → Result: 100
+- a = 20, b = 5, operator = "/" → Result: 4
+- a = 20, b = 0, operator = "/" → Cannot divide by zero
+- operator = "%" → Invalid operator
+
+Concepts Practiced:
+- switch and case
+- Arithmetic operators
+- Division by zero
+- Conditional logic
+- default case
+
+My Learning Notes:
+(To be completed after solving and reviewing.)
+*/
+```
 
 ******************************************************************************
 ******************************************************************************

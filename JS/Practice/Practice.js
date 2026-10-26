@@ -438,39 +438,60 @@
 // ***********************************************
 // *********        Question 17        *********
 
-let num = 8;
+// let num = 8;
 
-switch (num) {
-    case 1:
-        console.log("Monday")
-        break;
-    case 2:
-        console.log("Tuesday")
-        break;
-    case 3:
-        console.log("Wednesday")
-        break;
-    case 4:
-        console.log("Thursday")
-        break;
-    case 5:
-        console.log("Friday")
-        break;
-    case 6:
-        console.log("Saturday")
-        break;
-    case 7:
-        console.log("Sunday")
-        break;
+// switch (num) {
+//     case 1:
+//         console.log("Monday")
+//         break;
+//     case 2:
+//         console.log("Tuesday")
+//         break;
+//     case 3:
+//         console.log("Wednesday")
+//         break;
+//     case 4:
+//         console.log("Thursday")
+//         break;
+//     case 5:
+//         console.log("Friday")
+//         break;
+//     case 6:
+//         console.log("Saturday")
+//         break;
+//     case 7:
+//         console.log("Sunday")
+//         break;
 
-    default:
-        console.log("Invalid day number")
-        break;
-}
+//     default:
+//         console.log("Invalid day number")
+//         break;
+// }
 
 // ***********************************************
 // *********        Question 10        *********
 
+let a = 20;
+let b = 5;
+let operator = "*";
+
+switch (operator) {
+    case "*":
+        console.log("Result :", a*b)
+        break;
+    case "+":
+        console.log("Result :", a+b)
+        break;
+    case "-":
+        console.log("Result :", a-b)
+        break;
+    case "/":
+        console.log("Result :", a/b)
+        break;
+
+    default:
+        break;
+}
 
 
 // ***********************************************
