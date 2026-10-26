@@ -624,6 +624,64 @@ My Learning Notes:
 
 
 ******************************************************************************
+
+```js
+// ==========================================
+// Q017 — Day of the Week
+// Topic: Conditionals & Loops
+// Subtopic: switch, break, default
+// Difficulty: Level 2 — Basic to Intermediate
+// Status: In Progress
+// ==========================================
+
+/*
+Problem Statement:
+Write a JavaScript program that accepts a number
+from 1 to 7 and prints the corresponding day.
+
+Mapping:
+1 → Monday
+2 → Tuesday
+3 → Wednesday
+4 → Thursday
+5 → Friday
+6 → Saturday
+7 → Sunday
+
+Example:
+let day = 3;
+
+Expected Output:
+Wednesday
+
+Requirements:
+1. Use a switch statement.
+2. Use break to prevent unintended fall-through.
+3. Use default for invalid numbers.
+4. Print "Invalid day number" for values outside 1–7.
+
+Challenge:
+Test these values:
+- 1 → Monday
+- 5 → Friday
+- 7 → Sunday
+- 0 → Invalid day number
+- 8 → Invalid day number
+
+Concepts Practiced:
+- switch statements
+- case labels
+- break
+- default
+
+My Learning Notes:
+(To be completed after solving and reviewing.)
+*/
+```
+
 ******************************************************************************
+
+
+
 ******************************************************************************
 ******************************************************************************

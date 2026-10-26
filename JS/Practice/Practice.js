@@ -427,18 +427,46 @@
 // ***********************************************
 // *********        Question 16        *********
 
-let a = 15;
-let b = 15;
+// let a = 15;
+// let b = 15;
 
-let result = a === b ? "Both are equal" : a > b ? `${a} is largest` : `${b} is largest`;
-console.log(result);
+// let result = a === b ? "Both are equal" : a > b ? `${a} is largest` : `${b} is largest`;
+// console.log(result);
 
 
 
 // ***********************************************
-// *********        Question 10        *********
+// *********        Question 17        *********
 
+let num = 8;
 
+switch (num) {
+    case 1:
+        console.log("Monday")
+        break;
+    case 2:
+        console.log("Tuesday")
+        break;
+    case 3:
+        console.log("Wednesday")
+        break;
+    case 4:
+        console.log("Thursday")
+        break;
+    case 5:
+        console.log("Friday")
+        break;
+    case 6:
+        console.log("Saturday")
+        break;
+    case 7:
+        console.log("Sunday")
+        break;
+
+    default:
+        console.log("Invalid day number")
+        break;
+}
 
 // ***********************************************
 // *********        Question 10        *********
